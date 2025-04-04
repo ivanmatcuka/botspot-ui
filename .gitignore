@@ -1,0 +1,24 @@
+# Dependencies
+/node_modules
+
+# Production
+/dist
+
+# Miscallaneous
+.DS_Store
+*.pem
+
+# IDE
+/.idea
+
+# Debug
+npm-debug.log*
+
+# Environment Variables
+.env*.local
+.env.development
+
+# TypeScript
+*.tsbuildinfo
+
+*storybook.log
