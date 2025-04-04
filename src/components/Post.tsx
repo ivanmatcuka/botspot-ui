@@ -1,21 +1,22 @@
+'use client';
+
 import { Box, Typography } from '@mui/material';
-import Image from 'next/image';
 import { FC, ReactNode } from 'react';
 
 type PostProps = {
-  title: string;
-  excerpt?: string;
   cta?: ReactNode;
+  excerpt?: string;
   featuredImage?: string;
   objectFit?: 'cover' | 'contain';
+  title: string;
 };
 
 export const Post: FC<PostProps> = ({
-  title,
   cta,
   excerpt,
   featuredImage,
   objectFit = 'cover',
+  title,
 }) => (
   <Box
     alignItems="flex-end"
@@ -49,12 +50,11 @@ export const Post: FC<PostProps> = ({
       {cta}
     </Box>
     {featuredImage && (
-      <Image
+      <img
         alt=""
         className={`w-full h-full absolute inset-0 ${objectFit === 'cover' ? 'object-cover' : 'object-contain'} object-top`}
         height={1000}
         loading="lazy"
-        quality={80}
         src={featuredImage}
         width={1000}
       />

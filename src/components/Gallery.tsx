@@ -1,3 +1,5 @@
+'use client';
+
 import { Grid } from '@mui/material';
 import { FC, ReactNode } from 'react';
 
@@ -12,18 +14,18 @@ export const Gallery: FC<GalleryProps> = ({
   transparent = true,
 }) => (
   <Grid
-    columnGap={{ xs: 0, md: 2 }}
+    columnGap={{ md: 2, xs: 0 }}
     justifyContent="center"
     maxWidth="xl"
     mx="auto"
     px={3}
-    rowGap={{ xs: 2, md: 0 }}
+    rowGap={{ md: 0, xs: 2 }}
     container
   >
     <Grid
       bgcolor={transparent ? 'transparent' : 'grey.100'}
       borderRadius={1}
-      height={{ xs: 320, md: 420 }}
+      height={{ md: 420, xs: 320 }}
       md={5}
       overflow="hidden"
       xs={12}
@@ -34,7 +36,7 @@ export const Gallery: FC<GalleryProps> = ({
     <Grid
       bgcolor={transparent ? 'transparent' : 'grey.100'}
       borderRadius={1}
-      height={{ xs: 320, md: 420 }}
+      height={{ md: 420, xs: 320 }}
       md={5}
       overflow="hidden"
       xs={12}

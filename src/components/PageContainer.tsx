@@ -1,3 +1,5 @@
+'use client';
+
 import { Container, Grid, GridProps } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
@@ -11,9 +13,9 @@ export const PageContainer: FC<PropsWithChildren<PageContainerProps>> = ({
 }) => (
   <Container maxWidth="xl">
     <Grid
-      mb={{ xs: 10, md: 20 }}
+      mb={{ md: 20, xs: 10 }}
       md={10}
-      mt={{ xs: 2, md: 3 }}
+      mt={{ md: 3, xs: 2 }}
       mx="auto"
       xs={12}
       container
@@ -23,7 +25,7 @@ export const PageContainer: FC<PropsWithChildren<PageContainerProps>> = ({
         md={banner ? 7 : undefined}
         ml={banner ? 'auto' : undefined}
         mx={banner ? undefined : 'auto'}
-        textAlign={{ xs: 'center', md: 'left' }}
+        textAlign={{ md: 'left', xs: 'center' }}
         xl={banner ? 6 : undefined}
         xs={12}
         item

@@ -1,22 +1,19 @@
+import { createTheme, Shadows } from '@mui/material/styles';
+
 import { getComponents } from './components';
 import { palette } from './palette';
 import { typography } from './typography';
 
-import { createTheme, Shadows } from '@mui/material/styles';
-
 const theme = createTheme({
   palette,
   typography,
-  shape: {
-    borderRadius: 8,
-  },
   breakpoints: {
     values: {
-      xs: 0,
-      sm: 375,
-      md: 768,
       lg: 1024,
+      md: 768,
+      sm: 375,
       xl: 1280,
+      xs: 0,
     },
   },
   shadows: [
@@ -24,6 +21,9 @@ const theme = createTheme({
     '0px 36px 72px 0px rgba(22, 25, 79, 0.1)',
     ...Array(23).fill('none'),
   ] as Shadows,
+  shape: {
+    borderRadius: 8,
+  },
 });
 
 theme.components = getComponents(theme);

@@ -1,34 +1,33 @@
+'use client';
+
 import { Box } from '@mui/material';
-import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
 
 type IconLinkProps = {
-  href: string;
   alt: string;
+  href: string;
 };
-export const IconLink: FC<IconLinkProps> = ({ href, alt }) => (
+export const IconLink: FC<IconLinkProps> = ({ alt, href }) => (
   <Box position="relative">
-    <Image
+    <img
       alt={alt}
       height={32}
       loading="lazy"
       src={`/link_${alt}.svg`}
       width={32}
     />
-    <Link
+    <a
       className="absolute inset-0 opacity-0 hover:opacity-100"
       href={href}
-      prefetch={false}
       target="_blank"
     >
-      <Image
+      <img
         alt={alt}
         height={32}
         loading="lazy"
         src={`/white_link_${alt}.svg`}
         width={32}
       />
-    </Link>
+    </a>
   </Box>
 );

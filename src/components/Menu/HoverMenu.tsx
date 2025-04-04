@@ -1,7 +1,4 @@
-'use client';
-
-import { MenuButton } from './MenuButton';
-
+import { ButtonProps } from '@/components/Button';
 import { useTheme } from '@mui/material';
 import {
   bindHover,
@@ -11,22 +8,22 @@ import {
 import HoverMenu from 'material-ui-popup-state/HoverMenu';
 import { FC, PropsWithChildren } from 'react';
 
-import { ButtonProps } from '@/components/Button';
+import { MenuButton } from './MenuButton';
 
 type CustomHoverMenuProps = {
+  className?: string;
+  href?: string;
   label: string;
   popupState: ReturnType<typeof usePopupState>;
   variant: ButtonProps['variant'];
-  href?: string;
-  className?: string;
 };
 export const CustomHoverMenu: FC<PropsWithChildren<CustomHoverMenuProps>> = ({
+  children,
+  className,
+  href,
   label,
   popupState,
   variant,
-  href,
-  children,
-  className,
 }) => {
   const { shadows } = useTheme();
   const open = popupState.isOpen;
@@ -47,8 +44,8 @@ export const CustomHoverMenu: FC<PropsWithChildren<CustomHoverMenuProps>> = ({
         }}
         slotProps={{
           paper: {
-            sx: { boxShadow: shadows[1] },
             className: 'border-2 border-divider',
+            sx: { boxShadow: shadows[1] },
           },
         }}
         {...bindMenu(popupState)}

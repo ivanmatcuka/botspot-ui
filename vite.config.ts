@@ -1,27 +1,29 @@
 import react from '@vitejs/plugin-react';
+import path from 'path';
+import preserveDirectives from 'rollup-preserve-directives';
 import { defineConfig } from 'vite';
 
-import path from 'path';
-
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), preserveDirectives()],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
+      formats: ['es', 'cjs', 'umd'],
       name: 'botspot-ui',
-      fileName: (format) => `botspot-ui.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      output: {
-        assetFileNames: `assets/[name].[ext]`,
-        chunkFileNames: `assets/[name].js`,
-        entryFileNames: `assets/[name].js`,
-      },
+      external: [
+        'react',
+        'react/jsx-runtime',
+        '@emotion/react',
+        '@emotion/styled',
+      ],
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 });

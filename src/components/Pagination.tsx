@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/Button';
 import {
   Box,
   Pagination as MuiPagination,
@@ -7,8 +8,6 @@ import {
   useTheme,
 } from '@mui/material';
 import { FC, ReactEventHandler } from 'react';
-
-import { Button } from '@/components/Button';
 
 type PaginationProps = {
   count: number;
@@ -26,10 +25,7 @@ export const Pagination: FC<PaginationProps> = ({
   return (
     <Box>
       <MuiPagination
-        boundaryCount={matches ? 0 : 1}
-        color="primary"
-        count={count}
-        renderItem={({ onClick, page, type, selected, disabled }) => {
+        renderItem={({ disabled, onClick, page, selected, type }) => {
           const contentType: Record<
             typeof type,
             {
@@ -38,9 +34,6 @@ export const Pagination: FC<PaginationProps> = ({
             }
           > = {
             'end-ellipsis': {
-              buttonText: '...',
-            },
-            'start-ellipsis': {
               buttonText: '...',
             },
             first: {
@@ -55,19 +48,22 @@ export const Pagination: FC<PaginationProps> = ({
               buttonText: '>',
               onClick: () => setPage((page ?? 1) + 1),
             },
+            page: {
+              buttonText: `${page}`,
+              onClick,
+            },
             previous: {
               buttonText: '<',
               onClick: () => setPage((page ?? 1) - 1),
             },
-            page: {
-              buttonText: `${page}`,
-              onClick,
+            'start-ellipsis': {
+              buttonText: '...',
             },
           };
 
           if (type !== 'page') {
             return (
-              <Button disabled={disabled} variant="secondary" onClick={onClick}>
+              <Button disabled={disabled} onClick={onClick} variant="secondary">
                 {contentType[type].buttonText}
               </Button>
             );
@@ -76,17 +72,20 @@ export const Pagination: FC<PaginationProps> = ({
           return (
             <Button
               disabled={disabled}
-              variant={selected ? 'primary' : 'secondary'}
               onClick={onClick}
+              variant={selected ? 'primary' : 'secondary'}
             >
               {page}
             </Button>
           );
         }}
+        boundaryCount={matches ? 0 : 1}
+        color="primary"
+        count={count}
+        onChange={(_, page) => setPage(page)}
         shape="rounded"
         siblingCount={matches ? 0 : 1}
         variant="outlined"
-        onChange={(_, page) => setPage(page)}
       />
     </Box>
   );

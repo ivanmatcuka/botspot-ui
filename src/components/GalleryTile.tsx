@@ -1,34 +1,34 @@
+'use client';
+
 import { Box, Grid } from '@mui/material';
-import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
 
 type GalleryTileProps = {
-  imgUrl: string;
   alt?: string;
   bgColor?: string;
+  imgUrl: string;
 };
 export const GalleryTile: FC<PropsWithChildren<GalleryTileProps>> = ({
-  imgUrl,
-  children,
   alt,
   bgColor = 'grey.100',
+  children,
+  imgUrl,
 }) => (
-  <Box bgcolor={bgColor} py={{ xs: 5, md: 10 }}>
+  <Box bgcolor={bgColor} py={{ md: 10, xs: 5 }}>
     <Grid alignItems="center" maxWidth="xl" mx="auto" px={3} container>
       <Grid md={1} xs={0} />
       <Grid md={5} xs={12} item>
-        <Image
+        <img
           alt={alt ?? ''}
           className="rounded-xl"
           height={304}
           loading="lazy"
-          quality={80}
           src={imgUrl}
           width={493}
         />
       </Grid>
       <Grid md={1} xs={0} />
-      <Grid md={4} mt={{ xs: 2, md: 0 }} xs={12} item>
+      <Grid md={4} mt={{ md: 0, xs: 2 }} xs={12} item>
         {children}
       </Grid>
       <Grid md={1} xs={0} />

@@ -1,22 +1,23 @@
+'use client';
+
 import { Box, GridProps, Typography } from '@mui/material';
-import Image from 'next/image';
 import { FC, ReactNode } from 'react';
 
 type MainBlockProps = {
-  headline?: string;
-  subline?: string;
-  cta?: ReactNode;
-  subAssetUrl?: string;
   botomless?: boolean;
+  cta?: ReactNode;
+  headline?: string;
   mt?: GridProps['mt'];
+  subAssetUrl?: string;
+  subline?: string;
 };
 export const MainBlock: FC<MainBlockProps> = ({
-  headline,
-  subline,
   cta,
+  headline,
   subAssetUrl,
+  subline,
 }) => (
-  <Box textAlign={{ xs: 'center', md: 'left' }}>
+  <Box textAlign={{ md: 'left', xs: 'center' }}>
     <Typography mb={2} variant="body1">
       {subline}
     </Typography>
@@ -25,12 +26,11 @@ export const MainBlock: FC<MainBlockProps> = ({
     </Typography>
     {cta}
     {subAssetUrl && (
-      <Image
+      <img
         alt=""
         className="object-cover w-full h-auto pt-[48px] min-h-[240px]"
         height={800}
         loading="lazy"
-        quality={80}
         src={subAssetUrl}
         width={800}
       />

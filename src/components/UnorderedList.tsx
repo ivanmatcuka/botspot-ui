@@ -1,3 +1,5 @@
+'use client';
+
 import { List as MuiList } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 

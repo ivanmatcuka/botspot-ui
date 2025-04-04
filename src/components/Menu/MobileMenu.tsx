@@ -1,22 +1,19 @@
 'use client';
 
-import { MenuButton } from './MenuButton';
-
+import { ButtonProps } from '@/components/Button';
 import { Menu as MuiMenu, useTheme } from '@mui/material';
 import { FC, PropsWithChildren, useState } from 'react';
 
-import { ButtonProps } from '@/components/Button';
+import { MenuButton } from './MenuButton';
 
 type MobileMenuProps = {
   label: string;
   variant: ButtonProps['variant'];
-  onClick: () => void;
 };
 export const MobileMenu: FC<PropsWithChildren<MobileMenuProps>> = ({
+  children,
   label,
   variant,
-  children,
-  onClick,
 }) => {
   const { shadows } = useTheme();
 
@@ -29,26 +26,23 @@ export const MobileMenu: FC<PropsWithChildren<MobileMenuProps>> = ({
     <>
       <MenuButton
         label={label}
+        onClick={(event) => setAnchorEl(event.currentTarget)}
         open={open}
         variant={variant}
-        onClick={(event) => {
-          setAnchorEl(event.currentTarget);
-          onClick();
-        }}
       />
       <MuiMenu
-        anchorEl={anchorEl}
         MenuListProps={{
           'aria-labelledby': `basic-button-${label}`,
         }}
-        open={open}
         slotProps={{
           paper: {
-            sx: { boxShadow: shadows[1] },
             className: 'border-2 border-divider',
+            sx: { boxShadow: shadows[1] },
           },
         }}
+        anchorEl={anchorEl}
         onClose={handleClose}
+        open={open}
       >
         {children}
       </MuiMenu>

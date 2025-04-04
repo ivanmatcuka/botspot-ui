@@ -1,14 +1,12 @@
 'use client';
 
+import { MenuItem } from '@/components/Menu/Menu';
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
   styled,
 } from '@mui/material';
-import Link, { LinkProps } from 'next/link';
 import { FC } from 'react';
-
-import { MenuItem } from '@/components/Menu/Menu';
 
 const PrimaryButton = styled(({ ...props }: ButtonProps) => (
   <MuiButton color="primary" {...props} variant="contained" />
@@ -74,8 +72,9 @@ const MenuItemButton = styled(({ ...props }: ButtonProps) => (
 }));
 
 export type ButtonProps = {
-  variant?: 'primary' | 'secondary' | 'outline' | 'menu' | 'menuItem' | 'topic';
+  prefetch?: boolean;
   target?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'menu' | 'menuItem' | 'topic';
 } & Pick<
   MuiButtonProps,
   | 'id'
@@ -89,10 +88,9 @@ export type ButtonProps = {
   | 'className'
   | 'href'
   | 'startIcon'
-> &
-  Pick<LinkProps, 'prefetch'>;
+>;
 export const Button: FC<ButtonProps> = ({ variant, ...rest }) => {
-  const component = rest.href ? Link : rest.component;
+  const component = rest.component;
   const prefetch = rest.href ? false : rest.prefetch;
   const props = {
     ...rest,

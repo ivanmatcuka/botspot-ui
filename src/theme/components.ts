@@ -1,15 +1,8 @@
-import { palette } from './palette';
-
 import { Theme } from '@mui/material';
 
+import { palette } from './palette';
+
 export const getComponents = (theme: Theme) => ({
-  MuiOutlinedInput: {
-    styleOverrides: {
-      notchedOutline: {
-        borderWidth: 2,
-      },
-    },
-  },
   MuiAccordion: {
     defaultProps: {
       disableGutters: true,
@@ -24,30 +17,6 @@ export const getComponents = (theme: Theme) => ({
       },
     },
   },
-  MuiDialog: {
-    styleOverrides: {
-      paper: {
-        alignItems: 'center',
-        borderRadius: theme.spacing(2),
-        padding: theme.spacing(8, 2),
-      },
-    },
-  },
-  MuiDivider: {
-    styleOverrides: {
-      root: {
-        borderColor: palette.grey[200],
-      },
-    },
-  },
-  MuiDialogTitle: {
-    styleOverrides: {
-      root: {
-        width: '100%',
-        maxWidth: 648,
-      },
-    },
-  },
   MuiAccordionSummary: {
     styleOverrides: {
       root: {
@@ -57,13 +26,64 @@ export const getComponents = (theme: Theme) => ({
       },
     },
   },
-  MuiListItemButton: {
+  MuiButton: {
+    defaultProps: {
+      disableElevation: true,
+      disableRipple: true,
+    },
     styleOverrides: {
       root: {
+        border: 'solid',
+        borderWidth: '0.1em',
+        fontWeight: 'normal',
+        padding: theme.spacing(1.5, 2.5),
+
+        '&:disabled': {
+          backgroundColor: palette.grey[200],
+          borderColor: palette.common.white,
+          color: palette.common.white,
+        },
+      },
+      sizeSmall: {
+        padding: theme.spacing(1, 2),
+      },
+      text: {
         border: 'none',
+        fontWeight: 'normal',
+
+        '&:disabled': {
+          backgroundColor: palette.grey[100],
+          border: 'none',
+          color: palette.common.black,
+        },
         '&:hover': {
+          backgroundColor: 'transparent',
           color: palette.primary.main,
         },
+      },
+    },
+  },
+  MuiDialog: {
+    styleOverrides: {
+      paper: {
+        alignItems: 'center',
+        borderRadius: theme.spacing(2),
+        padding: theme.spacing(8, 2),
+      },
+    },
+  },
+  MuiDialogTitle: {
+    styleOverrides: {
+      root: {
+        maxWidth: 648,
+        width: '100%',
+      },
+    },
+  },
+  MuiDivider: {
+    styleOverrides: {
+      root: {
+        borderColor: palette.grey[200],
       },
     },
   },
@@ -81,52 +101,32 @@ export const getComponents = (theme: Theme) => ({
       },
     },
   },
+  MuiListItemButton: {
+    styleOverrides: {
+      root: {
+        border: 'none',
+        '&:hover': {
+          color: palette.primary.main,
+        },
+      },
+    },
+  },
   MuiMenuItem: {
     defaultProps: {
       disableRipple: true,
     },
     styleOverrides: {
       root: {
-        padding: 0,
-
         borderRadius: theme.shape.borderRadius,
+
+        padding: 0,
       },
     },
   },
-  MuiButton: {
-    defaultProps: {
-      disableElevation: true,
-      disableRipple: true,
-    },
+  MuiOutlinedInput: {
     styleOverrides: {
-      sizeSmall: {
-        padding: theme.spacing(1, 2),
-      },
-      text: {
-        border: 'none',
-        fontWeight: 'normal',
-
-        '&:hover': {
-          color: palette.primary.main,
-          backgroundColor: 'transparent',
-        },
-        '&:disabled': {
-          border: 'none',
-          backgroundColor: palette.grey[100],
-          color: palette.common.black,
-        },
-      },
-      root: {
-        padding: theme.spacing(1.5, 2.5),
-        border: 'solid',
-        borderWidth: '0.1em',
-        fontWeight: 'normal',
-
-        '&:disabled': {
-          borderColor: palette.common.white,
-          color: palette.common.white,
-          backgroundColor: palette.grey[200],
-        },
+      notchedOutline: {
+        borderWidth: 2,
       },
     },
   },

@@ -8,9 +8,9 @@ type SkeletonVideoProps = {
   videoSrc: string;
 } & MediaHTMLAttributes<HTMLVideoElement>;
 export const SkeletonVideo: FC<SkeletonVideoProps> = ({
-  videoSrc,
-  className = '',
   autoPlay,
+  className = '',
+  videoSrc,
   ...props
 }: SkeletonVideoProps) => {
   const video = useRef<HTMLVideoElement>(null);

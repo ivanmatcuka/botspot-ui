@@ -1,21 +1,18 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
-import { Poppins } from 'next/font/google';
-
-const roboto = Poppins({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const typography: TypographyOptions = {
+  // fontFamily: roboto.style.fontFamily,
+  body1: {
+    fontSize: 16,
+    lineHeight: 1.4,
+  },
   button: {
     fontSize: 16,
     lineHeight: '22.4px',
     textTransform: 'none',
   },
-  fontFamily: roboto.style.fontFamily,
-  body1: {
-    fontSize: 16,
+  caption: {
+    fontSize: 12,
     lineHeight: 1.4,
   },
   h1: {
@@ -33,9 +30,5 @@ export const typography: TypographyOptions = {
   h4: {
     fontSize: 24,
     lineHeight: 1.2,
-  },
-  caption: {
-    fontSize: 12,
-    lineHeight: 1.4,
   },
 };

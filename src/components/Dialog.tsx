@@ -8,14 +8,14 @@ import { DialogContent as MuiDialogContent } from '@mui/material/';
 import { FC, PropsWithChildren, ReactEventHandler } from 'react';
 
 type DialogProps = {
-  open: boolean;
   onClose: ReactEventHandler;
+  open: boolean;
   title?: string;
 };
 export const Dialog: FC<PropsWithChildren<DialogProps>> = ({
-  title,
   children,
   open,
+  title,
 }) => (
   <MuiDialog maxWidth="md" open={open} fullWidth>
     {title && (

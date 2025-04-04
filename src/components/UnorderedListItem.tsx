@@ -1,3 +1,5 @@
+'use client';
+
 import {
   ListItemText,
   ListItem as MuiListItem,
@@ -11,7 +13,7 @@ export const UnorderedListItem: FC<PropsWithChildren> = ({ children }) => (
       <Typography
         display="flex"
         lineHeight={2}
-        textAlign={{ xs: 'center', md: 'left' }}
+        textAlign={{ md: 'left', xs: 'center' }}
         variant="body1"
       >
         • {children}

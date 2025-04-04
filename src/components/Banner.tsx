@@ -1,23 +1,24 @@
+'use client';
+
+import { MediaBlock, MediaBlockProps } from '@/components/MediaBlock';
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
-import { MediaBlock, MediaBlockProps } from '@/components/MediaBlock';
-
 type BannerProps = {
   headline: string;
-  sublineElement: ReactNode;
+  mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
   primaryCta?: ReactNode;
   secondaryCta?: ReactNode;
-  mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
+  sublineElement: ReactNode;
 };
 export const Banner: FC<BannerProps> = ({
   headline,
-  sublineElement,
+  mediaBlockOptions,
   primaryCta,
   secondaryCta,
-  mediaBlockOptions,
+  sublineElement,
 }) => (
-  <Box minHeight={{ xs: '100vh', md: 768, lg: 800 }} position="relative">
+  <Box minHeight={{ lg: 800, md: 768, xs: '100vh' }} position="relative">
     {mediaBlockOptions && <MediaBlock {...mediaBlockOptions} fullHeight />}
 
     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
@@ -36,10 +37,10 @@ export const Banner: FC<BannerProps> = ({
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          mb={{ xs: 'auto', md: 15, lg: 29 }}
+          mb={{ lg: 29, md: 15, xs: 'auto' }}
           md={6}
-          mt={{ xs: 'auto', md: 0 }}
-          textAlign={{ xs: 'center', md: 'left' }}
+          mt={{ md: 0, xs: 'auto' }}
+          textAlign={{ md: 'left', xs: 'center' }}
           xs={12}
           item
         >
@@ -54,15 +55,15 @@ export const Banner: FC<BannerProps> = ({
               color="white"
               component="div"
               dangerouslySetInnerHTML={{ __html: sublineElement ?? '' }}
-              mb={{ xs: 3, sm: 2 }}
-              mt={{ xs: 1, sm: 0.5 }}
+              mb={{ sm: 2, xs: 3 }}
+              mt={{ sm: 0.5, xs: 1 }}
               variant="body1"
             />
           )}
-          <Box display="flex" mt={{ xs: 3, md: 8 }}>
+          <Box display="flex" mt={{ md: 8, xs: 3 }}>
             <Grid
               alignItems="center"
-              justifyContent={{ xs: 'center', md: 'left' }}
+              justifyContent={{ md: 'left', xs: 'center' }}
               spacing={2}
               container
             >

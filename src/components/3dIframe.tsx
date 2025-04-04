@@ -1,3 +1,5 @@
+'use client';
+
 export const Iframe = ({ src }: { src: string }) => (
   <iframe
     allow="autoplay; fullscreen; xr-spatial-tracking"

@@ -1,33 +1,32 @@
 'use client';
 
-import { SkeletonVideo } from './SkeletonVideo';
-
 import { Box } from '@mui/material';
-import Image from 'next/image';
 import { FC } from 'react';
+
+import { SkeletonVideo } from './SkeletonVideo';
 
 export type MediaBlockProps = {
   assetUrl?: string;
   autoplay?: boolean;
-  fullHeight?: boolean;
-  objectFit?: 'contain' | 'cover';
   banner?: boolean;
   containerClassName?: string;
+  fullHeight?: boolean;
+  objectFit?: 'contain' | 'cover';
 };
 export const MediaBlock: FC<MediaBlockProps> = ({
   assetUrl,
   autoplay = true,
-  fullHeight = false,
-  objectFit = 'cover',
   banner = false,
   containerClassName,
+  fullHeight = false,
+  objectFit = 'cover',
 }) => {
   if (!assetUrl) return null;
   const classes = `w-full h-full md:min-h-[768px] lg:min-h-[800px] ${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${banner ? 'xs:min-h-[420px]' : 'xs:min-h-auto'}`;
 
   const height = fullHeight
     ? '100vh'
-    : { xs: banner ? 420 : 'auto', md: 768, lg: 800 };
+    : { lg: 800, md: 768, xs: banner ? 420 : 'auto' };
 
   const isVideo = ['mp4', 'mov', 'webm'].some((ext) => assetUrl.endsWith(ext));
 
@@ -45,12 +44,11 @@ export const MediaBlock: FC<MediaBlockProps> = ({
     </Box>
   ) : (
     <Box className={containerClassName} height={height}>
-      <Image
+      <img
         alt=""
         className={classes}
         height={1080}
         loading="lazy"
-        quality={80}
         src={assetUrl}
         width={1920}
       />

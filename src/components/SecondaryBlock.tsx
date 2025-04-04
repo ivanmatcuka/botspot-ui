@@ -1,19 +1,21 @@
+'use client';
+
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
 type SecondaryBlockProps = {
   headline?: ReactNode;
-  sublineElement?: ReactNode;
   primaryCta?: ReactNode;
   secondaryCta?: ReactNode;
+  sublineElement?: ReactNode;
 };
 export const SecondaryBlock: FC<SecondaryBlockProps> = ({
   headline,
-  sublineElement,
   primaryCta,
   secondaryCta,
+  sublineElement,
 }) => (
-  <Box textAlign={{ xs: 'center', md: 'left' }}>
+  <Box textAlign={{ md: 'left', xs: 'center' }}>
     <Typography variant="h2">{headline}</Typography>
     {isValidElement(sublineElement) ? (
       sublineElement
@@ -21,15 +23,15 @@ export const SecondaryBlock: FC<SecondaryBlockProps> = ({
       <Typography
         component="div"
         dangerouslySetInnerHTML={{ __html: sublineElement ?? '' }}
-        mb={{ xs: 3, sm: 2 }}
-        mt={{ xs: 1, sm: 0.5 }}
+        mb={{ sm: 2, xs: 3 }}
+        mt={{ sm: 0.5, xs: 1 }}
         variant="body1"
       />
     )}
     {(primaryCta || secondaryCta) && (
       <Box display="flex">
         <Grid
-          justifyContent={{ xs: 'center', md: 'left' }}
+          justifyContent={{ md: 'left', xs: 'center' }}
           spacing={2}
           container
         >

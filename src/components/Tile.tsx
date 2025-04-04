@@ -7,18 +7,18 @@ type TileProps = {
 };
 
 export const Tile: FC<PropsWithChildren<TileProps>> = ({
-  headline,
   children,
+  headline,
 }) => {
   return (
     <Container maxWidth="xl">
       <Grid
         className="border-t border-gray-700"
-        mb={{ xs: 3, md: 6 }}
+        mb={{ md: 6, xs: 3 }}
         md={10}
         mx="auto"
-        pt={{ xs: 3, md: 6 }}
-        textAlign={{ xs: 'center', md: 'left' }}
+        pt={{ md: 6, xs: 3 }}
+        textAlign={{ md: 'left', xs: 'center' }}
         xs={12}
         container
       >
