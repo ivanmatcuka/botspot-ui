@@ -8,13 +8,14 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['es', 'cjs', 'umd'],
+      formats: ['umd'],
       name: 'botspot-ui',
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: [
         'react',
+        'react-dom',
         'react/jsx-runtime',
         '@emotion/react',
         '@emotion/styled',
