@@ -1,12 +1,15 @@
 'use client';
 
 import { MenuItem } from '@/components/Menu/Menu';
+import * as Icons from '@mui/icons-material';
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
   styled,
 } from '@mui/material';
 import { FC } from 'react';
+
+export { Icons };
 
 const PrimaryButton = styled(({ ...props }: ButtonProps) => (
   <MuiButton color="primary" {...props} variant="contained" />
@@ -84,10 +87,8 @@ export type ButtonProps = {
   | 'disabled'
   | 'type'
   | 'component'
-  | 'onMouseOver'
   | 'className'
   | 'href'
-  | 'startIcon'
 >;
 export const Button: FC<ButtonProps> = ({ variant, ...rest }) => {
   const component = rest.component;
@@ -100,7 +101,7 @@ export const Button: FC<ButtonProps> = ({ variant, ...rest }) => {
 
   switch (variant) {
     case 'primary':
-      return <PrimaryButton {...props} />;
+      return <PrimaryButton {...props} target="" />;
     case 'secondary':
       return <SecondaryButton {...props} />;
     case 'outline':

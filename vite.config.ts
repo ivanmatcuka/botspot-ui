@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['umd'],
+      formats: ['es', 'cjs', 'umd'],
       name: 'botspot-ui',
       fileName: (format) => `index.${format}.js`,
     },

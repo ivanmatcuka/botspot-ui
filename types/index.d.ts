@@ -6,6 +6,7 @@ export { typography } from './theme/typography';
 export { Iframe } from './components/3dIframe';
 export { Banner } from './components/Banner';
 export { Button } from './components/Button';
+export { storybookMeta as buttonStorybookMeta } from './components/Button/meta';
 export { Button as StandaloneButton } from './components/Button/standalone';
 export { Dialog } from './components/Dialog';
 export { DownloadForm } from './components/DownloadForm';
