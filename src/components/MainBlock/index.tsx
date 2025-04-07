@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 import { Button, ButtonProps } from '../Button';
 
-type MainBlockProps = {
+export type MainBlockProps = {
   botomless?: boolean;
   headline?: string;
   mt?: GridProps['mt'];

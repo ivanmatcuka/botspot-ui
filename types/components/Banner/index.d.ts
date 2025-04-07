@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import { MediaBlockProps } from '../MediaBlock';
-type BannerProps = {
+export type BannerProps = {
     headline: string;
     mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
     sublineElement: ReactNode;
@@ -14,4 +14,3 @@ type BannerProps = {
     };
 };
 export declare const Banner: FC<BannerProps>;
-export {};

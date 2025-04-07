@@ -6,7 +6,7 @@ import { FC, isValidElement, ReactNode } from 'react';
 import { Button } from '../Button';
 import { MediaBlock, MediaBlockProps } from '../MediaBlock';
 
-type BannerProps = {
+export type BannerProps = {
   headline: string;
   mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
   sublineElement: ReactNode;

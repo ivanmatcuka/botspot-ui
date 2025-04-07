@@ -11,7 +11,6 @@ export { typography } from './theme/typography';
 export { Iframe } from './components/3dIframe';
 export { Banner } from './components/Banner';
 export { Button } from './components/Button';
-export { StandaloneButton } from './components/Button/standalone';
 export { Dialog } from './components/Dialog';
 export { DownloadForm } from './components/DownloadForm';
 export { Form } from './components/Form';
@@ -40,3 +39,8 @@ export { storybookMeta as bannerStorybookMeta } from './components/Banner/meta';
 export { storybookMeta as buttonStorybookMeta } from './components/Button/meta';
 export { storybookMeta as mainBlockStorybookMeta } from './components/MainBlock/meta';
 export { storybookMeta as mediaBlockStorybookMeta } from './components/MediaBlock/meta';
+
+export { StandaloneBanner } from './components/Banner/standalone';
+export { StandaloneButton } from './components/Button/standalone';
+export { StandaloneMainBlock } from './components/MainBlock/standalone';
+export { StandaloneMediaBlock } from './components/MediaBlock/standalone';

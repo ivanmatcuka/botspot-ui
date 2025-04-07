@@ -1,7 +1,7 @@
 import { GridProps } from '@mui/material';
 import { FC } from 'react';
 import { ButtonProps } from '../Button';
-type MainBlockProps = {
+export type MainBlockProps = {
     botomless?: boolean;
     headline?: string;
     mt?: GridProps['mt'];
@@ -14,4 +14,3 @@ type MainBlockProps = {
     };
 };
 export declare const MainBlock: FC<MainBlockProps>;
-export {};

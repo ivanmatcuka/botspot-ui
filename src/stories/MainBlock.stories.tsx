@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { MainBlock } from '../components/MainBlock';
+import { MainBlock, MainBlockProps } from '../components/MainBlock';
 
-const meta: Meta<typeof MainBlock> = {
+const meta: Meta<MainBlockProps> = {
   component: MainBlock,
   tags: ['autodocs'],
   title: 'botspot/MainBlock',

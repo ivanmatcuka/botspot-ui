@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Banner } from '../components/Banner';
+import { Banner, BannerProps } from '../components/Banner';
 
-const meta: Meta<typeof Banner> = {
+const meta: Meta<BannerProps> = {
   component: Banner,
   tags: ['autodocs'],
   title: 'botspot/Banner',
