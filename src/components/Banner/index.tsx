@@ -3,20 +3,27 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
-import { MediaBlock, MediaBlockProps } from './MediaBlock';
+import { Button } from '../Button';
+import { MediaBlock, MediaBlockProps } from '../MediaBlock';
 
 type BannerProps = {
   headline: string;
   mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
-  primaryCta?: ReactNode;
-  secondaryCta?: ReactNode;
   sublineElement: ReactNode;
+  primary?: {
+    href: string;
+    value: string;
+  };
+  secondary?: {
+    href: string;
+    value: string;
+  };
 };
 export const Banner: FC<BannerProps> = ({
   headline,
   mediaBlockOptions,
-  primaryCta,
-  secondaryCta,
+  primary,
+  secondary,
   sublineElement,
 }) => (
   <Box minHeight={{ lg: 800, md: 768, xs: '100vh' }} position="relative">
@@ -69,10 +76,18 @@ export const Banner: FC<BannerProps> = ({
               container
             >
               <Grid md="auto" xs={12} item>
-                {primaryCta}
+                {primary && (
+                  <Button href={primary.href} variant="primary">
+                    {primary.value}
+                  </Button>
+                )}
               </Grid>
               <Grid md="auto" xs={12} item>
-                {secondaryCta}
+                {secondary && (
+                  <Button href={secondary.href} variant="secondary">
+                    {secondary.value}
+                  </Button>
+                )}
               </Grid>
             </Grid>
           </Box>
