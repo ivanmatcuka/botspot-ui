@@ -1,6 +1,6 @@
 {
   "name": "@botspot/ui",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "",
   "homepage": "https://github.com/ivanmatcuka/botspot-ui#readme",
   "bugs": {
@@ -27,6 +27,10 @@
       "types": "./types/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
+    },
+    "./dist/css": {
+      "import": "./dist/index.css",
+      "require": "./dist/index.css"
     }
   },
   "devDependencies": {
