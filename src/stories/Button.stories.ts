@@ -1,21 +1,28 @@
-import type { ButtonProps } from '@/components/Button'; // adjust import to match location
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@/components/Button/standalone';
+import type { ButtonProps } from '../components/Button';
+
+import { Button } from '../components/Button';
 
 const meta: Meta<ButtonProps> = {
   component: Button,
   tags: ['autodocs'],
-  title: 'Example/Button',
+  title: 'botspot/Button',
   args: {
     children: 'Button',
+    className: 'css-classes',
     disabled: false,
-    prefetch: false,
+    href: '#',
+    target: '_blank',
+    type: 'button',
     variant: 'primary',
   },
   argTypes: {
     className: {
       control: 'text',
+    },
+    disabled: {
+      control: 'boolean',
     },
     href: {
       control: 'text',
@@ -43,15 +50,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    children: 'Primary Button',
-    variant: 'primary',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    children: 'Secondary Button',
-    variant: 'secondary',
-  },
+  args: {},
 };

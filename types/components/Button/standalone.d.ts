@@ -1,3 +1,3 @@
 import { FC } from 'react';
 import { ButtonProps } from '.';
-export declare const Button: FC<ButtonProps>;
+export declare const StandaloneButton: FC<ButtonProps>;

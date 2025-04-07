@@ -1,7 +1,5 @@
 'use client';
 
-import { Button } from '@/components/Button';
-import { Menu } from '@/components/Menu/Menu';
 import {
   Box,
   Checkbox,
@@ -13,7 +11,9 @@ import {
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { Button } from './Button';
 import { Input } from './Form';
+import { Menu } from './Menu/Menu';
 
 export const FORM_ID = 15422;
 

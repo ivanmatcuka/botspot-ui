@@ -1,6 +1,5 @@
 'use client';
 
-import { MenuItem } from '@/components/Menu/Menu';
 import * as Icons from '@mui/icons-material';
 import {
   Button as MuiButton,
@@ -8,6 +7,8 @@ import {
   styled,
 } from '@mui/material';
 import { FC } from 'react';
+
+import { MenuItem } from '../Menu/Menu';
 
 export { Icons };
 

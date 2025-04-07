@@ -1,6 +1,5 @@
 'use client';
 
-import { ButtonProps } from '@/components/Button';
 import {
   MenuItem as MuiMenuItem,
   MenuItemProps as MuiMenuItemProps,
@@ -11,6 +10,7 @@ import {
 import { usePopupState } from 'material-ui-popup-state/hooks';
 import { FC, PropsWithChildren } from 'react';
 
+import { ButtonProps } from '../../components/Button';
 import { CustomHoverMenu } from './HoverMenu';
 import { MobileMenu } from './MobileMenu';
 

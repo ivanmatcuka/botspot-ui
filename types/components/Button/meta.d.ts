@@ -1,2 +1,1 @@
-import { meta } from '../../stories/Button.stories';
-export { meta as storybookMeta };
+export { default as storybookMeta } from '../../stories/Button.stories';

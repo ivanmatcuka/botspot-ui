@@ -1,7 +1,7 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 export const typography: TypographyOptions = {
-  // fontFamily: roboto.style.fontFamily,
+  fontFamily: 'Poppins',
   body1: {
     fontSize: 16,
     lineHeight: 1.4,

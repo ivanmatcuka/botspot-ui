@@ -1,5 +1,5 @@
-import { MediaBlockProps } from '@/components/MediaBlock';
 import { FC, ReactNode } from 'react';
+import { MediaBlockProps } from './MediaBlock';
 type BannerProps = {
     headline: string;
     mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;

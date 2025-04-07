@@ -3,7 +3,7 @@
 import { Box } from '@mui/material';
 import { FC } from 'react';
 
-import { SkeletonVideo } from './SkeletonVideo';
+import { SkeletonVideo } from '../SkeletonVideo';
 
 export type MediaBlockProps = {
   assetUrl?: string;

@@ -1,8 +1,9 @@
 'use client';
 
-import { MediaBlock, MediaBlockProps } from '@/components/MediaBlock';
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
+
+import { MediaBlock, MediaBlockProps } from './MediaBlock';
 
 type BannerProps = {
   headline: string;

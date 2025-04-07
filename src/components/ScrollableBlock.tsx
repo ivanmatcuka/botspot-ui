@@ -1,9 +1,9 @@
 'use client';
 
-import { PageContainer } from '@/components/PageContainer';
 import { Box } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
+import { PageContainer } from '../components/PageContainer';
 import { ScrollableVideo } from './ScrollableVideo';
 
 type ScrollableBlockProps = {

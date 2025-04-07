@@ -1,11 +1,11 @@
 'use client';
 
-import ThemeRegistry from '@/theme/ThemeRegistry';
 import { FC } from 'react';
 
-import { ButtonProps } from '.';
+import { Button, ButtonProps } from '.';
+import ThemeRegistry from '../../theme/ThemeRegistry';
 
-export const Button: FC<ButtonProps> = (props) => (
+export const StandaloneButton: FC<ButtonProps> = (props) => (
   <ThemeRegistry>
     <Button {...props} />
   </ThemeRegistry>
