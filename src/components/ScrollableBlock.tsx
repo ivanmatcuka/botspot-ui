@@ -3,7 +3,7 @@
 import { Box } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
-import { PageContainer } from '../components/PageContainer';
+import { PageContainer } from './PageContainer';
 import { ScrollableVideo } from './ScrollableVideo';
 
 type ScrollableBlockProps = {

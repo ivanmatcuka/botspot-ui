@@ -76,7 +76,6 @@ const MenuItemButton = styled(({ ...props }: ButtonProps) => (
 }));
 
 export type ButtonProps = {
-  prefetch?: boolean;
   target?: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'menu' | 'menuItem' | 'topic';
 } & Pick<
@@ -85,6 +84,7 @@ export type ButtonProps = {
   | 'onClick'
   | 'children'
   | 'endIcon'
+  | 'startIcon'
   | 'disabled'
   | 'type'
   | 'component'
@@ -93,11 +93,9 @@ export type ButtonProps = {
 >;
 export const Button: FC<ButtonProps> = ({ variant, ...rest }) => {
   const component = rest.component;
-  const prefetch = rest.href ? false : rest.prefetch;
   const props = {
     ...rest,
     component,
-    prefetch,
   };
 
   switch (variant) {

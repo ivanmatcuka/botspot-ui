@@ -39,6 +39,7 @@ export { storybookMeta as bannerStorybookMeta } from './components/Banner/meta';
 export { storybookMeta as buttonStorybookMeta } from './components/Button/meta';
 export { storybookMeta as mainBlockStorybookMeta } from './components/MainBlock/meta';
 export { storybookMeta as mediaBlockStorybookMeta } from './components/MediaBlock/meta';
+export { storybookMeta as pageContainerBlockStorybookMeta } from './components/PageContainer/meta';
 
 export { StandaloneBanner } from './components/Banner/standalone';
 export { StandaloneButton } from './components/Button/standalone';

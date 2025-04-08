@@ -1,10 +1,11 @@
 'use client';
 
 import { Container, Grid, GridProps } from '@mui/material';
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
-type PageContainerProps = {
+export type PageContainerProps = {
   banner?: boolean;
+  children: ReactNode;
 } & Pick<GridProps, 'mb' | 'mt' | 'mx' | 'my' | 'm' | 'id'>;
 export const PageContainer: FC<PropsWithChildren<PageContainerProps>> = ({
   banner = false,
