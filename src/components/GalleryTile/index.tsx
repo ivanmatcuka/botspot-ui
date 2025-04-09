@@ -1,11 +1,12 @@
 'use client';
 
 import { Box, Grid } from '@mui/material';
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
-type GalleryTileProps = {
+export type GalleryTileProps = {
   alt?: string;
   bgColor?: string;
+  children?: ReactNode;
   imgUrl: string;
 };
 export const GalleryTile: FC<PropsWithChildren<GalleryTileProps>> = ({

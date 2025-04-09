@@ -1,6 +1,6 @@
 {
   "name": "@botspot/ui",
-  "version": "1.0.54",
+  "version": "1.0.65",
   "description": "",
   "homepage": "https://github.com/ivanmatcuka/botspot-ui#readme",
   "bugs": {
@@ -12,7 +12,6 @@
   },
   "license": "ISC",
   "author": "Ivan Matcuka",
-  "type": "module",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,6 +24,21 @@
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./standalone": {
+      "types": "./types/standalone.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./theme": {
+      "types": "./types/theme.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./storybook": {
+      "types": "./types/storybook.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },

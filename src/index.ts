@@ -1,11 +1,7 @@
-import '../globals.scss';
-
-// Theme
-export { theme } from './theme';
-export { getComponents } from './theme/components';
-export { palette } from './theme/palette';
-export { default as ThemeRegistry } from './theme/ThemeRegistry';
-export { typography } from './theme/typography';
+export * from '../globals.scss';
+export * from './standalone';
+export * from './storybook';
+export * from './theme';
 
 // Components
 export { Iframe } from './components/3dIframe';
@@ -34,14 +30,3 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { Tile } from './components/Tile';
 export { UnorderedList } from './components/UnorderedList';
 export { UnorderedListItem } from './components/UnorderedListItem';
-
-export { storybookMeta as bannerStorybookMeta } from './components/Banner/meta';
-export { storybookMeta as buttonStorybookMeta } from './components/Button/meta';
-export { storybookMeta as mainBlockStorybookMeta } from './components/MainBlock/meta';
-export { storybookMeta as mediaBlockStorybookMeta } from './components/MediaBlock/meta';
-export { storybookMeta as pageContainerBlockStorybookMeta } from './components/PageContainer/meta';
-
-export { StandaloneBanner } from './components/Banner/standalone';
-export { StandaloneButton } from './components/Button/standalone';
-export { StandaloneMainBlock } from './components/MainBlock/standalone';
-export { StandaloneMediaBlock } from './components/MediaBlock/standalone';

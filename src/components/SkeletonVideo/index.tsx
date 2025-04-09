@@ -4,7 +4,7 @@ import { Skeleton } from '@mui/material';
 import { FC, MediaHTMLAttributes, useEffect, useRef } from 'react';
 import { useInViewport } from 'react-in-viewport';
 
-type SkeletonVideoProps = {
+export type SkeletonVideoProps = {
   videoSrc: string;
 } & MediaHTMLAttributes<HTMLVideoElement>;
 export const SkeletonVideo: FC<SkeletonVideoProps> = ({
@@ -29,8 +29,8 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   return (
     <div className={`relative ${className}`}>
       <Skeleton
-        className={`absolute inset-0`}
-        height={'100%'}
+        className="absolute inset-0"
+        height="100%"
         variant="rectangular"
       />
       <video

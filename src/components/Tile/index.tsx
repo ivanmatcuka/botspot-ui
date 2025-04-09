@@ -1,15 +1,13 @@
 'use client';
 
 import { Container, Grid, Typography } from '@mui/material';
-import { FC, PropsWithChildren } from 'react';
-type TileProps = {
+import { FC, ReactNode } from 'react';
+
+export type TileProps = {
+  children?: ReactNode;
   headline: string;
 };
-
-export const Tile: FC<PropsWithChildren<TileProps>> = ({
-  children,
-  headline,
-}) => {
+export const Tile: FC<TileProps> = ({ children, headline }) => {
   return (
     <Container maxWidth="xl">
       <Grid

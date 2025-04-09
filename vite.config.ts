@@ -3,6 +3,8 @@ import path from 'path';
 import preserveDirectives from 'rollup-preserve-directives';
 import { defineConfig } from 'vite';
 
+const subModules = ['index', 'theme', 'storybook', 'standalone'];
+
 export default defineConfig({
   plugins: [react(), preserveDirectives()],
   build: {
@@ -10,7 +12,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs', 'umd'],
       name: 'botspot-ui',
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: [
