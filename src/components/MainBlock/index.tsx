@@ -13,8 +13,8 @@ export type MainBlockProps = {
   subline?: string;
   cta?: {
     href?: string;
-    value: string;
-    variant: ButtonProps['variant'];
+    value?: string;
+    variant?: ButtonProps['variant'];
   };
 };
 export const MainBlock: FC<MainBlockProps> = ({
@@ -27,10 +27,10 @@ export const MainBlock: FC<MainBlockProps> = ({
     <Typography mb={2} variant="body1">
       {subline}
     </Typography>
-    <Typography mb={cta ? 4 : 0} variant="h2">
+    <Typography mb={cta?.value ? 4 : 0} variant="h2">
       {headline}
     </Typography>
-    {cta && (
+    {cta?.value && (
       <Button href={cta.href} variant={cta.variant}>
         {cta.value}
       </Button>

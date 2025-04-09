@@ -9,8 +9,8 @@ export type MainBlockProps = {
     subline?: string;
     cta?: {
         href?: string;
-        value: string;
-        variant: ButtonProps['variant'];
+        value?: string;
+        variant?: ButtonProps['variant'];
     };
 };
 export declare const MainBlock: FC<MainBlockProps>;

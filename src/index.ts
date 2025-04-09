@@ -30,3 +30,14 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { Tile } from './components/Tile';
 export { UnorderedList } from './components/UnorderedList';
 export { UnorderedListItem } from './components/UnorderedListItem';
+
+// MUI
+export {
+  Box,
+  Container,
+  Grid,
+  InputLabel,
+  Paper,
+  TextField,
+  Typography,
+} from '@mui/material';

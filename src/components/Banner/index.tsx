@@ -11,12 +11,12 @@ export type BannerProps = {
   mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
   sublineElement: ReactNode;
   primary?: {
-    href: string;
+    href?: string;
     value: string;
   };
   secondary?: {
-    href: string;
-    value: string;
+    href?: string;
+    value?: string;
   };
 };
 export const Banner: FC<BannerProps> = ({
@@ -76,14 +76,14 @@ export const Banner: FC<BannerProps> = ({
               container
             >
               <Grid md="auto" xs={12} item>
-                {primary && (
+                {primary?.value && (
                   <Button href={primary.href} variant="primary">
                     {primary.value}
                   </Button>
                 )}
               </Grid>
               <Grid md="auto" xs={12} item>
-                {secondary && (
+                {secondary?.value && (
                   <Button href={secondary.href} variant="secondary">
                     {secondary.value}
                   </Button>

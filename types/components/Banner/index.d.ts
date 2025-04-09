@@ -5,12 +5,12 @@ export type BannerProps = {
     mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
     sublineElement: ReactNode;
     primary?: {
-        href: string;
+        href?: string;
         value: string;
     };
     secondary?: {
-        href: string;
-        value: string;
+        href?: string;
+        value?: string;
     };
 };
 export declare const Banner: FC<BannerProps>;
