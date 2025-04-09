@@ -18,6 +18,9 @@ const meta: Meta<ButtonProps> = {
     variant: 'primary',
   },
   argTypes: {
+    children: {
+      control: 'text',
+    },
     className: {
       control: 'text',
     },

@@ -13,6 +13,22 @@ const meta: Meta<SkeletonVideoProps> = {
       'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
   },
   argTypes: {
+    autoPlay: {
+      control: 'boolean',
+      description: 'If true, video plays when in viewport',
+    },
+    className: {
+      control: 'text',
+      description: 'Optional class names for styling',
+    },
+    loop: {
+      control: 'boolean',
+      description: 'If true, video loops after ending',
+    },
+    muted: {
+      control: 'boolean',
+      description: 'If true, video starts muted',
+    },
     videoSrc: {
       control: 'text',
       description: 'URL of the video to be played',

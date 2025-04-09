@@ -1,7 +1,7 @@
 'use client';
 
 import { Skeleton } from '@mui/material';
-import { FC, MediaHTMLAttributes, useEffect, useRef } from 'react';
+import { FC, MediaHTMLAttributes, useEffect, useRef, useState } from 'react';
 import { useInViewport } from 'react-in-viewport';
 
 export type SkeletonVideoProps = {
@@ -15,6 +15,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
 }: SkeletonVideoProps) => {
   const video = useRef<HTMLVideoElement>(null);
   const { inViewport } = useInViewport(video);
+  const [isLoaded, setIsloaded] = useState(false);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -28,13 +29,16 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
 
   return (
     <div className={`relative ${className}`}>
-      <Skeleton
-        className="absolute inset-0"
-        height="100%"
-        variant="rectangular"
-      />
+      {!isLoaded && (
+        <Skeleton
+          className={`absolute inset-0`}
+          height={'100%'}
+          variant="rectangular"
+        />
+      )}
       <video
         className={`w-full h-full relative ${className}`}
+        onLoad={() => setIsloaded(true)}
         preload="none"
         ref={video}
         src={videoSrc}

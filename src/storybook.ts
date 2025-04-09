@@ -5,5 +5,6 @@ export { storybookMeta as galleryTileBlockStorybookMeta } from './components/Gal
 export { storybookMeta as mainBlockStorybookMeta } from './components/MainBlock/meta';
 export { storybookMeta as mediaBlockStorybookMeta } from './components/MediaBlock/meta';
 export { storybookMeta as pageContainerBlockStorybookMeta } from './components/PageContainer/meta';
+export { storybookMeta as secondaryBlockStorybookMeta } from './components/SecondaryBlock/meta';
 export { storybookMeta as skeletonVideoStorybookMeta } from './components/SkeletonVideo/meta';
 export { storybookMeta as tileStorybookMeta } from './components/Tile/meta';

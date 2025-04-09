@@ -3,16 +3,24 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
-type SecondaryBlockProps = {
+import { Button } from '../Button';
+
+export type SecondaryBlockProps = {
   headline?: ReactNode;
-  primaryCta?: ReactNode;
-  secondaryCta?: ReactNode;
   sublineElement?: ReactNode;
+  primary?: {
+    href: string;
+    value: string;
+  };
+  secondary?: {
+    href: string;
+    value: string;
+  };
 };
 export const SecondaryBlock: FC<SecondaryBlockProps> = ({
   headline,
-  primaryCta,
-  secondaryCta,
+  primary,
+  secondary,
   sublineElement,
 }) => (
   <Box textAlign={{ md: 'left', xs: 'center' }}>
@@ -28,15 +36,29 @@ export const SecondaryBlock: FC<SecondaryBlockProps> = ({
         variant="body1"
       />
     )}
-    {(primaryCta || secondaryCta) && (
+    {(primary || secondary) && (
       <Box display="flex">
         <Grid
           justifyContent={{ md: 'left', xs: 'center' }}
           spacing={2}
           container
         >
-          {primaryCta && <Grid item>{primaryCta}</Grid>}
-          {secondaryCta && <Grid item>{secondaryCta}</Grid>}
+          {primary && (
+            <Grid item>
+              <Button href={primary.href} variant="primary">
+                {primary.value}
+              </Button>
+            </Grid>
+          )}
+          {secondary && (
+            <Grid item>
+              <Grid item>
+                <Button href={secondary.href} variant="secondary">
+                  {secondary.value}
+                </Button>
+              </Grid>
+            </Grid>
+          )}
         </Grid>
       </Box>
     )}

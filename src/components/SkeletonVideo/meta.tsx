@@ -1,1 +1,1 @@
-export { default as storybookMeta } from '../../stories/Button.stories';
+export { default as storybookMeta } from '../../stories/SkeletonVideo.stories';
