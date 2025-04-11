@@ -2,15 +2,8 @@ import { FC, ReactNode } from 'react';
 import { MediaBlockProps } from '../MediaBlock';
 export type BannerProps = {
     headline: string;
+    children?: ReactNode;
     mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
     sublineElement: ReactNode;
-    primary?: {
-        href?: string;
-        value: string;
-    };
-    secondary?: {
-        href?: string;
-        value?: string;
-    };
 };
 export declare const Banner: FC<BannerProps>;

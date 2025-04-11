@@ -1,16 +1,11 @@
 import { GridProps } from '@mui/material';
-import { FC } from 'react';
-import { ButtonProps } from '../Button';
+import { FC, ReactNode } from 'react';
 export type MainBlockProps = {
     botomless?: boolean;
     headline?: string;
     mt?: GridProps['mt'];
     subAssetUrl?: string;
     subline?: string;
-    cta?: {
-        href?: string;
-        value?: string;
-        variant?: ButtonProps['variant'];
-    };
+    children?: ReactNode;
 };
 export declare const MainBlock: FC<MainBlockProps>;
