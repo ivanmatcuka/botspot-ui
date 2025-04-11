@@ -3,27 +3,18 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
-import { Button } from '../Button';
 import { MediaBlock, MediaBlockProps } from '../MediaBlock';
 
 export type BannerProps = {
   headline: string;
+  children?: ReactNode;
   mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
   sublineElement: ReactNode;
-  primary?: {
-    href?: string;
-    value: string;
-  };
-  secondary?: {
-    href?: string;
-    value?: string;
-  };
 };
 export const Banner: FC<BannerProps> = ({
   headline,
   mediaBlockOptions,
-  primary,
-  secondary,
+  children,
   sublineElement,
 }) => (
   <Box minHeight={{ lg: 800, md: 768, xs: '100vh' }} position="relative">
@@ -68,29 +59,17 @@ export const Banner: FC<BannerProps> = ({
               variant="body1"
             />
           )}
-          <Box display="flex" mt={{ md: 8, xs: 3 }}>
-            <Grid
+          {children && (
+            <Box
+              display="flex"
               alignItems="center"
               justifyContent={{ md: 'left', xs: 'center' }}
-              spacing={2}
-              container
+              gap={2}
+              mt={{ md: 8, xs: 3 }}
             >
-              <Grid md="auto" xs={12} item>
-                {primary?.value && (
-                  <Button href={primary.href} variant="primary">
-                    {primary.value}
-                  </Button>
-                )}
-              </Grid>
-              <Grid md="auto" xs={12} item>
-                {secondary?.value && (
-                  <Button href={secondary.href} variant="secondary">
-                    {secondary.value}
-                  </Button>
-                )}
-              </Grid>
-            </Grid>
-          </Box>
+              {children}
+            </Box>
+          )}
         </Grid>
         <Grid md={1} xs={0} />
       </Grid>

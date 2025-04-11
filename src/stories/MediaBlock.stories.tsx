@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import type { MediaBlockProps } from '../components/MediaBlock';
-
 import { MediaBlock } from '../components/MediaBlock';
 
 const meta: Meta<MediaBlockProps> = {
@@ -9,9 +8,6 @@ const meta: Meta<MediaBlockProps> = {
   tags: ['autodocs'],
   title: 'botspot/MediaBlock',
   args: {
-    autoplay: true,
-    banner: false,
-    containerClassName: '',
     fullHeight: false,
     objectFit: 'cover',
     assetUrl:
@@ -21,14 +17,6 @@ const meta: Meta<MediaBlockProps> = {
     assetUrl: {
       control: 'text',
       description: 'URL of the asset (image/video)',
-    },
-    autoplay: {
-      control: 'boolean',
-      description: 'Autoplay video if true',
-    },
-    banner: {
-      control: 'boolean',
-      description: 'Whether it is a banner-style media',
     },
     fullHeight: {
       control: 'boolean',
@@ -50,10 +38,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const VideoExample: Story = {
-  args: {
-    autoplay: true,
-    banner: false,
-    fullHeight: false,
-    objectFit: 'cover',
-  },
+  args: {},
 };

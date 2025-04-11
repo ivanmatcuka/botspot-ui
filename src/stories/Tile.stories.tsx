@@ -7,6 +7,7 @@ import { Tile, TileProps } from '../components/Tile';
 
 const meta: Meta<TileProps> = {
   component: Tile,
+  tags: ['autodocs'],
   title: 'botspot/Tile',
   args: {
     headline: 'Engaging Headline',

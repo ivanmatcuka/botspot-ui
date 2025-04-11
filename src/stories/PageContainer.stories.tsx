@@ -26,9 +26,6 @@ const meta: Meta<PageContainerProps> = {
       control: 'boolean',
       description: 'Adjusts layout and grid width for banner-like appearance',
     },
-    children: {
-      control: 'text',
-    },
     mb: {
       control: 'object',
       description: 'Bottom margin values (responsive)',

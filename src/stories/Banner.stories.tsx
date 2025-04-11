@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Banner, BannerProps } from '../components/Banner';
+import { Button } from '../components/Button';
 
 const meta: Meta<BannerProps> = {
   component: Banner,
@@ -15,14 +16,16 @@ const meta: Meta<BannerProps> = {
       assetUrl:
         'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
     },
-    primary: {
-      href: '#',
-      value: 'Primary CTA',
-    },
-    secondary: {
-      href: '#',
-      value: 'Secondary CTA',
-    },
+    children: (
+      <>
+        <Button href="#" variant="primary">
+          Primary CTA
+        </Button>
+        <Button href="#" variant="secondary">
+          Secondary CTA
+        </Button>
+      </>
+    ),
     sublineElement:
       'This is a sample subline. <strong>HTML content</strong> is allowed.',
   },
@@ -35,14 +38,7 @@ const meta: Meta<BannerProps> = {
       control: 'object',
       description: 'Options for the media block (video or image)',
     },
-    primary: {
-      control: 'object',
-      description: 'Primary call-to-action button or element',
-    },
-    secondary: {
-      control: 'object',
-      description: 'Secondary call-to-action button or element',
-    },
+    children: {},
     sublineElement: {
       control: 'text',
       description: 'Subline content, can accept HTML',
@@ -58,16 +54,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    headline: 'Welcome to Our Service',
-    mediaBlockOptions: {
-      autoplay: true,
-      banner: true,
-      objectFit: 'cover',
-      assetUrl:
-        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    },
-    sublineElement:
-      'Discover amazing features with <strong>our platform</strong>',
-  },
+  args: {},
 };

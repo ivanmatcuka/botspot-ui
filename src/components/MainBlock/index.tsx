@@ -1,9 +1,7 @@
 'use client';
 
 import { Box, GridProps, Typography } from '@mui/material';
-import { FC } from 'react';
-
-import { Button, ButtonProps } from '../Button';
+import { FC, ReactNode } from 'react';
 
 export type MainBlockProps = {
   botomless?: boolean;
@@ -11,14 +9,10 @@ export type MainBlockProps = {
   mt?: GridProps['mt'];
   subAssetUrl?: string;
   subline?: string;
-  cta?: {
-    href?: string;
-    value?: string;
-    variant?: ButtonProps['variant'];
-  };
+  children?: ReactNode;
 };
 export const MainBlock: FC<MainBlockProps> = ({
-  cta,
+  children,
   headline,
   subAssetUrl,
   subline,
@@ -27,14 +21,10 @@ export const MainBlock: FC<MainBlockProps> = ({
     <Typography mb={2} variant="body1">
       {subline}
     </Typography>
-    <Typography mb={cta?.value ? 4 : 0} variant="h2">
+    <Typography mb={children ? 4 : 0} variant="h2">
       {headline}
     </Typography>
-    {cta?.value && (
-      <Button href={cta.href} variant={cta.variant}>
-        {cta.value}
-      </Button>
-    )}
+    {children}
     {subAssetUrl && (
       <img
         alt=""

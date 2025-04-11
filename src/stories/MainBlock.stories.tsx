@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Button } from '../components/Button';
 import { MainBlock, MainBlockProps } from '../components/MainBlock';
 
 const meta: Meta<MainBlockProps> = {
@@ -9,19 +10,15 @@ const meta: Meta<MainBlockProps> = {
   args: {
     headline: 'Welcome to MainBlock',
     subline: 'Experience the best with our <strong>exclusive features</strong>',
-    cta: {
-      href: '#',
-      value: 'Get Started',
-      variant: 'primary',
-    },
+    children: (
+      <Button href="#" variant="primary">
+        Get Started
+      </Button>
+    ),
     subAssetUrl:
       'https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU',
   },
   argTypes: {
-    cta: {
-      control: 'object',
-      description: 'Call to action button configuration',
-    },
     headline: {
       control: 'text',
       description: 'Main headline text',

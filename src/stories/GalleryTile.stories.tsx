@@ -7,6 +7,7 @@ import { GalleryTile, GalleryTileProps } from '../components/GalleryTile/index';
 
 const meta: Meta<GalleryTileProps> = {
   component: GalleryTile,
+  tags: ['autodocs'],
   title: 'botspot/GalleryTile',
   args: {
     alt: 'Placeholder image',
