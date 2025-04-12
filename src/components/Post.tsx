@@ -3,7 +3,7 @@
 import { Box, Typography } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
-type PostProps = PropsWithChildren<{
+export type PostProps = PropsWithChildren<{
   excerpt?: string;
   featuredImage?: string;
   objectFit?: 'cover' | 'contain';

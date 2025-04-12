@@ -21,7 +21,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "rootDir": "./src"
   },
   "include": ["src", "globals.d.ts"],
   "exclude": ["node_modules", "dist", "types"]

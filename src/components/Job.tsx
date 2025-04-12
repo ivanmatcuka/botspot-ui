@@ -7,7 +7,7 @@ import { FC } from 'react';
 import { Button } from './Button';
 import { Tile } from './Tile';
 
-type JobProps = {
+export type JobProps = {
   excerpt: string;
   id: number;
   title: string;
