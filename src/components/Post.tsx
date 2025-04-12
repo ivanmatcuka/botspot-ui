@@ -1,18 +1,17 @@
 'use client';
 
 import { Box, Typography } from '@mui/material';
-import { FC, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
-type PostProps = {
-  cta?: ReactNode;
+type PostProps = PropsWithChildren<{
   excerpt?: string;
   featuredImage?: string;
   objectFit?: 'cover' | 'contain';
   title: string;
-};
+}>;
 
 export const Post: FC<PostProps> = ({
-  cta,
+  children,
   excerpt,
   featuredImage,
   objectFit = 'cover',
@@ -47,7 +46,7 @@ export const Post: FC<PostProps> = ({
           variant="body1"
         />
       )}
-      {cta}
+      {children}
     </Box>
     {featuredImage && (
       <img

@@ -1,5 +1,6 @@
 export { StandaloneBanner } from './components/Banner/standalone';
 export { StandaloneButton } from './components/Button/standalone';
+export { StandaloneGallery } from './components/Gallery/standalone';
 export { StandaloneGalleryTile } from './components/GalleryTile/standalone';
 export { StandaloneMainBlock } from './components/MainBlock/standalone';
 export { StandaloneMediaBlock } from './components/MediaBlock/standalone';
