@@ -1,4 +1,5 @@
 import { WP_REST_API_Attachment, WP_REST_API_Post } from 'wp-types';
+
 interface Sizes {
   [size: string]: {
     source_url: string;

@@ -6,6 +6,7 @@ export { StandaloneJobs } from './components/Jobs/standalone';
 export { StandaloneMainBlock } from './components/MainBlock/standalone';
 export { StandaloneMediaBlock } from './components/MediaBlock/standalone';
 export { StandalonePageContainer } from './components/PageContainer/standalone';
+export { StandalonePeople } from './components/People/standalone';
 export { StandalonePosts } from './components/Posts/standalone';
 export { StandaloneSecondaryBlock } from './components/SecondaryBlock/standalone';
 export { StandaloneSkeletonVideo } from './components/SkeletonVideo/standalone';

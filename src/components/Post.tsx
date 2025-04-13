@@ -31,8 +31,7 @@ export const Post: FC<PostProps> = ({
       p={2}
     >
       <Typography
-        color="white"
-        className="line-clamp-2"
+        className="line-clamp-2 !text-white"
         component="h3"
         dangerouslySetInnerHTML={{ __html: title ?? '' }}
         mb={excerpt ? 0 : 1}
