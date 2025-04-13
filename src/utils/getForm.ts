@@ -17,9 +17,9 @@ type ApiResponse = {
   status: number;
 };
 
-const customFormsUrl = '/botspot/v1/forms';
+const customFormsUrl = '/wp-json/botspot/v1/forms';
 
-export const getForm = async (formId?: number): Promise<ApiResponse | null> => {
+export const getForm = async (formId: number): Promise<ApiResponse | null> => {
   try {
     const response = await fetch(`${customFormsUrl}/${formId}`, {
       method: 'GET',

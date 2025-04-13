@@ -1,7 +1,7 @@
-import { Job } from '@botspot/ui';
 import { Box } from '@mui/material';
 import { FC } from 'react';
 import type { WP_REST_API_Post } from 'wp-types';
+import { Job } from '../Job';
 
 export type JobsProps = {
   jobs: Pick<WP_REST_API_Post, 'excerpt' | 'id' | 'title'>[];

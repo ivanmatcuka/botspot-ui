@@ -15,5 +15,5 @@ type ApiResponse = {
     fields: Field[];
     status: number;
 };
-export declare const getForm: (formId?: number) => Promise<ApiResponse | null>;
+export declare const getForm: (formId: number) => Promise<ApiResponse | null>;
 export {};

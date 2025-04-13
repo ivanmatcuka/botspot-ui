@@ -10,7 +10,7 @@ import { Input } from '../Input';
 import { useSnackbar } from '../Snackbar';
 
 export type DynamicFormProps = PropsWithChildren<{
-  formId: number;
+  formId?: number;
   frameless?: boolean;
   secondary?: boolean;
   submitForm: (formData: FormData, formId: number) => Promise<void>;
@@ -34,10 +34,14 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   } = useForm();
 
   useEffect(() => {
+    if (!formId) return;
+
     getForm(formId).then((form) => setFields(form?.fields ?? []));
   }, [formId]);
 
   const onSubmit = useCallback(() => {
+    if (!formId) return;
+
     setIsLoading(true);
     const newFormData = new FormData();
 
@@ -79,7 +83,9 @@ export const DynamicForm: FC<DynamicFormProps> = ({
     );
   };
 
-  const content = <>{fields.map((field) => renderField(field))}</>;
+  const content = (
+    <Box width="100%">{fields.map((field) => renderField(field))}</Box>
+  );
 
   if (frameless) return content;
 

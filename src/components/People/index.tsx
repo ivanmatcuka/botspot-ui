@@ -1,7 +1,8 @@
-import { Grid, Post } from '@botspot/ui';
+import { Grid } from '@mui/material';
 import { FC } from 'react';
 import { WP_REST_API_Post } from 'wp-types';
 import { getFeaturedImageUrl } from '../../utils/getFeaturedImageUrl';
+import { Post } from '../Post';
 
 export type PeopleProps = {
   people: WP_REST_API_Post[];

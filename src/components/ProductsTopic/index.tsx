@@ -1,8 +1,8 @@
 'use client';
 
-import { Menu } from '@botspot/ui';
 import { Box, Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 import { FC, useEffect } from 'react';
+import { Menu } from '../Menu/Menu';
 
 export type ProductsTopicProps = {
   productNames: string[];

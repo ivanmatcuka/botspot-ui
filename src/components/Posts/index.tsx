@@ -1,11 +1,14 @@
 'use client';
 
-import { Button, LoadingSkeletons, Pagination, Post } from '@botspot/ui';
 import { Grid } from '@mui/material';
 import { FC } from 'react';
 
 import { WP_REST_API_Post } from 'wp-types';
 import { getFeaturedImageUrl } from '../../utils/getFeaturedImageUrl';
+import { Button } from '../Button';
+import { LoadingSkeletons } from '../LoadingSkeletons';
+import { Pagination } from '../Pagination';
+import { Post } from '../Post';
 
 export type PostsProps = {
   hidePagination?: boolean;
