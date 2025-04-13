@@ -1,5 +1,6 @@
 export { StandaloneBanner } from './components/Banner/standalone';
 export { StandaloneButton } from './components/Button/standalone';
+export { StandaloneDynamicForm } from './components/DynamicForm/standalone';
 export { StandaloneGallery } from './components/Gallery/standalone';
 export { StandaloneGalleryTile } from './components/GalleryTile/standalone';
 export { StandaloneJobs } from './components/Jobs/standalone';
@@ -8,6 +9,7 @@ export { StandaloneMediaBlock } from './components/MediaBlock/standalone';
 export { StandalonePageContainer } from './components/PageContainer/standalone';
 export { StandalonePeople } from './components/People/standalone';
 export { StandalonePosts } from './components/Posts/standalone';
+export { StandaloneProductsTopic } from './components/ProductsTopic/standalone';
 export { StandaloneSecondaryBlock } from './components/SecondaryBlock/standalone';
 export { StandaloneSkeletonVideo } from './components/SkeletonVideo/standalone';
 export { StandaloneTile } from './components/Tile/standalone';

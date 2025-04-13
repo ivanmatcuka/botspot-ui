@@ -16,6 +16,7 @@ export { Menu, MenuItem } from './components/Menu/Menu';
 export { PageContainer } from './components/PageContainer';
 export { Pagination } from './components/Pagination';
 export { PartnerLogo } from './components/PartnerLogo';
+export { PartnerLogoContainer } from './components/PartnerLogoContainer';
 export { Post } from './components/Post';
 export { Posts } from './components/Posts';
 export { ScrollableBlock } from './components/ScrollableBlock';
