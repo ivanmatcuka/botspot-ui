@@ -30,6 +30,7 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { Tile } from './components/Tile';
 export { UnorderedList } from './components/UnorderedList';
 export { UnorderedListItem } from './components/UnorderedListItem';
+export { DynamicForm } from './components/DynamicForm';
 
 // MUI
 export {
