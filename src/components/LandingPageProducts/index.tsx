@@ -1,12 +1,10 @@
-import {
-  Button,
-  MediaBlock,
-  PageContainer,
-  ScrollableBlock,
-  SecondaryBlock,
-} from '@botspot/ui';
 import { FC } from 'react';
 import { getFeaturedImageUrl } from '../../utils/getFeaturedImageUrl';
+import { SecondaryBlock } from '../SecondaryBlock';
+import { Button } from '../Button';
+import { ScrollableBlock } from '../ScrollableBlock';
+import { MediaBlock } from '../MediaBlock';
+import { PageContainer } from '../PageContainer';
 
 export type LandingPageProductsProps = {
   products: any[];

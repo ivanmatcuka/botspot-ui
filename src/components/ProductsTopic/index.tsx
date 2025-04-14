@@ -1,23 +1,42 @@
 'use client';
 
 import { Box, Checkbox, FormControlLabel, FormGroup } from '@mui/material';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import { Menu } from '../Menu/Menu';
+import { WP_REST_API_Post } from 'wp-types';
+import { CustomPost } from '../../types/wordpress';
 
 export type ProductsTopicProps = {
-  productNames: string[];
-  topic: string;
   onChange: (topic: string | null) => void;
   defaultProductName: string;
+  getProducts: () => Promise<{
+    count: number;
+    data: CustomPost[];
+  }>;
 };
 export const ProductsTopic: FC<ProductsTopicProps> = ({
   defaultProductName,
-  topic,
   onChange,
-  productNames,
+  getProducts,
 }) => {
+  const [data, setData] = useState<WP_REST_API_Post[]>();
+  const [topic, setTopic] = useState<string>('');
+
+  const productNames = useMemo(
+    () => data?.map((product) => product.title.rendered) ?? [],
+    [data],
+  );
+
   useEffect(() => {
-    onChange(defaultProductName);
+    getProducts().then(({ data }) => {
+      setData(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    const defaultValue = defaultProductName ?? productNames?.[0] ?? '';
+    setTopic(defaultValue);
+    onChange(defaultValue);
   }, [defaultProductName, productNames]);
 
   return (
@@ -29,7 +48,10 @@ export const ProductsTopic: FC<ProductsTopicProps> = ({
               control={<Checkbox checked={topic === currTopic} />}
               key={index}
               label={currTopic}
-              onChange={(event) => onChange(event.currentTarget.nodeValue)}
+              onChange={() => {
+                setTopic(currTopic);
+                onChange(currTopic);
+              }}
             />
           ))}
         </FormGroup>

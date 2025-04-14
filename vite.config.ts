@@ -21,6 +21,7 @@ export default defineConfig({
         'react/jsx-runtime',
         '@emotion/react',
         '@emotion/styled',
+        'react-hook-form',
       ],
     },
   },

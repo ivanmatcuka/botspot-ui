@@ -1,6 +1,7 @@
 export * from '../globals.scss';
 export * from './standalone';
 export * from './theme';
+export * from './service';
 
 // Components
 export { Iframe } from './components/3dIframe';
@@ -34,6 +35,7 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { Tile } from './components/Tile';
 export { UnorderedList } from './components/UnorderedList';
 export { UnorderedListItem } from './components/UnorderedListItem';
+export { ProductsTopic } from './components/ProductsTopic';
 
 // MUI
 export {

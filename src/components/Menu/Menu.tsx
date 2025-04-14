@@ -41,7 +41,6 @@ export const Menu: FC<PropsWithChildren<MenuProps>> = ({
 }) => {
   const { breakpoints } = useTheme();
   const matches = useMediaQuery(breakpoints.down('xl'));
-
   const popupState = usePopupState({ popupId: 'demoMenu', variant: 'popper' });
 
   return (

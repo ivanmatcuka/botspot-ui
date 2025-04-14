@@ -1,6 +1,7 @@
 export * from '../globals.scss';
 export * from './standalone';
 export * from './theme';
+export * from './service';
 export { Iframe } from './components/3dIframe';
 export { Banner } from './components/Banner';
 export { Button } from './components/Button';
@@ -32,4 +33,5 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { Tile } from './components/Tile';
 export { UnorderedList } from './components/UnorderedList';
 export { UnorderedListItem } from './components/UnorderedListItem';
+export { ProductsTopic } from './components/ProductsTopic';
 export { Accordion, AccordionSummary, AppBar, Box, Container, Drawer, Grid, IconButton, InputLabel, List, ListItem, ListItemButton, Paper, Skeleton, TextField, Toolbar, Typography, useMediaQuery, useTheme, } from '@mui/material';
