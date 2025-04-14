@@ -4,7 +4,11 @@ import { Box, Paper } from '@mui/material';
 import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Field, getForm } from '../../utils/getForm';
+import {
+  ApiResponse,
+  Field,
+  getForm as mockGetForm,
+} from '../../utils/getForm';
 import { Button } from '../Button';
 import { Input } from '../Input';
 import { useSnackbar } from '../Snackbar';
@@ -14,6 +18,7 @@ export type DynamicFormProps = PropsWithChildren<{
   frameless?: boolean;
   secondary?: boolean;
   submitForm: (formData: FormData, formId: number) => Promise<void>;
+  getForm?: (formId: number) => Promise<ApiResponse | null>;
 }>;
 export const DynamicForm: FC<DynamicFormProps> = ({
   children,
@@ -21,8 +26,9 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   frameless = false,
   secondary = false,
   submitForm,
+  getForm = mockGetForm,
 }) => {
-  const [fields, setFields] = useState<Field[] | null>(null);
+  const [fields, setFields] = useState<Field[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { showSnackbar } = useSnackbar();
   const {
@@ -84,7 +90,35 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   };
 
   const content = (
-    <Box width="100%">{fields.map((field) => renderField(field))}</Box>
+    <Box
+      display="flex"
+      flexDirection="column"
+      flexWrap="wrap"
+      gap={3}
+      alignItems={{ md: 'baseline', xs: 'center' }}
+      p={frameless ? 0 : { md: 5, xs: 3 }}
+      py={frameless ? 0 : { xs: 2 }}
+    >
+      <Box width="100%">{children}</Box>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        gap={3}
+        justifyContent={{ md: 'left', xs: 'center' }}
+        rowGap={2}
+        width="100%"
+      >
+        {fields.map((field) => renderField(field))}
+      </Box>
+      <Button
+        disabled={isLoading}
+        onClick={handleSubmit(onSubmit)}
+        type="submit"
+        variant="primary"
+      >
+        Submit
+      </Button>
+    </Box>
   );
 
   if (frameless) return content;
@@ -94,25 +128,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
       className={`${secondary && '!bg-primary-main'} border-2 border-divider`}
       elevation={1}
     >
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        gap={3}
-        justifyContent={{ md: 'left', xs: 'center' }}
-        p={frameless ? 0 : { md: 5, xs: 3 }}
-        py={frameless ? 0 : { xs: 2 }}
-      >
-        <Box width="100%">{children}</Box>
-        {content}
-        <Button
-          disabled={isLoading}
-          onClick={handleSubmit(onSubmit)}
-          type="submit"
-          variant="primary"
-        >
-          Submit
-        </Button>
-      </Box>
+      {content}
     </Paper>
   );
 };

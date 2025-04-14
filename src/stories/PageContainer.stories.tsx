@@ -13,24 +13,25 @@ const meta: Meta<PageContainerProps> = {
   title: 'botspot/PageContainer',
   args: {
     banner: false,
-    mb: { md: 10, xs: 5 },
-    mt: { md: 4, xs: 2 },
+    pb: { md: 10, xs: 5 },
+    pt: { md: 10, xs: 5 },
     children: (
       <Typography variant="h4">
         This is content inside the <strong>PageContainer</strong>.
       </Typography>
     ),
+    bgcolor: 'white',
   },
   argTypes: {
     banner: {
       control: 'boolean',
       description: 'Adjusts layout and grid width for banner-like appearance',
     },
-    mb: {
+    pb: {
       control: 'object',
       description: 'Bottom margin values (responsive)',
     },
-    mt: {
+    pt: {
       control: 'object',
       description: 'Top margin values (responsive)',
     },

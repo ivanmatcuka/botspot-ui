@@ -1,7 +1,6 @@
 import { GridProps } from '@mui/material';
-import { FC, PropsWithChildren, ReactNode } from 'react';
-export type PageContainerProps = {
+import { FC, PropsWithChildren } from 'react';
+export type PageContainerProps = PropsWithChildren<{
     banner?: boolean;
-    children: ReactNode;
-} & Pick<GridProps, 'mb' | 'mt' | 'mx' | 'my' | 'm' | 'id'>;
-export declare const PageContainer: FC<PropsWithChildren<PageContainerProps>>;
+}> & Pick<GridProps, 'pb' | 'pt' | 'mx' | 'my' | 'm' | 'id' | 'bgcolor' | 'mt' | 'mb'>;
+export declare const PageContainer: FC<PageContainerProps>;

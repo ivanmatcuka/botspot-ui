@@ -1,9 +1,11 @@
 export { StandaloneBanner } from './components/Banner/standalone';
 export { StandaloneButton } from './components/Button/standalone';
+export { StandaloneDownloadAreaContent } from './components/DownloadAreaContent/standalone';
 export { StandaloneDynamicForm } from './components/DynamicForm/standalone';
 export { StandaloneGallery } from './components/Gallery/standalone';
 export { StandaloneGalleryTile } from './components/GalleryTile/standalone';
 export { StandaloneJobs } from './components/Jobs/standalone';
+export { StandaloneLandingPageProducts } from './components/LandingPageProducts/standalone';
 export { StandaloneMainBlock } from './components/MainBlock/standalone';
 export { StandaloneMediaBlock } from './components/MediaBlock/standalone';
 export { StandalonePageContainer } from './components/PageContainer/standalone';

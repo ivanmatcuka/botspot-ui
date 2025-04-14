@@ -4,9 +4,9 @@ export type PostsProps = {
     hidePagination?: boolean;
     list?: boolean;
     perPage?: number;
-    posts?: Pick<WP_REST_API_Post, 'excerpt' | 'id' | 'title' | 'slug' | '_embedded'>[];
-    loading?: boolean;
-    count: number;
-    setPage: (page: number) => void;
+    getPosts: (page?: number, perPage?: number) => Promise<{
+        count: number;
+        data: WP_REST_API_Post[];
+    }>;
 };
 export declare const Posts: FC<PostsProps>;

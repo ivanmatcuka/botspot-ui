@@ -11,9 +11,8 @@ export type Field = {
     type: string;
     values: string[];
 };
-type ApiResponse = {
+export type ApiResponse = {
     fields: Field[];
     status: number;
 };
 export declare const getForm: (formId: number) => Promise<ApiResponse | null>;
-export {};

@@ -12,7 +12,7 @@ export type Field = {
   values: string[];
 };
 
-type ApiResponse = {
+export type ApiResponse = {
   fields: Field[];
   status: number;
 };
