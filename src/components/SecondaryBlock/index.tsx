@@ -26,8 +26,13 @@ export const SecondaryBlock: FC<SecondaryBlockProps> = ({
         variant="body1"
       />
     )}
-    {children && (
-      <Box display="flex" gap={2} justifyContent={{ md: 'left', xs: 'center' }}>
+    {!!children && (
+      <Box
+        display="flex"
+        gap={2}
+        justifyContent={{ md: 'left', xs: 'center' }}
+        flexDirection={{ md: 'row', xs: 'column' }}
+      >
         {children}
       </Box>
     )}

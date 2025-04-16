@@ -63,6 +63,7 @@ export const Banner: FC<BannerProps> = ({
             <Box
               display="flex"
               alignItems="center"
+              flexDirection={{ md: 'row', xs: 'column' }}
               justifyContent={{ md: 'left', xs: 'center' }}
               gap={2}
               mt={{ md: 8, xs: 3 }}
