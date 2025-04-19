@@ -5,7 +5,7 @@ export { StandaloneDynamicForm } from './components/DynamicForm/standalone';
 export { StandaloneGallery } from './components/Gallery/standalone';
 export { StandaloneGalleryTile } from './components/GalleryTile/standalone';
 export { StandaloneJobs } from './components/Jobs/standalone';
-export { StandaloneLandingPageProducts } from './components/LandingPageProducts/standalone';
+export { StandaloneProductsList } from './components/ProductsList/standalone';
 export { StandaloneMainBlock } from './components/MainBlock/standalone';
 export { StandaloneMediaBlock } from './components/MediaBlock/standalone';
 export { StandalonePageContainer } from './components/PageContainer/standalone';

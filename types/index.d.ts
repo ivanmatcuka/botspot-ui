@@ -12,7 +12,7 @@ export { GalleryTile } from './components/GalleryTile';
 export { IconLink } from './components/IconLink';
 export { Job } from './components/Job';
 export { Jobs } from './components/Jobs';
-export { LandingPageProducts } from './components/LandingPageProducts';
+export { ProductsList } from './components/ProductsList';
 export { LoadingSkeletons } from './components/LoadingSkeletons';
 export { MainBlock } from './components/MainBlock';
 export { MediaBlock } from './components/MediaBlock';
