@@ -2,6 +2,7 @@ export * from '../globals.scss';
 export * from './standalone';
 export * from './theme';
 export * from './service';
+export * from './utils';
 
 // Components
 export { Iframe } from './components/3dIframe';

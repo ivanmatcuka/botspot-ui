@@ -11,10 +11,10 @@ export const getFeaturedImageUrl = (
     'excerpt' | 'id' | 'title' | 'slug' | '_embedded'
   >,
 ) => {
-  return (
-    (
-      (post?._embedded?.['wp:featuredmedia']?.[0] as WP_REST_API_Attachment)
-        ?.media_details?.sizes as Sizes
-    )?.large?.source_url ?? '/img/banners/innovation-lab.png'
-  );
+  const featuredMedia = post?._embedded?.[
+    'wp:featuredmedia'
+  ]?.[0] as WP_REST_API_Attachment;
+  const sizes = featuredMedia?.media_details?.sizes as Sizes;
+
+  return sizes?.large?.source_url ?? '/img/404.webp';
 };

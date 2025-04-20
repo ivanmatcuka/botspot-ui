@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import { getFeaturedImageUrl } from '../../utils/getFeaturedImageUrl';
 import { SecondaryBlock } from '../SecondaryBlock';
-import { Button } from '../Button';
 import { ScrollableBlock } from '../ScrollableBlock';
 import { MediaBlock } from '../MediaBlock';
 import { PageContainer } from '../PageContainer';
 import { CustomFields } from '../../types/wordpress';
+import { Button } from '../Button';
 
 export type ProductsListProps = {
   products: any[];
@@ -15,7 +15,7 @@ export const ProductsList: FC<ProductsListProps> = ({
   products,
   scrollable = false,
 }) => {
-  return products?.map((product) => {
+  return products?.map((product, index) => {
     if (!product.acf) return null;
 
     const imagesUrls =
@@ -35,25 +35,30 @@ export const ProductsList: FC<ProductsListProps> = ({
         <Button href={`/products/${product.slug}`} variant="primary">
           Explore {product?.acf?.['short-name'] || product.title.rendered}
         </Button>
-        <Button href={`/download-area/${product.slug}`} variant="secondary">
+        <Button
+          href={product?.acf?.['download-link'] || '#'}
+          variant="secondary"
+        >
           Download Data Sheet
         </Button>
       </SecondaryBlock>
     );
 
     return hasEnoughImages && scrollable ? (
-      <ScrollableBlock imagesUrls={imagesUrls} key={product.id}>
+      <ScrollableBlock
+        imagesUrls={imagesUrls}
+        key={`${product.id}_${index + 1}`}
+      >
         {contentBlock}
       </ScrollableBlock>
     ) : (
-      <>
+      <Fragment key={`${product.id}_${index + 1}`}>
         <MediaBlock
           assetUrl={
             scrollable
               ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
               : picture
           }
-          key={product.id}
           containerClassName="block md:hidden"
           objectFit="cover"
         />
@@ -63,12 +68,11 @@ export const ProductsList: FC<ProductsListProps> = ({
               ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
               : picture
           }
-          key={product.id}
           containerClassName="hidden md:block"
           objectFit="contain"
         />
         <PageContainer>{contentBlock}</PageContainer>
-      </>
+      </Fragment>
     );
   });
 };
