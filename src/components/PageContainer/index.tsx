@@ -8,7 +8,7 @@ export type PageContainerProps = PropsWithChildren<{
 }> &
   Pick<
     GridProps,
-    'pb' | 'pt' | 'mx' | 'my' | 'm' | 'id' | 'bgcolor' | 'mt' | 'mb'
+    'pb' | 'pt' | 'mx' | 'my' | 'm' | 'id' | 'bgcolor' | 'mt' | 'mb' | 'my'
   >;
 export const PageContainer: FC<PageContainerProps> = ({
   banner = false,

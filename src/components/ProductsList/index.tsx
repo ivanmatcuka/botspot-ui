@@ -73,7 +73,9 @@ export const ProductsList: FC<ProductsListProps> = ({
           containerClassName="hidden md:block"
           objectFit="contain"
         />
-        <PageContainer my={{ md: 10, xs: 5 }}>{contentBlock}</PageContainer>
+        <PageContainer mt={{ md: 10, xs: 5 }} mb={{ md: 20, xs: 15 }}>
+          {contentBlock}
+        </PageContainer>
       </Fragment>
     );
   });
