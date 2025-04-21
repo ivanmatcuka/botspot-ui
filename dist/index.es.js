@@ -19297,7 +19297,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
     {
       display: "flex",
       gap: 2,
-      justifyContent: { md: "left", xs: "center" },
+      alignItems: { md: "left", xs: "center" },
       flexDirection: { md: "row", xs: "column" },
       children: o
     }

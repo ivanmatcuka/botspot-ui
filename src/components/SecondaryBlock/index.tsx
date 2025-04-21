@@ -30,7 +30,7 @@ export const SecondaryBlock: FC<SecondaryBlockProps> = ({
       <Box
         display="flex"
         gap={2}
-        justifyContent={{ md: 'left', xs: 'center' }}
+        alignItems={{ md: 'left', xs: 'center' }}
         flexDirection={{ md: 'row', xs: 'column' }}
       >
         {children}

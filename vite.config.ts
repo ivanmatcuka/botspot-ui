@@ -3,8 +3,6 @@ import path from 'path';
 import preserveDirectives from 'rollup-preserve-directives';
 import { defineConfig } from 'vite';
 
-const subModules = ['index', 'theme', 'storybook', 'standalone'];
-
 export default defineConfig({
   plugins: [react(), preserveDirectives()],
   build: {
