@@ -18,17 +18,21 @@ export const typography: TypographyOptions = {
   h1: {
     fontSize: 60,
     lineHeight: 1,
+    fontWeight: 'unset',
   },
   h2: {
     fontSize: 40,
     lineHeight: 1.2,
+    fontWeight: 'unset',
   },
   h3: {
     fontSize: 32,
     lineHeight: 1.2,
+    fontWeight: 'unset',
   },
   h4: {
     fontSize: 24,
     lineHeight: 1.2,
+    fontWeight: 'unset',
   },
 };
