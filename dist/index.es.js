@@ -18386,7 +18386,7 @@ const Ml = ({
   h1: {
     fontSize: 60,
     lineHeight: 1,
-    fontWeight: 500
+    fontWeight: 400
   },
   h2: {
     fontSize: 40,
