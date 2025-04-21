@@ -19375,7 +19375,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
 }) => e == null ? void 0 : e.map((o, r) => {
   var c;
   if (!(o != null && o.acf)) return null;
-  const i = ((c = o.acf.photo_gallery) == null ? void 0 : c.animation.flat().map((u) => u.full_image_url)) ?? [], { picture: s } = o.acf ?? {}, a = i.length > 9, l = /* @__PURE__ */ se(
+  const i = ((c = o.acf.photo_gallery) == null ? void 0 : c.animation.flat().map((u) => u.full_image_url)) ?? [], { picture: s } = o.acf ?? {}, a = i.length > 9, l = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
     zl,
     {
       headline: o.acf["full-name"] || o.title.rendered,
@@ -19395,7 +19395,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
         )
       ]
     }
-  );
+  ) });
   return a && t ? /* @__PURE__ */ y(
     cv,
     {
@@ -19420,7 +19420,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
         objectFit: "contain"
       }
     ),
-    /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: l })
+    l
   ] }, `${o.id}_${r + 1}`);
 }), Mv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(dv, { ...e }) }), Av = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ll, { ...e }) }), Dv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Io, { ...e }) }), Fv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(xi, { ...e }) }), pv = ({ people: e }) => /* @__PURE__ */ y(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(
   vi,

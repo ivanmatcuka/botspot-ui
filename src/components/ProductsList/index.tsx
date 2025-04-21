@@ -30,20 +30,22 @@ export const ProductsList: FC<ProductsListProps> = ({
     const hasEnoughImages = imagesUrls.length > 9;
 
     const contentBlock = (
-      <SecondaryBlock
-        headline={product.acf['full-name'] || product.title.rendered}
-        sublineElement={product.excerpt.rendered}
-      >
-        <Button href={`/products/${product.slug}`} variant="primary">
-          Explore {product.acf['short-name'] || product.title.rendered}
-        </Button>
-        <Button
-          href={`${product.acf['download-link'] || DOWNLOAD_AREA_FALLBACK}?default=${product.title.rendered}`}
-          variant="secondary"
+      <PageContainer py={{ md: 10, xs: 5 }}>
+        <SecondaryBlock
+          headline={product.acf['full-name'] || product.title.rendered}
+          sublineElement={product.excerpt.rendered}
         >
-          Download Data Sheet
-        </Button>
-      </SecondaryBlock>
+          <Button href={`/products/${product.slug}`} variant="primary">
+            Explore {product.acf['short-name'] || product.title.rendered}
+          </Button>
+          <Button
+            href={`${product.acf['download-link'] || DOWNLOAD_AREA_FALLBACK}?default=${product.title.rendered}`}
+            variant="secondary"
+          >
+            Download Data Sheet
+          </Button>
+        </SecondaryBlock>
+      </PageContainer>
     );
 
     return hasEnoughImages && scrollable ? (
@@ -73,7 +75,7 @@ export const ProductsList: FC<ProductsListProps> = ({
           containerClassName="hidden md:block"
           objectFit="contain"
         />
-        <PageContainer py={{ md: 10, xs: 5 }}>{contentBlock}</PageContainer>
+        {contentBlock}
       </Fragment>
     );
   });
