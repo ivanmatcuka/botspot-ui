@@ -1,6 +1,9 @@
-import { GridProps } from '@mui/material';
+import { BoxProps, GridProps } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
+type GridPick = Pick<GridProps, 'id' | 'm' | 'mx' | 'my'>;
+type BoxPick = Pick<BoxProps, 'pb' | 'pt' | 'mt' | 'mb' | 'my' | 'py' | 'bgcolor'>;
 export type PageContainerProps = PropsWithChildren<{
     banner?: boolean;
-}> & Pick<GridProps, 'id' | 'pb' | 'pt' | 'm' | 'mx' | 'my' | 'mt' | 'mb' | 'my' | 'py' | 'bgcolor'>;
+}> & GridPick & BoxPick;
 export declare const PageContainer: FC<PageContainerProps>;
+export {};
