@@ -1,5 +1,3 @@
-'use client';
-
 import { Grid, Skeleton } from '@mui/material';
 import { FC } from 'react';
 

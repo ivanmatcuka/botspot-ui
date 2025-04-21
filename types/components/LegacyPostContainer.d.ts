@@ -1,0 +1,1 @@
+export declare const LegacyPostContainer: import("@emotion/styled").StyledComponent<import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme> & import("react").ClassAttributes<HTMLElement> & import("react").HTMLAttributes<HTMLElement>, {}, {}>;

@@ -7,6 +7,8 @@ import { PageContainer } from '../PageContainer';
 import { CustomFields } from '../../types/wordpress';
 import { Button } from '../Button';
 
+const DOWNLOAD_AREA_FALLBACK = '/download-area';
+
 export type ProductsListProps = {
   products: any[];
   scrollable: boolean;
@@ -16,7 +18,7 @@ export const ProductsList: FC<ProductsListProps> = ({
   scrollable = false,
 }) => {
   return products?.map((product, index) => {
-    if (!product.acf) return null;
+    if (!product?.acf) return null;
 
     const imagesUrls =
       (product.acf as any).photo_gallery?.animation
@@ -29,14 +31,14 @@ export const ProductsList: FC<ProductsListProps> = ({
 
     const contentBlock = (
       <SecondaryBlock
-        headline={product?.acf?.['full-name'] || product.title.rendered}
+        headline={product.acf['full-name'] || product.title.rendered}
         sublineElement={product.excerpt.rendered}
       >
         <Button href={`/products/${product.slug}`} variant="primary">
-          Explore {product?.acf?.['short-name'] || product.title.rendered}
+          Explore {product.acf['short-name'] || product.title.rendered}
         </Button>
         <Button
-          href={product?.acf?.['download-link'] || '#'}
+          href={`${product.acf['download-link'] || DOWNLOAD_AREA_FALLBACK}?default=${product.title.rendered}`}
           variant="secondary"
         >
           Download Data Sheet

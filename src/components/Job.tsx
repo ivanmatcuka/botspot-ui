@@ -1,5 +1,3 @@
-'use client';
-
 import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
 import { Box, Typography } from '@mui/material';
 import { FC } from 'react';

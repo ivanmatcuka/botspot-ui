@@ -28,14 +28,12 @@ export { People } from './components/People';
 export { Post } from './components/Post';
 export { Posts } from './components/Posts';
 export { ScrollableBlock } from './components/ScrollableBlock';
-export { ScrollableVideo } from './components/ScrollableVideo';
 export { SecondaryBlock } from './components/SecondaryBlock';
 export { SkeletonVideo } from './components/SkeletonVideo';
 export { SnackbarProvider } from './components/Snackbar';
 export { ThemedContainer } from './components/ThemedContainer';
+export { LegacyPostContainer } from './components/LegacyPostContainer';
 export { Tile } from './components/Tile';
-export { UnorderedList } from './components/UnorderedList';
-export { UnorderedListItem } from './components/UnorderedListItem';
 export { ProductsTopic } from './components/ProductsTopic';
 
 // MUI

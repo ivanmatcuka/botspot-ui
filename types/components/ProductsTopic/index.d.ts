@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { CustomPost } from '../../types/wordpress';
 export type ProductsTopicProps = {
     onChange: (topic: string | null) => void;
-    defaultProductName: string;
+    defaultProductName?: string;
     getProducts: () => Promise<{
         count: number;
         data: CustomPost[];
