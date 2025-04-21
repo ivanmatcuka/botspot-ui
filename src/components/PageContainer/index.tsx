@@ -8,7 +8,17 @@ export type PageContainerProps = PropsWithChildren<{
 }> &
   Pick<
     GridProps,
-    'pb' | 'pt' | 'mx' | 'my' | 'm' | 'id' | 'bgcolor' | 'mt' | 'mb' | 'my'
+    | 'id'
+    | 'pb'
+    | 'pt'
+    | 'm'
+    | 'mx'
+    | 'my'
+    | 'mt'
+    | 'mb'
+    | 'my'
+    | 'py'
+    | 'bgcolor'
   >;
 export const PageContainer: FC<PageContainerProps> = ({
   banner = false,
@@ -18,9 +28,10 @@ export const PageContainer: FC<PageContainerProps> = ({
   pt,
   mb,
   mt,
+  py,
   ...margins
 }) => (
-  <Box bgcolor={bgcolor} pb={pb} pt={pt} mt={mt} mb={mb}>
+  <Box bgcolor={bgcolor} pb={pb} pt={pt} mt={mt} mb={mb} py={py}>
     <Container maxWidth="xl">
       <Grid md={10} mx="auto" xs={12} container {...margins}>
         <Grid

@@ -19310,8 +19310,9 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
   pt: i,
   mb: s,
   mt: a,
-  ...l
-}) => /* @__PURE__ */ y(Oe, { bgcolor: o, pb: r, pt: i, mt: a, mb: s, children: /* @__PURE__ */ y(rl, { maxWidth: "xl", children: /* @__PURE__ */ y(Re, { md: 10, mx: "auto", xs: 12, container: !0, ...l, children: /* @__PURE__ */ y(
+  py: l,
+  ...c
+}) => /* @__PURE__ */ y(Oe, { bgcolor: o, pb: r, pt: i, mt: a, mb: s, py: l, children: /* @__PURE__ */ y(rl, { maxWidth: "xl", children: /* @__PURE__ */ y(Re, { md: 10, mx: "auto", xs: 12, container: !0, ...c, children: /* @__PURE__ */ y(
   Re,
   {
     md: e ? 7 : void 0,
@@ -19419,7 +19420,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
         objectFit: "contain"
       }
     ),
-    /* @__PURE__ */ y(xi, { children: l })
+    /* @__PURE__ */ y(xi, { py: {}, children: l })
   ] }, `${o.id}_${r + 1}`);
 }), Mv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(dv, { ...e }) }), Av = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ll, { ...e }) }), Dv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Io, { ...e }) }), Fv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(xi, { ...e }) }), pv = ({ people: e }) => /* @__PURE__ */ y(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(
   vi,
