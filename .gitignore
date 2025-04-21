@@ -1,9 +1,6 @@
 # Dependencies
 /node_modules
 
-# Production
-/dist
-
 # Miscallaneous
 .DS_Store
 *.pem
