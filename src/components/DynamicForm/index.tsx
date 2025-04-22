@@ -31,15 +31,8 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   const [fields, setFields] = useState<Field[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { showSnackbar } = useSnackbar();
-  const {
-    formState,
-    handleSubmit,
-    register,
-    reset,
-    watch,
-    getValues,
-    ...methods
-  } = useForm();
+  const { formState, handleSubmit, register, reset, watch, ...methods } =
+    useForm();
   const { errors } = formState;
 
   useEffect(() => {
@@ -55,9 +48,8 @@ export const DynamicForm: FC<DynamicFormProps> = ({
     const newFormData = new FormData();
 
     newFormData.append('_wpcf7_unit_tag', `${formId}`);
-    const values = getValues() ?? {};
-    Object.entries(values).forEach(([key, value]) => {
-      newFormData.append(`${key}`, value);
+    Object.keys(fields).forEach((key) => {
+      newFormData.append(`${key}`, watch(key));
     });
 
     submitForm(newFormData, formId)
@@ -67,7 +59,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
         setIsLoading(false);
         reset();
       });
-  }, [showSnackbar, reset, getValues, formId]);
+  }, [showSnackbar, reset, watch, formId]);
 
   if (!fields) return null;
 
@@ -101,7 +93,6 @@ export const DynamicForm: FC<DynamicFormProps> = ({
       formState={formState}
       register={register}
       reset={reset}
-      getValues={getValues}
     >
       <Box
         display="flex"
