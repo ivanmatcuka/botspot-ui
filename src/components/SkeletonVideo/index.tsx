@@ -6,13 +6,16 @@ import { useInViewport } from 'react-in-viewport';
 
 export type SkeletonVideoProps = {
   videoSrc: string;
-} & MediaHTMLAttributes<HTMLVideoElement>;
-
+} & Pick<
+  MediaHTMLAttributes<HTMLVideoElement>,
+  'autoPlay' | 'className' | 'loop' | 'muted'
+>;
 export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   autoPlay,
   className = '',
+  loop,
   videoSrc,
-  ...props
+  muted = true,
 }) => {
   const wrapperRef = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -52,10 +55,14 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
             className="w-full h-full relative"
             onCanPlay={() => setIsLoaded(true)}
             playsInline
-            src={videoSrc}
             autoPlay={isLoaded && autoPlay}
-            {...props}
-          />
+            preload="auto"
+            controls={false}
+            loop={loop}
+            muted={muted}
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
         </>
       ) : (
         <Skeleton
