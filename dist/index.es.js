@@ -19680,7 +19680,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
     }
   };
   return {
-    ...["p", "h1", "h2", "h3", "h4", "h5"].reduce(
+    ...["p", "h1", "h2", "h3", "h4", "h5", "div"].reduce(
       (r, i) => (r[`& ${i}:not(.MuiTypography-root)`] = t, r[`& *:not(.MuiTypography-root) ${i}`] = t, r),
       {}
     ),

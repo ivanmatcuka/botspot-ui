@@ -11,7 +11,7 @@ export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => {
     },
   };
 
-  const applyMargins = ['p', 'h1', 'h2', 'h3', 'h4', 'h5'].reduce(
+  const applyMargins = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'div'].reduce(
     (acc: Record<string, unknown>, tag) => {
       acc[`& ${tag}:not(.MuiTypography-root)`] = marginStyles;
       acc[`& *:not(.MuiTypography-root) ${tag}`] = marginStyles;
