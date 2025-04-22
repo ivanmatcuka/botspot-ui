@@ -7,44 +7,63 @@ import { useInViewport } from 'react-in-viewport';
 export type SkeletonVideoProps = {
   videoSrc: string;
 } & MediaHTMLAttributes<HTMLVideoElement>;
+
 export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   autoPlay,
   className = '',
   videoSrc,
   ...props
-}: SkeletonVideoProps) => {
-  const video = useRef<HTMLVideoElement>(null);
-  const { inViewport } = useInViewport(video);
-  const [isLoaded, setIsloaded] = useState(false);
+}) => {
+  const wrapperRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const { inViewport } = useInViewport(wrapperRef);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [canRenderVideo, setCanRenderVideo] = useState(false);
+
+  useEffect(() => {
+    if (inViewport) {
+      setCanRenderVideo(true);
+    }
+  }, [inViewport]);
 
   useEffect(() => {
     if (!autoPlay || !isLoaded) return;
 
     if (inViewport) {
-      video.current?.play();
+      videoRef.current?.play().catch(() => {});
     } else {
-      video.current?.pause();
+      videoRef.current?.pause();
     }
   }, [autoPlay, inViewport, isLoaded]);
 
   return (
-    <div className={`relative ${className}`}>
-      {!isLoaded && (
+    <div ref={wrapperRef} className={`relative ${className}`}>
+      {canRenderVideo ? (
+        <>
+          {!isLoaded && (
+            <Skeleton
+              className="absolute inset-0"
+              height="100%"
+              variant="rectangular"
+            />
+          )}
+          <video
+            ref={videoRef}
+            className="w-full h-full relative"
+            onCanPlay={() => setIsLoaded(true)}
+            preload="metadata"
+            playsInline
+            src={videoSrc}
+            {...props}
+          />
+        </>
+      ) : (
         <Skeleton
-          className={`absolute inset-0`}
-          height={'100%'}
+          className="absolute inset-0"
+          height="100%"
           variant="rectangular"
         />
       )}
-      <video
-        className={`w-full h-full relative ${className}`}
-        onCanPlay={() => setIsloaded(true)}
-        preload="none"
-        ref={video}
-        src={videoSrc}
-        playsInline
-        {...props}
-      />
     </div>
   );
 };
