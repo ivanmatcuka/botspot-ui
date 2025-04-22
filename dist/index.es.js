@@ -19672,28 +19672,34 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
   h5: {
     ...e.typography.h5
   }
-})), Xv = W(vv)(({ theme: e }) => ({
-  "& *:not(.MuiTypography-root) p": {
-    ...e.typography.body1
-  },
-  "& *:not(.MuiTypography-root) h1, & *:not(.MuiTypography-root) h2, & *:not(.MuiTypography-root) h3, & *:not(.MuiTypography-root) h4, & *:not(.MuiTypography-root) h5, & *:not(.MuiTypography-root) p": {
+})), Xv = W(vv)(({ theme: e }) => {
+  const t = {
     marginBottom: e.spacing(3),
     [e.breakpoints.down("md")]: {
       marginBottom: e.spacing(2)
     }
-  },
-  "& ul": {
-    listStyle: "initial"
-  },
-  "& hr": {
-    borderColor: e.palette.info.main,
-    borderTopWidth: 1,
-    marginBottom: e.spacing(5)
-  },
-  [e.breakpoints.down("md")]: {
-    textAlign: "center"
-  }
-}));
+  };
+  return {
+    ...["p", "h1", "h2", "h3", "h4", "h5"].reduce(
+      (r, i) => (r[`& ${i}:not(.MuiTypography-root)`] = t, r[`& *:not(.MuiTypography-root) ${i}`] = t, r),
+      {}
+    ),
+    "& p:not(.MuiTypography-root), & *:not(.MuiTypography-root) p": {
+      ...e.typography.body1
+    },
+    "& ul": {
+      listStyle: "initial"
+    },
+    "& hr": {
+      borderColor: e.palette.info.main,
+      borderTopWidth: 1,
+      marginBottom: e.spacing(5)
+    },
+    [e.breakpoints.down("md")]: {
+      textAlign: "center"
+    }
+  };
+});
 export {
   hf as Accordion,
   Mf as AccordionSummary,

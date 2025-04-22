@@ -3,31 +3,42 @@
 import { styled } from '@mui/material';
 import { ThemedContainer } from './ThemedContainer';
 
-export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => ({
-  '& *:not(.MuiTypography-root) p': {
-    ...theme.typography.body1,
-  },
+export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => {
+  const marginStyles = {
+    marginBottom: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+      marginBottom: theme.spacing(2),
+    },
+  };
 
-  '& *:not(.MuiTypography-root) h1, & *:not(.MuiTypography-root) h2, & *:not(.MuiTypography-root) h3, & *:not(.MuiTypography-root) h4, & *:not(.MuiTypography-root) h5, & *:not(.MuiTypography-root) p':
-    {
-      marginBottom: theme.spacing(3),
+  const applyMargins = ['p', 'h1', 'h2', 'h3', 'h4', 'h5'].reduce(
+    (acc: Record<string, unknown>, tag) => {
+      acc[`& ${tag}:not(.MuiTypography-root)`] = marginStyles;
+      acc[`& *:not(.MuiTypography-root) ${tag}`] = marginStyles;
+      return acc;
+    },
+    {},
+  );
 
-      [theme.breakpoints.down('md')]: {
-        marginBottom: theme.spacing(2),
-      },
+  return {
+    ...applyMargins,
+
+    '& p:not(.MuiTypography-root), & *:not(.MuiTypography-root) p': {
+      ...theme.typography.body1,
     },
 
-  '& ul': {
-    listStyle: 'initial',
-  },
+    '& ul': {
+      listStyle: 'initial',
+    },
 
-  '& hr': {
-    borderColor: theme.palette.info.main,
-    borderTopWidth: 1,
-    marginBottom: theme.spacing(5),
-  },
+    '& hr': {
+      borderColor: theme.palette.info.main,
+      borderTopWidth: 1,
+      marginBottom: theme.spacing(5),
+    },
 
-  [theme.breakpoints.down('md')]: {
-    textAlign: 'center',
-  },
-}));
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
+  };
+});
