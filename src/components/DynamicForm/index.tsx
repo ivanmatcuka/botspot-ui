@@ -2,13 +2,9 @@
 
 import { Box, Paper } from '@mui/material';
 import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
-import {
-  ApiResponse,
-  Field,
-  getForm as mockGetForm,
-} from '../../utils/getForm';
+import { ApiResponse, Field } from '../../utils/getForm';
 import { Button } from '../Button';
 import { Input } from '../Input';
 import { useSnackbar } from '../Snackbar';
@@ -26,13 +22,12 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   frameless = false,
   secondary = false,
   submitForm,
-  getForm = mockGetForm,
+  getForm,
 }) => {
   const [fields, setFields] = useState<Field[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { showSnackbar } = useSnackbar();
-  const { formState, handleSubmit, register, reset, watch, ...methods } =
-    useForm();
+  const { formState, handleSubmit, register, reset, watch } = useForm();
   const { errors } = formState;
 
   useEffect(() => {
@@ -87,41 +82,32 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   };
 
   const content = (
-    <FormProvider
-      {...methods}
-      handleSubmit={handleSubmit}
-      watch={watch}
-      formState={formState}
-      register={register}
-      reset={reset}
+    <Box
+      display="flex"
+      flexDirection="column"
+      flexWrap="wrap"
+      gap={3}
+      alignItems={{ md: 'baseline', xs: 'center' }}
+      p={frameless ? 0 : { md: 5, xs: 3 }}
+      py={frameless ? 0 : { xs: 2 }}
+      component="form"
+      onSubmit={handleSubmit(onSubmit)}
     >
+      <Box width="100%">{children}</Box>
       <Box
         display="flex"
-        flexDirection="column"
         flexWrap="wrap"
         gap={3}
-        alignItems={{ md: 'baseline', xs: 'center' }}
-        p={frameless ? 0 : { md: 5, xs: 3 }}
-        py={frameless ? 0 : { xs: 2 }}
-        component="form"
-        onSubmit={handleSubmit(onSubmit)}
+        justifyContent={{ md: 'left', xs: 'center' }}
+        rowGap={2}
+        width="100%"
       >
-        <Box width="100%">{children}</Box>
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          gap={3}
-          justifyContent={{ md: 'left', xs: 'center' }}
-          rowGap={2}
-          width="100%"
-        >
-          {fields.map((field) => renderField(field))}
-        </Box>
-        <Button disabled={isLoading} type="submit" variant="primary">
-          Submit
-        </Button>
+        {fields.map((field) => renderField(field))}
       </Box>
-    </FormProvider>
+      <Button disabled={isLoading} type="submit" variant="primary">
+        Submit
+      </Button>
+    </Box>
   );
 
   if (frameless) return content;
