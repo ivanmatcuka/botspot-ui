@@ -21,13 +21,6 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const { inViewport } = useInViewport(wrapperRef);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [canRenderVideo, setCanRenderVideo] = useState(false);
-
-  useEffect(() => {
-    if (inViewport) {
-      setCanRenderVideo(true);
-    }
-  }, [inViewport]);
 
   useEffect(() => {
     if (!autoPlay || !isLoaded) return;
@@ -41,37 +34,26 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
 
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
-      {canRenderVideo ? (
-        <>
-          {!isLoaded && (
-            <Skeleton
-              className="absolute inset-0"
-              height="100%"
-              variant="rectangular"
-            />
-          )}
-          <video
-            ref={videoRef}
-            className="w-full h-full relative object-cover"
-            onCanPlay={() => setIsLoaded(true)}
-            onLoadedMetadata={() => setIsLoaded(true)}
-            playsInline
-            autoPlay={isLoaded && autoPlay}
-            preload="auto"
-            controls={false}
-            loop={loop}
-            muted={muted}
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-        </>
-      ) : (
+      {!isLoaded && (
         <Skeleton
           className="absolute inset-0"
           height="100%"
           variant="rectangular"
         />
       )}
+      <video
+        ref={videoRef}
+        className="w-full h-full relative object-cover"
+        onCanPlay={() => setIsLoaded(true)}
+        playsInline
+        autoPlay={isLoaded && autoPlay}
+        preload="auto"
+        controls={false}
+        loop={loop}
+        muted={muted}
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
     </div>
   );
 };
