@@ -18132,7 +18132,7 @@ const Ml = ({
   objectFit: s = "cover"
 }) => {
   if (!e) return null;
-  const a = `w-full h-full !md:min-h-[768px] !lg:min-h-[800px] ${s === "cover" ? "object-cover" : "object-contain"} ${o ? "!xs:min-h-[420px]" : "!xs:min-h-auto"}`, l = i ? "100vh" : { lg: 800, md: 768, xs: o ? 420 : "auto" };
+  const a = `w-full !h-full !md:min-h-[768px] !lg:min-h-[800px] ${s === "cover" ? "object-cover" : "object-contain"} ${o ? "!xs:min-h-[420px]" : "!xs:min-h-auto"}`, l = i ? "100vh" : { lg: 800, md: 768, xs: o ? 420 : "auto" };
   return ["mp4", "mov", "webm"].some((u) => e.endsWith(u)) ? /* @__PURE__ */ y(Oe, { className: r, height: l, children: /* @__PURE__ */ y(
     Ml,
     {
