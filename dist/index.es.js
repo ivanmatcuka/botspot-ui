@@ -18984,8 +18984,8 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     ...O
   } = Jl(), { errors: S } = h;
   Ct(() => {
-    t && s(t).then(($) => l(($ == null ? void 0 : $.fields) ?? []));
-  }, [t]);
+    !t || !s || s(t).then(($) => l(($ == null ? void 0 : $.fields) ?? []));
+  }, [t, s]);
   const v = Fn(() => {
     if (!t) return;
     u(!0);
@@ -18997,7 +18997,7 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     }), i($, t).then(() => d("Thank you for your feedback!", "success", 3e3)).catch(() => d("Something went wrong!", "error", 3e3)).finally(() => {
       u(!1), g();
     });
-  }, [d, g, a, R, t]);
+  }, [d, g, R, t]);
   if (!a) return null;
   const C = ($) => {
     const { basetype: m, labels: w, name: P, type: N } = $, I = N.includes("*"), A = w[0] || P;

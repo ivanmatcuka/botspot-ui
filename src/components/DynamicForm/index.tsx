@@ -43,10 +43,10 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   const { errors } = formState;
 
   useEffect(() => {
-    if (!formId) return;
+    if (!formId || !getForm) return;
 
     getForm(formId).then((form) => setFields(form?.fields ?? []));
-  }, [formId]);
+  }, [formId, getForm]);
 
   const onSubmit = useCallback(() => {
     if (!formId) return;
@@ -67,7 +67,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
         setIsLoading(false);
         reset();
       });
-  }, [showSnackbar, reset, fields, getValues, formId]);
+  }, [showSnackbar, reset, getValues, formId]);
 
   if (!fields) return null;
 
