@@ -19673,7 +19673,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
     ...e.typography.h5
   }
 })), Xv = W(vv)(({ theme: e }) => ({
-  "*:not(.MuiTypography-root)": {
+  ":not(.MuiTypography-root)": {
     p: {
       ...e.typography.body1
     },
