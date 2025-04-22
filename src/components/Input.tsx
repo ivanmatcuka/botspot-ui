@@ -38,7 +38,6 @@ export const Input: FC<InputProps> = ({
   type,
   value,
 }) => {
-  console.log({ name });
   return (
     <Box
       className="!text-white"

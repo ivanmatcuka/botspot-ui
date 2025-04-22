@@ -40,8 +40,6 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
     }
   }, [autoPlay, inViewport, isLoaded]);
 
-  console.log({ canRenderVideo });
-
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
       {canRenderVideo ? (

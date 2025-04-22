@@ -65,7 +65,6 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   if (!fields) return null;
 
   const renderField = (field: Field) => {
-    console.log({ field });
     const { basetype, labels, name, type } = field;
     const isRequired = type.includes('*');
     const label = labels[0] || name;
