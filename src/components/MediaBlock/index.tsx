@@ -22,7 +22,7 @@ export const MediaBlock: FC<MediaBlockProps> = ({
   objectFit = 'cover',
 }) => {
   if (!assetUrl) return null;
-  const classes = `w-full h-full md:min-h-[768px] lg:min-h-[800px] ${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${banner ? 'xs:min-h-[420px]' : 'xs:min-h-auto'}`;
+  const classes = `w-full h-full !md:min-h-[768px] !lg:min-h-[800px] ${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${banner ? '!xs:min-h-[420px]' : '!xs:min-h-auto'}`;
 
   const height = fullHeight
     ? '100vh'

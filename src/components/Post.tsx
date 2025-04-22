@@ -21,7 +21,7 @@ export const Post: FC<PostProps> = ({
   >
     <Box
       alignItems="center"
-      className="bg-common-black bg-opacity-80 w-full text-center z-10"
+      className="bg-common-black !bg-opacity-80 w-full text-center z-10"
       display="flex"
       flexDirection="column"
       gap={1}

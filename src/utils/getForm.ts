@@ -16,21 +16,3 @@ export type ApiResponse = {
   fields: Field[];
   status: number;
 };
-
-const customFormsUrl = '/wp-json/botspot/v1/forms';
-
-export const getForm = async (formId: number): Promise<ApiResponse | null> => {
-  try {
-    const response = await fetch(`${customFormsUrl}/${formId}`, {
-      method: 'GET',
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to submit form');
-    }
-
-    return await response.json();
-  } catch (error) {
-    return null;
-  }
-};
