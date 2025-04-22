@@ -48,6 +48,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
     const newFormData = new FormData();
 
     newFormData.append('_wpcf7_unit_tag', `${formId}`);
+
     Object.keys(fields).forEach((key) => {
       newFormData.append(`${key}`, watch(key));
     });
@@ -64,6 +65,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   if (!fields) return null;
 
   const renderField = (field: Field) => {
+    console.log({ field });
     const { basetype, labels, name, type } = field;
     const isRequired = type.includes('*');
     const label = labels[0] || name;

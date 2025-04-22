@@ -18917,7 +18917,7 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
   rules: c,
   type: u,
   value: d
-}) => /* @__PURE__ */ se(
+}) => (console.log({ name: i }), /* @__PURE__ */ se(
   Oe,
   {
     className: "!text-white",
@@ -18952,7 +18952,7 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
       ] })
     ]
   }
-), Fl = Wl({ showSnackbar: () => ({}) }), wv = ({ children: e }) => {
+)), Fl = Wl({ showSnackbar: () => ({}) }), wv = ({ children: e }) => {
   const [t, o] = Ae(!1), [r, i] = Ae(""), [s, a] = Ae("success"), [l, c] = Ae(3e3), u = (d, h, f = 3e3) => {
     o(!0), i(d), a(h), c(f), setTimeout(() => o(!1), f);
   };
@@ -18990,6 +18990,7 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
   }, [d, g, p, t]);
   if (!a) return null;
   const x = (y) => {
+    console.log({ field: y });
     const { basetype: $, labels: m, name: P, type: w } = y, N = w.includes("*"), I = m[0] || P;
     return /* @__PURE__ */ v(
       Xy,
