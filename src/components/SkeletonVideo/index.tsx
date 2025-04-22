@@ -51,9 +51,9 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
             ref={videoRef}
             className="w-full h-full relative"
             onCanPlay={() => setIsLoaded(true)}
-            preload="metadata"
             playsInline
             src={videoSrc}
+            autoPlay={isLoaded && autoPlay}
             {...props}
           />
         </>
