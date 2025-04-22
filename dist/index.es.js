@@ -18414,6 +18414,11 @@ const Ml = ({
     fontSize: 24,
     lineHeight: 1.2,
     fontWeight: 300
+  },
+  h5: {
+    fontSize: 20,
+    lineHeight: 1.2,
+    fontWeight: 300
   }
 }, pn = ii({
   palette: bt,
