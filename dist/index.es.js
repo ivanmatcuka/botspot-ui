@@ -19675,25 +19675,28 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
 })), Xv = W(vv)(({ theme: e }) => {
   const t = {
     marginBottom: e.spacing(3),
+    marginTop: e.spacing(3),
     [e.breakpoints.down("md")]: {
-      marginBottom: e.spacing(2)
+      marginBottom: e.spacing(2),
+      marginTop: e.spacing(2)
     }
   };
   return {
-    ...["p", "h1", "h2", "h3", "h4", "h5", "div"].reduce(
-      (r, i) => (r[`& ${i}:not(.MuiTypography-root)`] = t, r[`& *:not(.MuiTypography-root) ${i}`] = t, r),
-      {}
-    ),
-    "& p:not(.MuiTypography-root), & *:not(.MuiTypography-root) p": {
-      ...e.typography.body1
+    "div.MuiTypography-root *": {
+      marginBottom: 0,
+      marginTop: 0
     },
-    "& ul": {
-      listStyle: "initial"
+    "h1, h2, h3, h4, h5": {
+      "&:not(.MuiTypography-root)": t
     },
-    "& hr": {
+    hr: {
       borderColor: e.palette.info.main,
       borderTopWidth: 1,
       marginBottom: e.spacing(5)
+    },
+    p: {
+      ...e.typography.body1,
+      ...t
     },
     [e.breakpoints.down("md")]: {
       textAlign: "center"
