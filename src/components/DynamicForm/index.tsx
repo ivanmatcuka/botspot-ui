@@ -57,7 +57,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
     newFormData.append('_wpcf7_unit_tag', `${formId}`);
     const values = getValues() ?? {};
     Object.entries(values).forEach(([key, value]) => {
-      newFormData.append(key, value);
+      newFormData.append(`${key}`, value);
     });
 
     submitForm(newFormData, formId)

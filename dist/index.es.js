@@ -18993,7 +18993,7 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     $.append("_wpcf7_unit_tag", `${t}`);
     const m = R() ?? {};
     Object.entries(m).forEach(([w, P]) => {
-      $.append(w, P);
+      $.append(`${w}`, P);
     }), i($, t).then(() => d("Thank you for your feedback!", "success", 3e3)).catch(() => d("Something went wrong!", "error", 3e3)).finally(() => {
       u(!1), g();
     });
