@@ -18,14 +18,14 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   const [isLoaded, setIsloaded] = useState(false);
 
   useEffect(() => {
-    if (!autoPlay) return;
+    if (!autoPlay || !isLoaded) return;
 
     if (inViewport) {
       video.current?.play();
     } else {
       video.current?.pause();
     }
-  }, [autoPlay, inViewport, videoSrc]);
+  }, [autoPlay, inViewport, isLoaded]);
 
   return (
     <div className={`relative ${className}`}>
@@ -38,7 +38,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
       )}
       <video
         className={`w-full h-full relative ${className}`}
-        onLoad={() => setIsloaded(true)}
+        onCanPlay={() => setIsloaded(true)}
         preload="none"
         ref={video}
         src={videoSrc}
