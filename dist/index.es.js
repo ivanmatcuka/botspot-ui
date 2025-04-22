@@ -19673,30 +19673,25 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
     ...e.typography.h5
   }
 })), Xv = W(vv)(({ theme: e }) => ({
-  "*:not(.MuiTypography-root)": {
-    p: {
-      ...e.typography.body1
-    },
+  "& *:not(.MuiTypography-root) p": {
+    ...e.typography.body1
+  },
+  "& h1, & h2, & h3, & h4, & h5, & p": {
+    marginBottom: e.spacing(3),
     [e.breakpoints.down("md")]: {
-      textAlign: "center"
-    },
-    ul: {
-      listStyle: "initial"
-    },
-    "h1, h2, h3, h4, h5, p": {
-      marginBottom: e.spacing(3),
-      [e.breakpoints.down("md")]: {
-        marginBottom: e.spacing(2)
-      }
-    },
-    [e.breakpoints.down("md")]: {
-      textAlign: "center"
+      marginBottom: e.spacing(2)
     }
   },
-  hr: {
+  "& ul": {
+    listStyle: "initial"
+  },
+  "& hr": {
     borderColor: e.palette.info.main,
     borderTopWidth: 1,
     marginBottom: e.spacing(5)
+  },
+  [e.breakpoints.down("md")]: {
+    textAlign: "center"
   }
 }));
 export {
