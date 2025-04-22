@@ -17,7 +17,7 @@ export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => ({
     borderTopWidth: 1,
     marginBottom: theme.spacing(5),
   },
-  p: {
+  '*:not(.MuiTypography-root) p': {
     ...theme.typography.body1,
     marginBottom: theme.spacing(6),
 
