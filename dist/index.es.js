@@ -18105,14 +18105,14 @@ const Ml = ({
       {
         ref: a,
         className: "w-full h-full relative object-cover",
-        onCanPlay: () => u(!0),
+        onCanPlayThrough: () => u(!0),
         playsInline: !0,
         autoPlay: e,
         preload: "auto",
         controls: !1,
         loop: o,
         muted: i,
-        children: /* @__PURE__ */ y("source", { src: r, type: "video/mp4" })
+        children: /* @__PURE__ */ y("source", { src: r })
       }
     )
   ] }) : /* @__PURE__ */ y(

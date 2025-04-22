@@ -56,7 +56,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
           <video
             ref={videoRef}
             className="w-full h-full relative object-cover"
-            onCanPlay={() => setIsLoaded(true)}
+            onCanPlayThrough={() => setIsLoaded(true)}
             playsInline
             autoPlay={autoPlay}
             preload="auto"
@@ -64,7 +64,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
             loop={loop}
             muted={muted}
           >
-            <source src={videoSrc} type="video/mp4" />
+            <source src={videoSrc} />
           </video>
         </>
       ) : (
