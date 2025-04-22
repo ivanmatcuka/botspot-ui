@@ -18104,7 +18104,7 @@ const Ml = ({
       "video",
       {
         ref: a,
-        className: "w-full h-full relative",
+        className: "w-full h-full relative object-cover",
         onCanPlay: () => u(!0),
         playsInline: !0,
         autoPlay: c && e,

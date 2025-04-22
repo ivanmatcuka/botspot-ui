@@ -52,7 +52,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
           )}
           <video
             ref={videoRef}
-            className="w-full h-full relative"
+            className="w-full h-full relative object-cover"
             onCanPlay={() => setIsLoaded(true)}
             playsInline
             autoPlay={isLoaded && autoPlay}
