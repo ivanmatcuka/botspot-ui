@@ -18106,6 +18106,7 @@ const Ml = ({
         ref: a,
         className: "w-full h-full relative object-cover",
         onCanPlay: () => u(!0),
+        onLoadedMetadata: () => u(!0),
         playsInline: !0,
         autoPlay: c && e,
         preload: "auto",
