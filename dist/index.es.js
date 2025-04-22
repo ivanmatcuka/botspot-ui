@@ -19676,7 +19676,7 @@ const iv = /* @__PURE__ */ Wr(rv), Bl = ({ children: e, headline: t }) => /* @__
   "& *:not(.MuiTypography-root) p": {
     ...e.typography.body1
   },
-  "& h1, & h2, & h3, & h4, & h5, & p": {
+  "& *:not(.MuiTypography-root) h1, & *:not(.MuiTypography-root) h2, & *:not(.MuiTypography-root) h3, & *:not(.MuiTypography-root) h4, & *:not(.MuiTypography-root) h5, & *:not(.MuiTypography-root) p": {
     marginBottom: e.spacing(3),
     [e.breakpoints.down("md")]: {
       marginBottom: e.spacing(2)

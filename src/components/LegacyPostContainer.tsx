@@ -8,13 +8,14 @@ export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => ({
     ...theme.typography.body1,
   },
 
-  '& h1, & h2, & h3, & h4, & h5, & p': {
-    marginBottom: theme.spacing(3),
+  '& *:not(.MuiTypography-root) h1, & *:not(.MuiTypography-root) h2, & *:not(.MuiTypography-root) h3, & *:not(.MuiTypography-root) h4, & *:not(.MuiTypography-root) h5, & *:not(.MuiTypography-root) p':
+    {
+      marginBottom: theme.spacing(3),
 
-    [theme.breakpoints.down('md')]: {
-      marginBottom: theme.spacing(2),
+      [theme.breakpoints.down('md')]: {
+        marginBottom: theme.spacing(2),
+      },
     },
-  },
 
   '& ul': {
     listStyle: 'initial',
