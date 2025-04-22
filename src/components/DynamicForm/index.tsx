@@ -49,8 +49,8 @@ export const DynamicForm: FC<DynamicFormProps> = ({
 
     newFormData.append('_wpcf7_unit_tag', `${formId}`);
 
-    Object.keys(fields).forEach((key) => {
-      newFormData.append(`${key}`, watch(key));
+    fields.forEach((field) => {
+      newFormData.append(`${field.raw_name}`, watch(field.raw_name));
     });
 
     submitForm(newFormData, formId)
@@ -60,7 +60,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
         setIsLoading(false);
         reset();
       });
-  }, [showSnackbar, reset, watch, formId]);
+  }, [showSnackbar, reset, watch, fields, formId]);
 
   if (!fields) return null;
 

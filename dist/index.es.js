@@ -18982,12 +18982,12 @@ const Fy = Dy(lr), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     if (!t) return;
     u(!0);
     const y = new FormData();
-    y.append("_wpcf7_unit_tag", `${t}`), Object.keys(a).forEach(($) => {
-      y.append(`${$}`, p($));
+    y.append("_wpcf7_unit_tag", `${t}`), a.forEach(($) => {
+      y.append(`${$.raw_name}`, p($.raw_name));
     }), i(y, t).then(() => d("Thank you for your feedback!", "success", 3e3)).catch(() => d("Something went wrong!", "error", 3e3)).finally(() => {
       u(!1), g();
     });
-  }, [d, g, p, t]);
+  }, [d, g, p, a, t]);
   if (!a) return null;
   const x = (y) => {
     const { basetype: $, labels: m, name: P, type: w } = y, N = w.includes("*"), I = m[0] || P;
