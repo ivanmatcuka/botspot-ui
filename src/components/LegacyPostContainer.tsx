@@ -4,7 +4,7 @@ import { styled } from '@mui/material';
 import { ThemedContainer } from './ThemedContainer';
 
 export const LegacyPostContainer = styled(ThemedContainer)(({ theme }) => ({
-  '& *:not(.MuiTypography-root)': {
+  '*:not(.MuiTypography-root)': {
     p: {
       ...theme.typography.body1,
     },
