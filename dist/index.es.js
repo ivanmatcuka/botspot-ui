@@ -18086,12 +18086,12 @@ const Ml = ({
 }) => {
   const s = xo(null), a = xo(null), { inViewport: l } = Ey.useInViewport(s), [c, u] = Ae(!1), [d, h] = Ae(!1);
   return Ct(() => {
-    l && h(!0);
+    l && (console.log("inViewport"), h(!0));
   }, [l]), Ct(() => {
     var f, T;
     !e || !c || (l ? (f = a.current) == null || f.play().catch(() => {
     }) : (T = a.current) == null || T.pause());
-  }, [e, l, c]), /* @__PURE__ */ y("div", { ref: s, className: `relative ${t}`, children: d ? /* @__PURE__ */ se(xn, { children: [
+  }, [e, l, c]), console.log({ canRenderVideo: d }), /* @__PURE__ */ y("div", { ref: s, className: `relative ${t}`, children: d ? /* @__PURE__ */ se(xn, { children: [
     !c && /* @__PURE__ */ y(
       Yn,
       {

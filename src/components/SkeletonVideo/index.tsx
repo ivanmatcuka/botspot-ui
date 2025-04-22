@@ -25,6 +25,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
 
   useEffect(() => {
     if (inViewport) {
+      console.log('inViewport');
       setCanRenderVideo(true);
     }
   }, [inViewport]);
@@ -38,6 +39,8 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
       videoRef.current?.pause();
     }
   }, [autoPlay, inViewport, isLoaded]);
+
+  console.log({ canRenderVideo });
 
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
