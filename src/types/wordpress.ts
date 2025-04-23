@@ -1,4 +1,5 @@
-import { DeepPartial, Seo } from '@/types/yoast';
+import { WP_REST_API_Post } from 'wp-types';
+import { DeepPartial, Seo } from './yoast';
 
 export type CustomPost = {
   acf?: Partial<CustomFields>;
@@ -8,17 +9,14 @@ export type CustomPost = {
 export type CustomFields = {
   banner: string;
   closeup: string;
-
   datasheet: string;
+  'demo-url': string;
   'demo-video': string;
-  'first-animation': string;
+  'download-link': string;
   'first-headline': string;
-
   'first-subline': string;
-
   'full-name': string;
   picture: string;
-
   'second-animation': string;
   'second-headline': string;
   'second-subline': string;

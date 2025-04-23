@@ -18932,6 +18932,7 @@ const Dy = Ay(lr), Fy = /* @__PURE__ */ E.forwardRef(function(t, o) {
           type: u,
           value: d,
           fullWidth: !0,
+          inputProps: {},
           ...s(i, c)
         }
       ),
@@ -19357,9 +19358,12 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
   products: e,
   scrollable: t = !1
 }) => e == null ? void 0 : e.map((o, r) => {
-  var c;
   if (!(o != null && o.acf)) return null;
-  const i = ((c = o.acf.photo_gallery) == null ? void 0 : c.animation.flat().map((u) => u.full_image_url)) ?? [], { picture: s } = o.acf ?? {}, a = i.length > 9, l = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
+  const {
+    "download-link": i = av,
+    picture: s,
+    photo_gallery: a
+  } = o.acf ?? {}, l = (a == null ? void 0 : a.animation.flat().map((d) => d.full_image_url)) ?? [], c = l.length > 9, u = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
     zl,
     {
       headline: o.acf["full-name"] || o.title.rendered,
@@ -19372,7 +19376,7 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
         /* @__PURE__ */ y(
           Et,
           {
-            href: `${o.acf["download-link"] || av}?default=${o.title.rendered}`,
+            href: `${i}?default=${o.title.rendered}`,
             variant: "secondary",
             children: "Download Data Sheet"
           }
@@ -19380,18 +19384,18 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
       ]
     }
   ) });
-  return a && t ? /* @__PURE__ */ y(
+  return c && t ? /* @__PURE__ */ y(
     sv,
     {
-      imagesUrls: i,
-      children: l
+      imagesUrls: l,
+      children: u
     },
     `${o.id}_${r + 1}`
   ) : /* @__PURE__ */ se(ql, { children: [
     /* @__PURE__ */ y(
       Mo,
       {
-        assetUrl: t ? i[0] ?? Ao(o) : s,
+        assetUrl: t ? l[0] ?? Ao(o) : s,
         containerClassName: "block md:hidden",
         objectFit: "cover"
       }
@@ -19399,12 +19403,12 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
     /* @__PURE__ */ y(
       Mo,
       {
-        assetUrl: t ? i[0] ?? Ao(o) : s,
+        assetUrl: t ? l[0] ?? Ao(o) : s,
         containerClassName: "hidden md:block",
         objectFit: "contain"
       }
     ),
-    l
+    u
   ] }, `${o.id}_${r + 1}`);
 }), _v = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(lv, { ...e }) }), Iv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ll, { ...e }) }), kv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Mo, { ...e }) }), Mv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(xi, { ...e }) }), cv = ({ people: e }) => /* @__PURE__ */ y(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(
   vi,

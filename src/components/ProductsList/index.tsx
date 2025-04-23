@@ -4,13 +4,13 @@ import { SecondaryBlock } from '../SecondaryBlock';
 import { ScrollableBlock } from '../ScrollableBlock';
 import { MediaBlock } from '../MediaBlock';
 import { PageContainer } from '../PageContainer';
-import { CustomFields } from '../../types/wordpress';
+import { CustomFields, CustomPost } from '../../types/wordpress';
 import { Button } from '../Button';
 
 const DOWNLOAD_AREA_FALLBACK = '/download-area';
 
 export type ProductsListProps = {
-  products: any[];
+  products: CustomPost[];
   scrollable: boolean;
 };
 export const ProductsList: FC<ProductsListProps> = ({
@@ -20,12 +20,15 @@ export const ProductsList: FC<ProductsListProps> = ({
   return products?.map((product, index) => {
     if (!product?.acf) return null;
 
-    const imagesUrls =
-      (product.acf as any).photo_gallery?.animation
-        .flat()
-        .map((url: any) => url.full_image_url) ?? [];
+    const {
+      'download-link': downloadLink = DOWNLOAD_AREA_FALLBACK,
+      picture,
+      photo_gallery,
+    }: Partial<CustomFields> = product.acf ?? {};
 
-    const { picture }: Partial<CustomFields> = product.acf ?? {};
+    const imagesUrls =
+      photo_gallery?.animation.flat().map((url: any) => url.full_image_url) ??
+      [];
 
     const hasEnoughImages = imagesUrls.length > 9;
 
@@ -39,7 +42,7 @@ export const ProductsList: FC<ProductsListProps> = ({
             Explore {product.acf['short-name'] || product.title.rendered}
           </Button>
           <Button
-            href={`${product.acf['download-link'] || DOWNLOAD_AREA_FALLBACK}?default=${product.title.rendered}`}
+            href={`${downloadLink}?default=${product.title.rendered}`}
             variant="secondary"
           >
             Download Data Sheet

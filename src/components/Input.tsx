@@ -63,6 +63,7 @@ export const Input: FC<InputProps> = ({
         type={type}
         value={value}
         fullWidth
+        inputProps={{}}
         {...register(name, rules)}
       />
       {error && (

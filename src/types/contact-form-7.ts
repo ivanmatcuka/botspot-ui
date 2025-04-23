@@ -1,12 +1,12 @@
-interface CF7FormField {
+export type CF7FormField = {
   labels?: string[];
   name: string;
   options?: string[];
   type: string;
   values?: string[];
-}
+};
 
-interface CF7Form {
+export type CF7Form = {
   id: number;
   locale: string;
   properties: {
@@ -26,4 +26,4 @@ interface CF7Form {
     };
   };
   title: string;
-}
+};
