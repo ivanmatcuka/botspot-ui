@@ -49,6 +49,11 @@ export const DynamicForm: FC<DynamicFormProps> = ({
       newFormData.append(`${field.raw_name}`, watch(field.raw_name));
     });
 
+    // @TODO: fix
+    if (watch('your-topic')) {
+      newFormData.append('your-topic', watch('your-topic'));
+    }
+
     submitForm(newFormData, formId)
       .then(() => showSnackbar('Thank you for your feedback!', 'success', 3000))
       .catch(() => showSnackbar('Something went wrong!', 'error', 3000))
