@@ -29,7 +29,7 @@ export const ProductsList: FC<ProductsListProps> = ({
       'demo-cta': demoCta,
       'explore-cta':
         // Legacy leftover
-        exploreCta = `Explore ${shortName || product.title.rendered}`,
+        exploreCta = 'Explore',
     }: Partial<CustomFields> = product.acf ?? {};
 
     const imagesUrls =
@@ -45,7 +45,7 @@ export const ProductsList: FC<ProductsListProps> = ({
           sublineElement={product.excerpt.rendered}
         >
           <Button href={`/products/${product.slug}`} variant="primary">
-            {exploreCta}
+            {exploreCta} ${shortName || product.title.rendered}
           </Button>
           <Button
             href={`${downloadLink}?default=${product.title.rendered}`}
@@ -57,6 +57,10 @@ export const ProductsList: FC<ProductsListProps> = ({
       </PageContainer>
     );
 
+    const assetUrl = scrollable
+      ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
+      : picture;
+
     return hasEnoughImages && scrollable ? (
       <ScrollableBlock
         imagesUrls={imagesUrls}
@@ -67,20 +71,12 @@ export const ProductsList: FC<ProductsListProps> = ({
     ) : (
       <Fragment key={`${product.id}_${index + 1}`}>
         <MediaBlock
-          assetUrl={
-            scrollable
-              ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
-              : picture
-          }
+          assetUrl={assetUrl}
           containerClassName="block md:hidden"
           objectFit="cover"
         />
         <MediaBlock
-          assetUrl={
-            scrollable
-              ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
-              : picture
-          }
+          assetUrl={assetUrl}
           containerClassName="hidden md:block"
           objectFit="contain"
         />
