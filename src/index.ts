@@ -61,4 +61,4 @@ export {
 } from '@mui/material';
 
 // Icons
-export * as MuiIcons from '@mui/icons-material';
+export { Facebook, Instagram, X, LinkedIn } from '@mui/icons-material';

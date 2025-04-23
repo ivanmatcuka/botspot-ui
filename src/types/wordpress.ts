@@ -23,6 +23,11 @@ export type CustomFields = {
   'second-headline': string;
   'second-subline': string;
   'short-name': string;
+  'parent-page': {
+    post_excerpt: string;
+    post_name: string;
+    post_title: string;
+  } & CustomPost;
 
   photo_gallery: {
     animation: { full_image_url: string }[];
