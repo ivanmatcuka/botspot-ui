@@ -7,6 +7,7 @@ import { PageContainer } from '../PageContainer';
 import { CustomFields, CustomPost } from '../../types/wordpress';
 import { Button } from '../Button';
 
+// Legacy leftover
 const DOWNLOAD_AREA_FALLBACK = '/download-area';
 
 export type ProductsListProps = {
@@ -24,6 +25,11 @@ export const ProductsList: FC<ProductsListProps> = ({
       'download-url': downloadLink = DOWNLOAD_AREA_FALLBACK,
       picture,
       photo_gallery,
+      'short-name': shortName,
+      'demo-cta': demoCta,
+      'explore-cta':
+        // Legacy leftover
+        exploreCta = `Explore ${shortName || product.title.rendered}`,
     }: Partial<CustomFields> = product.acf ?? {};
 
     const imagesUrls =
@@ -39,13 +45,13 @@ export const ProductsList: FC<ProductsListProps> = ({
           sublineElement={product.excerpt.rendered}
         >
           <Button href={`/products/${product.slug}`} variant="primary">
-            Explore {product.acf['short-name'] || product.title.rendered}
+            {exploreCta}
           </Button>
           <Button
             href={`${downloadLink}?default=${product.title.rendered}`}
             variant="secondary"
           >
-            Download Data Sheet
+            {demoCta}
           </Button>
         </SecondaryBlock>
       </PageContainer>
