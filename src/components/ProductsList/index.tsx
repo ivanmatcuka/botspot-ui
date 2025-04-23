@@ -21,7 +21,7 @@ export const ProductsList: FC<ProductsListProps> = ({
     if (!product?.acf) return null;
 
     const {
-      'download-link': downloadLink = DOWNLOAD_AREA_FALLBACK,
+      'download-url': downloadLink = DOWNLOAD_AREA_FALLBACK,
       picture,
       photo_gallery,
     }: Partial<CustomFields> = product.acf ?? {};

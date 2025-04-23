@@ -11,8 +11,9 @@ export type CustomFields = {
     closeup: string;
     datasheet: string;
     'demo-url': string;
-    'demo-video': string;
-    'download-link': string;
+    'demo-cta': string;
+    'download-cta': string;
+    'download-url': string;
     'first-headline': string;
     'first-subline': string;
     'full-name': string;

@@ -19379,7 +19379,7 @@ const ov = /* @__PURE__ */ Wr(nv), Bl = ({ children: e, headline: t }) => /* @__
 }) => e == null ? void 0 : e.map((o, r) => {
   if (!(o != null && o.acf)) return null;
   const {
-    "download-link": i = lv,
+    "download-url": i = lv,
     picture: s,
     photo_gallery: a
   } = o.acf ?? {}, l = (a == null ? void 0 : a.animation.flat().map((d) => d.full_image_url)) ?? [], c = l.length > 9, u = /* @__PURE__ */ g(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
