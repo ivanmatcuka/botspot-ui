@@ -2,7 +2,7 @@
 
 import { Box, Paper } from '@mui/material';
 import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 
 import { ApiResponse, Field } from '../../utils/getForm';
 import { Button } from '../Button';
@@ -27,7 +27,8 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   const [fields, setFields] = useState<Field[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { showSnackbar } = useSnackbar();
-  const { formState, handleSubmit, register, reset, watch } = useForm();
+  const { formState, handleSubmit, register, reset, watch, ...methods } =
+    useForm();
   const { errors } = formState;
 
   useEffect(() => {
@@ -82,32 +83,41 @@ export const DynamicForm: FC<DynamicFormProps> = ({
   };
 
   const content = (
-    <Box
-      display="flex"
-      flexDirection="column"
-      flexWrap="wrap"
-      gap={3}
-      alignItems={{ md: 'baseline', xs: 'center' }}
-      p={frameless ? 0 : { md: 5, xs: 3 }}
-      py={frameless ? 0 : { xs: 2 }}
-      component="form"
-      onSubmit={handleSubmit(onSubmit)}
+    <FormProvider
+      {...methods}
+      handleSubmit={handleSubmit}
+      watch={watch}
+      formState={formState}
+      register={register}
+      reset={reset}
     >
-      <Box width="100%">{children}</Box>
       <Box
         display="flex"
+        flexDirection="column"
         flexWrap="wrap"
         gap={3}
-        justifyContent={{ md: 'left', xs: 'center' }}
-        rowGap={2}
-        width="100%"
+        alignItems={{ md: 'baseline', xs: 'center' }}
+        p={frameless ? 0 : { md: 5, xs: 3 }}
+        py={frameless ? 0 : { xs: 2 }}
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
       >
-        {fields.map((field) => renderField(field))}
+        <Box width="100%">{children}</Box>
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          gap={3}
+          justifyContent={{ md: 'left', xs: 'center' }}
+          rowGap={2}
+          width="100%"
+        >
+          {fields.map((field) => renderField(field))}
+        </Box>
+        <Button disabled={isLoading} type="submit" variant="primary">
+          Submit
+        </Button>
       </Box>
-      <Button disabled={isLoading} type="submit" variant="primary">
-        Submit
-      </Button>
-    </Box>
+    </FormProvider>
   );
 
   if (frameless) return content;
