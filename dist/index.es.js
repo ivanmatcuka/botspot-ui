@@ -19651,7 +19651,7 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
   h5: {
     ...e.typography.h5
   },
-  a: {
+  "a:not(.MuiButton-root)": {
     textDecoration: "underline",
     color: e.palette.primary.main,
     "&:hover": {

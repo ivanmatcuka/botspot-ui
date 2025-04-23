@@ -18,7 +18,7 @@ export const ThemedContainer = styled('main')(({ theme }) => ({
   h5: {
     ...theme.typography.h5,
   },
-  a: {
+  'a:not(.MuiButton-root)': {
     textDecoration: 'underline',
     color: theme.palette.primary.main,
 
