@@ -9,6 +9,7 @@ import { Button } from '../Button';
 
 // Legacy leftover
 const DOWNLOAD_AREA_FALLBACK = '/download-area';
+const EXPLORE_CTA_FALLBACK = '/download-area';
 
 export type ProductsListProps = {
   products: CustomPost[];
@@ -22,6 +23,7 @@ export const ProductsList: FC<ProductsListProps> = ({
     if (!product?.acf) return null;
 
     const {
+      // Legacy leftover
       'download-url': downloadLink = DOWNLOAD_AREA_FALLBACK,
       picture,
       photo_gallery,
@@ -29,7 +31,7 @@ export const ProductsList: FC<ProductsListProps> = ({
       'demo-cta': demoCta,
       'explore-cta':
         // Legacy leftover
-        exploreCta = 'Explore',
+        exploreCta = EXPLORE_CTA_FALLBACK,
     }: Partial<CustomFields> = product.acf ?? {};
 
     const imagesUrls =
@@ -37,11 +39,12 @@ export const ProductsList: FC<ProductsListProps> = ({
       [];
 
     const hasEnoughImages = imagesUrls.length > 9;
+    const headline = product.acf['full-name'] || product.title.rendered;
 
     const contentBlock = (
       <PageContainer py={{ md: 10, xs: 5 }}>
         <SecondaryBlock
-          headline={product.acf['full-name'] || product.title.rendered}
+          headline={headline}
           sublineElement={product.excerpt.rendered}
         >
           <Button href={`/products/${product.slug}`} variant="primary">

@@ -18451,19 +18451,19 @@ pn.typography.h1 = {
 function ze({ children: e }) {
   return /* @__PURE__ */ y(qa, { theme: pn, children: e });
 }
-const Ov = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ty, { ...e }) }), Ry = Ue(/* @__PURE__ */ y("path", {
+const Rv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ty, { ...e }) }), Ry = Ue(/* @__PURE__ */ y("path", {
   d: "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"
 }), "ErrorOutline"), Sy = Ue(/* @__PURE__ */ y("path", {
   d: "m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
 }), "ExpandLess"), Py = Ue(/* @__PURE__ */ y("path", {
   d: "M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-}), "ExpandMore"), Rv = Ue(/* @__PURE__ */ y("path", {
+}), "ExpandMore"), Sv = Ue(/* @__PURE__ */ y("path", {
   d: "M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
-}), "Facebook"), Sv = Ue(/* @__PURE__ */ y("path", {
+}), "Facebook"), Pv = Ue(/* @__PURE__ */ y("path", {
   d: "M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-}), "Instagram"), Pv = Ue(/* @__PURE__ */ y("path", {
+}), "Instagram"), wv = Ue(/* @__PURE__ */ y("path", {
   d: "M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
-}), "LinkedIn"), wv = Ue(/* @__PURE__ */ y("path", {
+}), "LinkedIn"), $v = Ue(/* @__PURE__ */ y("path", {
   d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
 }), "X");
 function An(e) {
@@ -18902,7 +18902,7 @@ const Fy = Dy(ar), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     default:
       return /* @__PURE__ */ y(Gt, { ...r });
   }
-}, $v = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Et, { ...e }) }), Yy = ({
+}, Nv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Et, { ...e }) }), Yy = ({
   color: e,
   error: t,
   fullWidth: o,
@@ -18950,7 +18950,7 @@ const Fy = Dy(ar), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
       ] })
     ]
   }
-), Fl = Wl({ showSnackbar: () => ({}) }), Nv = ({ children: e }) => {
+), Fl = Wl({ showSnackbar: () => ({}) }), _v = ({ children: e }) => {
   const [t, o] = Ae(!1), [r, i] = Ae(""), [s, a] = Ae("success"), [l, c] = Ae(3e3), u = (d, m, f = 3e3) => {
     o(!0), i(d), a(m), c(f), setTimeout(() => o(!1), f);
   };
@@ -19174,7 +19174,7 @@ const Fy = Dy(ar), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
       children: r
     }
   );
-}, _v = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Xy, { ...e }) }), Iv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(jl, { ...e }) }), Jy = ({ children: e, transparent: t = !0 }) => /* @__PURE__ */ y(
+}, Iv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Xy, { ...e }) }), kv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(jl, { ...e }) }), Jy = ({ children: e, transparent: t = !0 }) => /* @__PURE__ */ y(
   Oe,
   {
     columnGap: { md: 2, xs: 0 },
@@ -19189,7 +19189,7 @@ const Fy = Dy(ar), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     flexDirection: { xs: "column", md: "row" },
     children: e
   }
-), kv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Jy, { ...e }) }), Zy = ({
+), Mv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Jy, { ...e }) }), Zy = ({
   alt: e,
   bgColor: t = "grey.100",
   children: o,
@@ -19210,7 +19210,7 @@ const Fy = Dy(ar), jy = /* @__PURE__ */ E.forwardRef(function(t, o) {
   /* @__PURE__ */ y(Re, { md: 1, xs: 0 }),
   /* @__PURE__ */ y(Re, { md: 4, mt: { md: 0, xs: 2 }, xs: 12, item: !0, children: o }),
   /* @__PURE__ */ y(Re, { md: 1, xs: 0 })
-] }) }), Mv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Zy, { ...e }) });
+] }) }), Av = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Zy, { ...e }) });
 var Dn = {}, Pr = {};
 const Qy = /* @__PURE__ */ Rt(zp);
 var Xs;
@@ -19276,7 +19276,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       /* @__PURE__ */ y(Et, { href: `/about/careers/${t}`, variant: "primary", children: /* @__PURE__ */ y(ov, {}) })
     ]
   }
-) }), iv = ({ jobs: e }) => e.map(({ excerpt: t, id: o, title: r }) => /* @__PURE__ */ y(Oe, { display: "flex", children: /* @__PURE__ */ y(rv, { excerpt: t.rendered, id: o, title: r.rendered }) }, o)), Av = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(iv, { ...e }) }), vi = (e) => {
+) }), iv = ({ jobs: e }) => e.map(({ excerpt: t, id: o, title: r }) => /* @__PURE__ */ y(Oe, { display: "flex", children: /* @__PURE__ */ y(rv, { excerpt: t.rendered, id: o, title: r.rendered }) }, o)), Dv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(iv, { ...e }) }), vi = (e) => {
   var r, i, s, a;
   const t = (i = (r = e == null ? void 0 : e._embedded) == null ? void 0 : r["wp:featuredmedia"]) == null ? void 0 : i[0], o = (s = t == null ? void 0 : t.media_details) == null ? void 0 : s.sizes;
   return ((a = o == null ? void 0 : o.large) == null ? void 0 : a.source_url) ?? "/img/404.webp";
@@ -19373,22 +19373,23 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
 }) => /* @__PURE__ */ se(xn, { children: [
   /* @__PURE__ */ y(sv, { imagesUrls: t }),
   /* @__PURE__ */ y(Oe, { children: /* @__PURE__ */ y(xi, { children: e }) })
-] }), lv = "/download-area", cv = ({
+] }), lv = "/download-area", cv = "/download-area", uv = ({
   products: e,
   scrollable: t = !1
 }) => e == null ? void 0 : e.map((o, r) => {
   if (!(o != null && o.acf)) return null;
   const {
+    // Legacy leftover
     "download-url": i = lv,
     picture: s,
     photo_gallery: a,
     "short-name": l,
     "demo-cta": c,
-    "explore-cta": u = "Explore"
-  } = o.acf ?? {}, d = (a == null ? void 0 : a.animation.flat().map((g) => g.full_image_url)) ?? [], m = d.length > 9, f = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
+    "explore-cta": u = cv
+  } = o.acf ?? {}, d = (a == null ? void 0 : a.animation.flat().map((p) => p.full_image_url)) ?? [], m = d.length > 9, f = o.acf["full-name"] || o.title.rendered, T = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
     zl,
     {
-      headline: o.acf["full-name"] || o.title.rendered,
+      headline: f,
       sublineElement: o.excerpt.rendered,
       children: [
         /* @__PURE__ */ se(Et, { href: `/products/${o.slug}`, variant: "primary", children: [
@@ -19406,19 +19407,19 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
         )
       ]
     }
-  ) }), T = t ? d[0] ?? vi(o) : s;
+  ) }), g = t ? d[0] ?? vi(o) : s;
   return m && t ? /* @__PURE__ */ y(
     av,
     {
       imagesUrls: d,
-      children: f
+      children: T
     },
     `${o.id}_${r + 1}`
   ) : /* @__PURE__ */ se(ql, { children: [
     /* @__PURE__ */ y(
       Mo,
       {
-        assetUrl: T,
+        assetUrl: g,
         containerClassName: "block md:hidden",
         objectFit: "cover"
       }
@@ -19426,21 +19427,21 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     /* @__PURE__ */ y(
       Mo,
       {
-        assetUrl: T,
+        assetUrl: g,
         containerClassName: "hidden md:block",
         objectFit: "contain"
       }
     ),
-    f
+    T
   ] }, `${o.id}_${r + 1}`);
-}), Dv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(cv, { ...e }) }), Fv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ll, { ...e }) }), jv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Mo, { ...e }) }), Lv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(xi, { ...e }) }), uv = ({ people: e }) => /* @__PURE__ */ y(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(
+}), Fv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(uv, { ...e }) }), jv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ll, { ...e }) }), Lv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Mo, { ...e }) }), Bv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(xi, { ...e }) }), dv = ({ people: e }) => /* @__PURE__ */ y(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(
   yi,
   {
     excerpt: t.excerpt.rendered,
     featuredImage: vi(t),
     title: t.title.rendered
   }
-) }, t.id)) }), Bv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(uv, { ...e }) }), dv = ({ count: e = 12 }) => Array(e).fill(null).map((t, o) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(Yn, { height: 360, variant: "rounded" }) }, o)), pv = ({
+) }, t.id)) }), zv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(dv, { ...e }) }), pv = ({ count: e = 12 }) => Array(e).fill(null).map((t, o) => /* @__PURE__ */ y(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ y(Yn, { height: 360, variant: "rounded" }) }, o)), fv = ({
   count: e,
   perPage: t,
   setPage: o
@@ -19497,7 +19498,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       variant: "outlined"
     }
   ) });
-}, fv = ({
+}, mv = ({
   hidePagination: e = !1,
   list: t = !1,
   perPage: o = 12,
@@ -19509,7 +19510,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       m(T), u(f);
     }).finally(() => s(!1));
   }, [a, o]), /* @__PURE__ */ se(Re, { spacing: { lg: 5, md: 3, xs: 2 }, container: !0, children: [
-    i ? /* @__PURE__ */ y(dv, { count: o }) : d.map((f) => /* @__PURE__ */ y(
+    i ? /* @__PURE__ */ y(pv, { count: o }) : d.map((f) => /* @__PURE__ */ y(
       Re,
       {
         lg: t ? 12 : 4,
@@ -19535,9 +19536,9 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       },
       f.id
     )),
-    !e && /* @__PURE__ */ y(Re, { mx: "auto", xs: 12, item: !0, children: /* @__PURE__ */ y(pv, { count: c, perPage: o, setPage: l }) })
+    !e && /* @__PURE__ */ y(Re, { mx: "auto", xs: 12, item: !0, children: /* @__PURE__ */ y(fv, { count: c, perPage: o, setPage: l }) })
   ] });
-}, zv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(fv, { ...e }) }), mv = ({
+}, Vv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(mv, { ...e }) }), hv = ({
   defaultProductName: e,
   onChange: t,
   getProducts: o
@@ -19564,16 +19565,16 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     },
     u
   )) }) }) });
-}, Vv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(mv, { ...e }) }), Wv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(zl, { ...e }) }), Uv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ml, { ...e }) }), qv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Bl, { ...e }) }), hv = (e) => `${e}/wp-json/wp/v2`, bv = {
+}, Wv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(hv, { ...e }) }), Uv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(zl, { ...e }) }), qv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Ml, { ...e }) }), Hv = (e) => /* @__PURE__ */ y(ze, { children: /* @__PURE__ */ y(Bl, { ...e }) }), bv = (e) => `${e}/wp-json/wp/v2`, gv = {
   method: "GET",
   headers: {
     "Content-Type": "application/json"
   }
-}, Hv = (e) => async () => {
+}, Gv = (e) => async () => {
   var o;
   const t = await fetch(
-    `${hv(e)}/product?&per_page=100&acf_format=standard`,
-    bv
+    `${bv(e)}/product?&per_page=100&acf_format=standard`,
+    gv
   );
   try {
     const r = await t.json(), i = Number(t.headers.get("X-WP-TotalPages")) ?? 1;
@@ -19581,12 +19582,12 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
   } catch {
     return { count: 0, data: [] };
   }
-}, Gv = {
+}, Yv = {
   method: "GET",
   headers: {
     "Content-Type": "application/json"
   }
-}, Yv = ({ src: e }) => /* @__PURE__ */ y(
+}, Kv = ({ src: e }) => /* @__PURE__ */ y(
   "iframe",
   {
     allow: "autoplay; fullscreen; xr-spatial-tracking",
@@ -19599,7 +19600,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     width: "100%",
     "xr-spatial-tracking": "true"
   }
-), Kv = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
+), Xv = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
   /* @__PURE__ */ y(
     "img",
     {
@@ -19628,7 +19629,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       )
     }
   )
-] }), Xv = ({ name: e, src: t }) => /* @__PURE__ */ y(
+] }), Jv = ({ name: e, src: t }) => /* @__PURE__ */ y(
   "img",
   {
     alt: e,
@@ -19638,7 +19639,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     src: t,
     width: 168
   }
-), Jv = ({ children: e }) => /* @__PURE__ */ y(
+), Zv = ({ children: e }) => /* @__PURE__ */ y(
   Oe,
   {
     display: "flex",
@@ -19650,7 +19651,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     px: { md: 8, xs: 4 },
     children: e
   }
-), gv = W("main")(({ theme: e }) => ({
+), yv = W("main")(({ theme: e }) => ({
   h1: {
     ...e.typography.h1
   },
@@ -19673,7 +19674,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       textDecoration: "none"
     }
   }
-})), Zv = W(gv)(({ theme: e }) => {
+})), Qv = W(yv)(({ theme: e }) => {
   const t = {
     marginBottom: e.spacing(3),
     marginTop: e.spacing(3),
@@ -19715,71 +19716,71 @@ export {
   Xy as DownloadAreaContent,
   gh as Drawer,
   jl as DynamicForm,
-  Rv as Facebook,
+  Sv as Facebook,
   Jy as Gallery,
   Zy as GalleryTile,
   Re as Grid,
   Bf as IconButton,
-  Kv as IconLink,
-  Yv as Iframe,
+  Xv as IconLink,
+  Kv as Iframe,
   pi as InputLabel,
-  Sv as Instagram,
+  Pv as Instagram,
   rv as Job,
   iv as Jobs,
-  Zv as LegacyPostContainer,
-  Pv as LinkedIn,
+  Qv as LegacyPostContainer,
+  wv as LinkedIn,
   bl as List,
   Mb as ListItem,
   Cb as ListItemButton,
-  dv as LoadingSkeletons,
+  pv as LoadingSkeletons,
   Ll as MainBlock,
   Mo as MediaBlock,
   Vy as Menu,
   zy as MenuItem,
   xi as PageContainer,
-  pv as Pagination,
+  fv as Pagination,
   Ht as Paper,
-  Xv as PartnerLogo,
-  Jv as PartnerLogoContainer,
-  uv as People,
+  Jv as PartnerLogo,
+  Zv as PartnerLogoContainer,
+  dv as People,
   yi as Post,
-  fv as Posts,
-  cv as ProductsList,
-  mv as ProductsTopic,
+  mv as Posts,
+  uv as ProductsList,
+  hv as ProductsTopic,
   av as ScrollableBlock,
   zl as SecondaryBlock,
   Yn as Skeleton,
   Ml as SkeletonVideo,
-  Nv as SnackbarProvider,
-  Ov as StandaloneBanner,
-  $v as StandaloneButton,
-  _v as StandaloneDownloadAreaContent,
-  Iv as StandaloneDynamicForm,
-  kv as StandaloneGallery,
-  Mv as StandaloneGalleryTile,
-  Av as StandaloneJobs,
-  Fv as StandaloneMainBlock,
-  jv as StandaloneMediaBlock,
-  Lv as StandalonePageContainer,
-  Bv as StandalonePeople,
-  zv as StandalonePosts,
-  Dv as StandaloneProductsList,
-  Vv as StandaloneProductsTopic,
-  Wv as StandaloneSecondaryBlock,
-  Uv as StandaloneSkeletonVideo,
-  qv as StandaloneTile,
+  _v as SnackbarProvider,
+  Rv as StandaloneBanner,
+  Nv as StandaloneButton,
+  Iv as StandaloneDownloadAreaContent,
+  kv as StandaloneDynamicForm,
+  Mv as StandaloneGallery,
+  Av as StandaloneGalleryTile,
+  Dv as StandaloneJobs,
+  jv as StandaloneMainBlock,
+  Lv as StandaloneMediaBlock,
+  Bv as StandalonePageContainer,
+  zv as StandalonePeople,
+  Vv as StandalonePosts,
+  Fv as StandaloneProductsList,
+  Wv as StandaloneProductsTopic,
+  Uv as StandaloneSecondaryBlock,
+  qv as StandaloneSkeletonVideo,
+  Hv as StandaloneTile,
   _l as TextField,
   ze as ThemeRegistry,
-  gv as ThemedContainer,
+  yv as ThemedContainer,
   Bl as Tile,
   cy as Toolbar,
   He as Typography,
-  wv as X,
+  $v as X,
   Cy as getComponents,
   vi as getFeaturedImageUrl,
-  Hv as getProductsFunction,
+  Gv as getProductsFunction,
   bt as palette,
-  Gv as requestInit,
+  Yv as requestInit,
   pn as theme,
   Oy as typography,
   Sa as useMediaQuery,
