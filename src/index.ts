@@ -59,3 +59,6 @@ export {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
+// Icons
+export * from '@mui/icons-material';

@@ -35,3 +35,4 @@ export { LegacyPostContainer } from './components/LegacyPostContainer';
 export { Tile } from './components/Tile';
 export { ProductsTopic } from './components/ProductsTopic';
 export { Accordion, AccordionSummary, AppBar, Box, Container, Drawer, Grid, IconButton, InputLabel, List, ListItem, ListItemButton, Paper, Skeleton, TextField, Toolbar, Typography, useMediaQuery, useTheme, } from '@mui/material';
+export * from '@mui/icons-material';

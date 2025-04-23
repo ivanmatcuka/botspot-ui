@@ -82,7 +82,7 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^5.15.11",
+    "@mui/icons-material": "^5.17.1",
     "@mui/material": "^5.14.13",
     "@smakss/react-scroll-direction": "^4.2.0",
     "material-ui-popup-state": "5.3.3",
