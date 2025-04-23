@@ -19384,7 +19384,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     picture: s,
     photo_gallery: a,
     "short-name": l,
-    "demo-cta": c,
+    "download-cta": c,
     "explore-cta": u = cv
   } = o.acf ?? {}, d = (a == null ? void 0 : a.animation.flat().map((p) => p.full_image_url)) ?? [], m = d.length > 9, f = o.acf["full-name"] || o.title.rendered, T = /* @__PURE__ */ y(xi, { py: { md: 10, xs: 5 }, children: /* @__PURE__ */ se(
     zl,

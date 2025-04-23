@@ -24,11 +24,11 @@ export const ProductsList: FC<ProductsListProps> = ({
 
     const {
       // Legacy leftover
-      'download-url': downloadLink = DOWNLOAD_AREA_FALLBACK,
+      'download-url': downloadUrl = DOWNLOAD_AREA_FALLBACK,
       picture,
       photo_gallery,
       'short-name': shortName,
-      'demo-cta': demoCta,
+      'download-cta': downloadCta,
       'explore-cta':
         // Legacy leftover
         exploreCta = EXPLORE_CTA_FALLBACK,
@@ -51,10 +51,10 @@ export const ProductsList: FC<ProductsListProps> = ({
             {exploreCta} {shortName || product.title.rendered}
           </Button>
           <Button
-            href={`${downloadLink}?default=${product.title.rendered}`}
+            href={`${downloadUrl}?default=${product.title.rendered}`}
             variant="secondary"
           >
-            {demoCta}
+            {downloadCta}
           </Button>
         </SecondaryBlock>
       </PageContainer>
