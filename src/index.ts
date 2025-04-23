@@ -61,4 +61,4 @@ export {
 } from '@mui/material';
 
 // Icons
-export * from '@mui/icons-material';
+export * as MuiIcons from '@mui/icons-material';
