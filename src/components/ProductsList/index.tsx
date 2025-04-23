@@ -9,7 +9,7 @@ import { Button } from '../Button';
 
 // Legacy leftover
 const DOWNLOAD_AREA_FALLBACK = '/download-area';
-const EXPLORE_CTA_FALLBACK = '/download-area';
+const EXPLORE_CTA_FALLBACK = 'Explore';
 
 export type ProductsListProps = {
   products: CustomPost[];
@@ -48,7 +48,7 @@ export const ProductsList: FC<ProductsListProps> = ({
           sublineElement={product.excerpt.rendered}
         >
           <Button href={`/products/${product.slug}`} variant="primary">
-            {exploreCta} ${shortName || product.title.rendered}
+            {exploreCta} {shortName || product.title.rendered}
           </Button>
           <Button
             href={`${downloadLink}?default=${product.title.rendered}`}
