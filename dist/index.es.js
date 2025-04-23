@@ -19373,7 +19373,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
 }) => /* @__PURE__ */ se(xn, { children: [
   /* @__PURE__ */ y(sv, { imagesUrls: t }),
   /* @__PURE__ */ y(Oe, { children: /* @__PURE__ */ y(xi, { children: e }) })
-] }), lv = "/download-area", cv = "/download-area", uv = ({
+] }), lv = "/download-area", cv = "Explore", uv = ({
   products: e,
   scrollable: t = !1
 }) => e == null ? void 0 : e.map((o, r) => {
@@ -19394,7 +19394,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
       children: [
         /* @__PURE__ */ se(Et, { href: `/products/${o.slug}`, variant: "primary", children: [
           u,
-          " $",
+          " ",
           l || o.title.rendered
         ] }),
         /* @__PURE__ */ y(
