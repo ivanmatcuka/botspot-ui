@@ -1,9 +1,11 @@
 import { WP_REST_API_Post } from 'wp-types';
 import { DeepPartial, Seo } from './yoast';
 
-export type CustomPost = {
+export type CustomPost<T = unknown> = {
   acf?: Partial<CustomFields>;
   yoast_head_json?: DeepPartial<Seo>;
+  block_data?: T[];
+  has_blocks?: boolean;
 } & WP_REST_API_Post;
 
 export type CustomFields = {
