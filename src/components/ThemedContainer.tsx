@@ -18,4 +18,12 @@ export const ThemedContainer = styled('main')(({ theme }) => ({
   h5: {
     ...theme.typography.h5,
   },
+  a: {
+    textDecoration: 'underline',
+    color: theme.palette.primary.main,
+
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
 }));

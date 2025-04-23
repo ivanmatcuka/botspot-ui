@@ -19650,6 +19650,13 @@ const nv = /* @__PURE__ */ Wr(tv), Bl = ({ children: e, headline: t }) => /* @__
   },
   h5: {
     ...e.typography.h5
+  },
+  a: {
+    textDecoration: "underline",
+    color: e.palette.primary.main,
+    "&:hover": {
+      textDecoration: "none"
+    }
   }
 })), Jv = W(bv)(({ theme: e }) => {
   const t = {
