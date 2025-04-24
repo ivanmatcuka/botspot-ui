@@ -1,6 +1,6 @@
 export const Iframe = ({ src }: { src: string }) => {
-  const widthRules = 'xs:min-w-full md:min-w-[386px] lg:min-w-[493px]';
-  const heightRules = 'xs:min-h-[327px] md:min-h-[384px] lg:min-h-[420px]';
+  const widthRules = 'min-w-full md:min-w-[386px] lg:min-w-[493px]';
+  const heightRules = 'min-h-[327px] md:min-h-[384px] lg:min-h-[420px]';
 
   return (
     <div>

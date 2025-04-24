@@ -19599,7 +19599,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     "web-share": "true",
     width: "100%",
     "xr-spatial-tracking": "true",
-    className: "xs:min-w-full md:min-w-[386px] lg:min-w-[493px] xs:min-h-[327px] md:min-h-[384px] lg:min-h-[420px]"
+    className: "min-w-full md:min-w-[386px] lg:min-w-[493px] min-h-[327px] md:min-h-[384px] lg:min-h-[420px]"
   }
 ) }), Xv = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
   /* @__PURE__ */ y(
