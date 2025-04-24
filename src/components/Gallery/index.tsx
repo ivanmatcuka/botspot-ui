@@ -11,10 +11,9 @@ export const Gallery: FC<GalleryProps> = ({ children, transparent = true }) => (
     columnGap={{ md: 2, xs: 0 }}
     justifyContent="center"
     mx="auto"
-    px={3}
+    py={3}
     display="flex"
     rowGap={{ md: 0, xs: 2 }}
-    height={{ md: 420, xs: 320 }}
     bgcolor={transparent ? 'transparent' : 'grey.100'}
     borderRadius={1}
     flexDirection={{ xs: 'column', md: 'row' }}
