@@ -19587,7 +19587,7 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
   headers: {
     "Content-Type": "application/json"
   }
-}, Kv = ({ src: e }) => /* @__PURE__ */ y(
+}, Kv = ({ src: e }) => /* @__PURE__ */ y("div", { children: /* @__PURE__ */ y(
   "iframe",
   {
     allow: "autoplay; fullscreen; xr-spatial-tracking",
@@ -19598,9 +19598,10 @@ const ov = /* @__PURE__ */ Vr(nv), Bl = ({ children: e, headline: t }) => /* @__
     src: e,
     "web-share": "true",
     width: "100%",
-    "xr-spatial-tracking": "true"
+    "xr-spatial-tracking": "true",
+    className: "xs:min-w-full md:min-w-[386px] lg:min-w-[493px] xs:min-h-[327px] md:min-h-[384px] lg:min-h-[420px]"
   }
-), Xv = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
+) }), Xv = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
   /* @__PURE__ */ y(
     "img",
     {
