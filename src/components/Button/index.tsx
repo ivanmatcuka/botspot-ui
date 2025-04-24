@@ -1,12 +1,29 @@
 'use client';
 
-import * as MuiIcons from '@mui/icons-material';
+import {
+  X,
+  LinkedIn,
+  Facebook,
+  Instagram,
+  Twitter,
+  ExpandLess,
+  ExpandMore,
+} from '@mui/icons-material';
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
   styled,
 } from '@mui/material';
 import { FC } from 'react';
+const MuiIcons = {
+  X,
+  LinkedIn,
+  Facebook,
+  Instagram,
+  Twitter,
+  ExpandLess,
+  ExpandMore,
+};
 
 import { MenuItem } from '../Menu/Menu';
 
