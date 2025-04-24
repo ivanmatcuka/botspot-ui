@@ -1,4 +1,3 @@
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { FC, MouseEvent } from 'react';
 
 import { Button, ButtonProps } from '../../components/Button';
@@ -23,7 +22,7 @@ export const MenuButton: FC<MenuButtonProps> = ({
     aria-controls={open ? `basic-menu-${label}` : undefined}
     aria-expanded={open ? 'true' : undefined}
     aria-haspopup="true"
-    endIcon={open ? <ExpandLess /> : <ExpandMore />}
+    endIconName={open ? 'ExpandLess' : 'ExpandMore'}
     id={`basic-button-${label}`}
     onClick={onClick}
     variant={variant}

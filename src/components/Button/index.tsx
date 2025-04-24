@@ -1,6 +1,6 @@
 'use client';
 
-import * as Icons from '@mui/icons-material';
+import * as MuiIcons from '@mui/icons-material';
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
@@ -9,8 +9,6 @@ import {
 import { FC } from 'react';
 
 import { MenuItem } from '../Menu/Menu';
-
-export { Icons };
 
 const PrimaryButton = styled(({ ...props }: ButtonProps) => (
   <MuiButton color="primary" {...props} variant="contained" />
@@ -75,32 +73,41 @@ const MenuItemButton = styled(({ ...props }: ButtonProps) => (
   },
 }));
 
+type IconName = keyof typeof MuiIcons;
 export type ButtonProps = {
   target?: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'menu' | 'menuItem' | 'topic';
+  startIconName?: IconName;
+  endIconName?: IconName;
 } & Pick<
   MuiButtonProps,
   | 'id'
   | 'onClick'
   | 'children'
-  | 'endIcon'
-  | 'startIcon'
   | 'disabled'
   | 'type'
   | 'component'
   | 'className'
   | 'href'
 >;
-export const Button: FC<ButtonProps> = ({ variant, ...rest }) => {
-  const component = rest.component;
+export const Button: FC<ButtonProps> = ({
+  variant,
+  startIconName,
+  endIconName,
+  ...rest
+}) => {
+  const StartIconClass = startIconName ? MuiIcons[startIconName] : null;
+  const EndIconClass = endIconName ? MuiIcons[endIconName] : null;
+
   const props = {
     ...rest,
-    component,
+    startIcon: StartIconClass ? <StartIconClass /> : undefined,
+    endIcon: EndIconClass ? <EndIconClass /> : undefined,
   };
 
   switch (variant) {
     case 'primary':
-      return <PrimaryButton {...props} target="" />;
+      return <PrimaryButton {...props} />;
     case 'secondary':
       return <SecondaryButton {...props} />;
     case 'outline':
