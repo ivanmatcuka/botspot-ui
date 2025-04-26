@@ -15,6 +15,7 @@ export type CustomFields = {
     'download-cta': string;
     'download-url': string;
     'explore-cta': string;
+    'post-cta': string;
     'first-headline': string;
     'first-subline': string;
     'full-name': string;
