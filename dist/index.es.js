@@ -18117,15 +18117,13 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ y(
         className: "w-full h-full relative object-cover",
         onCanPlayThrough: () => d(!0),
         playsInline: !0,
-        autoPlay: e,
         preload: "auto",
         controls: !1,
         loop: o,
         muted: i,
         children: /* @__PURE__ */ y("source", { src: r })
       }
-    ),
-    " "
+    )
   ] }) : /* @__PURE__ */ y(Gs, { thumbSrc: s }) });
 }, ko = ({
   assetUrl: e,

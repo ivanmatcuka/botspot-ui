@@ -72,14 +72,13 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
             className="w-full h-full relative object-cover"
             onCanPlayThrough={() => setIsLoaded(true)}
             playsInline
-            autoPlay={autoPlay}
             preload="auto"
             controls={false}
             loop={loop}
             muted={muted}
           >
             <source src={videoSrc} />
-          </video>{' '}
+          </video>
         </>
       ) : (
         <Thumb thumbSrc={thumbSrc} />
