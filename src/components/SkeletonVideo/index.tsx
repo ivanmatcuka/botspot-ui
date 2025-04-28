@@ -44,6 +44,13 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const { inViewport } = useInViewport(wrapperRef);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [canRenderVideo, setCanRenderVideo] = useState(false);
+
+  useEffect(() => {
+    if (inViewport) {
+      setCanRenderVideo(true);
+    }
+  }, [inViewport]);
 
   useEffect(() => {
     if (!autoPlay || !isLoaded) return;
@@ -57,22 +64,26 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
 
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
-      <>
-        {!isLoaded && <Thumb thumbSrc={thumbSrc} />}
-        <video
-          ref={videoRef}
-          className="w-full h-full relative object-cover"
-          onCanPlayThrough={() => setIsLoaded(true)}
-          playsInline
-          autoPlay={autoPlay}
-          preload="auto"
-          controls={false}
-          loop={loop}
-          muted={muted}
-        >
-          <source src={videoSrc} />
-        </video>
-      </>
+      {canRenderVideo ? (
+        <>
+          {!isLoaded && <Thumb thumbSrc={thumbSrc} />}
+          <video
+            ref={videoRef}
+            className="w-full h-full relative object-cover"
+            onCanPlayThrough={() => setIsLoaded(true)}
+            playsInline
+            autoPlay={autoPlay}
+            preload="auto"
+            controls={false}
+            loop={loop}
+            muted={muted}
+          >
+            <source src={videoSrc} />
+          </video>{' '}
+        </>
+      ) : (
+        <Thumb thumbSrc={thumbSrc} />
+      )}
     </div>
   );
 };
