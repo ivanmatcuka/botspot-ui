@@ -18106,9 +18106,9 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ y(
     c && f(!0);
   }, [c]), Ct(() => {
     var T, g;
-    !e || !u || (c ? (T = l.current) == null || T.play().catch(() => {
+    !e || !u || !m || (c ? (T = l.current) == null || T.play().catch(() => {
     }) : (g = l.current) == null || g.pause());
-  }, [e, c, u]), /* @__PURE__ */ y("div", { ref: a, className: `relative ${t}`, children: m ? /* @__PURE__ */ se(xn, { children: [
+  }, [e, c, u, m]), /* @__PURE__ */ y("div", { ref: a, className: `relative ${t}`, children: m ? /* @__PURE__ */ se(xn, { children: [
     !u && /* @__PURE__ */ y(Gs, { thumbSrc: s }),
     /* @__PURE__ */ y(
       "video",
@@ -18117,6 +18117,7 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ y(
         className: "w-full h-full relative object-cover",
         onCanPlayThrough: () => d(!0),
         playsInline: !0,
+        autoPlay: e,
         preload: "auto",
         controls: !1,
         loop: o,
