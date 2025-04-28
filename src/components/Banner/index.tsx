@@ -8,7 +8,7 @@ import { MediaBlock, MediaBlockProps } from '../MediaBlock';
 export type BannerProps = {
   headline: string;
   children?: ReactNode;
-  mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight'>;
+  mediaBlockOptions?: Omit<MediaBlockProps, 'fullHeight' | 'thumbSrc'>;
   sublineElement: ReactNode;
 };
 export const Banner: FC<BannerProps> = ({

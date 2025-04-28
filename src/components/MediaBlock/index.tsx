@@ -12,6 +12,7 @@ export type MediaBlockProps = {
   containerClassName?: string;
   fullHeight?: boolean;
   objectFit?: 'contain' | 'cover';
+  thumbSrc?: string;
 };
 export const MediaBlock: FC<MediaBlockProps> = ({
   assetUrl,
@@ -19,6 +20,7 @@ export const MediaBlock: FC<MediaBlockProps> = ({
   banner = false,
   containerClassName,
   fullHeight = false,
+  thumbSrc,
   objectFit = 'cover',
 }) => {
   if (!assetUrl) return null;
@@ -36,6 +38,7 @@ export const MediaBlock: FC<MediaBlockProps> = ({
         autoPlay={autoplay}
         className={classes}
         videoSrc={assetUrl}
+        thumbSrc={thumbSrc}
         loop
         muted
       />
