@@ -6,5 +6,6 @@ export type MediaBlockProps = {
     containerClassName?: string;
     fullHeight?: boolean;
     objectFit?: 'contain' | 'cover';
+    thumbSrc?: string;
 };
 export declare const MediaBlock: FC<MediaBlockProps>;
