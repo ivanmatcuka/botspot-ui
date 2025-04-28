@@ -1,13 +1,7 @@
 import { CustomPost } from '../types/wordpress';
+import { requestInit } from '../utils';
 
 const getBaseUrl = (url: string) => `${url}/wp-json/wp/v2`;
-
-const requestInit: RequestInit = {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-};
 export const getProductsFunction =
   (url: string) =>
   async (): Promise<{
