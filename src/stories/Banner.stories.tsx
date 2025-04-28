@@ -15,6 +15,8 @@ const meta: Meta<BannerProps> = {
       objectFit: 'cover',
       assetUrl:
         'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+      thumbSrc:
+        'https://botspot.live-website.com/wp-content/uploads/2025/04/anycript_thumbnail_1.webp',
     },
     children: (
       <>
