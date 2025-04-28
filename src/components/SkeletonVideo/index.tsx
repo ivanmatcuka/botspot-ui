@@ -53,14 +53,14 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
   }, [inViewport]);
 
   useEffect(() => {
-    if (!autoPlay || !isLoaded) return;
+    if (!autoPlay || !isLoaded || !canRenderVideo) return;
 
     if (inViewport) {
       videoRef.current?.play().catch(() => {});
     } else {
       videoRef.current?.pause();
     }
-  }, [autoPlay, inViewport, isLoaded]);
+  }, [autoPlay, inViewport, isLoaded, canRenderVideo]);
 
   return (
     <div ref={wrapperRef} className={`relative ${className}`}>
@@ -72,6 +72,7 @@ export const SkeletonVideo: FC<SkeletonVideoProps> = ({
             className="w-full h-full relative object-cover"
             onCanPlayThrough={() => setIsLoaded(true)}
             playsInline
+            autoPlay={autoPlay}
             preload="auto"
             controls={false}
             loop={loop}
