@@ -18961,6 +18961,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
           type: u,
           value: d,
           fullWidth: !0,
+          multiline: u === "textarea",
           inputProps: {},
           ...s(i, c)
         }

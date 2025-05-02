@@ -63,6 +63,7 @@ export const Input: FC<InputProps> = ({
         type={type}
         value={value}
         fullWidth
+        multiline={type === 'textarea'}
         inputProps={{}}
         {...register(name, rules)}
       />
