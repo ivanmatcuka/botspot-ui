@@ -19021,7 +19021,6 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
         name: P,
         register: T,
         required: N,
-        rows: $ === "textarea" ? 3 : void 0,
         rules: N ? { required: `${I} is required` } : void 0,
         type: $ === "textarea" ? "textarea" : "text"
       },
