@@ -81,7 +81,7 @@ export const DynamicForm: FC<DynamicFormProps> = ({
         register={register}
         required={isRequired}
         rules={isRequired ? { required: `${label} is required` } : undefined}
-        type={basetype === 'textarea' ? 'textarea' : 'text'}
+        type={basetype}
       />
     );
   };
