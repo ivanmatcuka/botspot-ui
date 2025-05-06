@@ -34,5 +34,6 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { LegacyPostContainer } from './components/LegacyPostContainer';
 export { Tile } from './components/Tile';
 export { ProductsTopic } from './components/ProductsTopic';
+export { ShareButton } from './components/ShareButton';
 export { Accordion, AccordionSummary, AppBar, Box, Container, Drawer, Grid, IconButton, InputLabel, List, ListItem, ListItemButton, Paper, Skeleton, TextField, Toolbar, Typography, useMediaQuery, useTheme, } from '@mui/material';
 export { Facebook, Instagram, X, LinkedIn } from '@mui/icons-material';

@@ -36,6 +36,7 @@ export { ThemedContainer } from './components/ThemedContainer';
 export { LegacyPostContainer } from './components/LegacyPostContainer';
 export { Tile } from './components/Tile';
 export { ProductsTopic } from './components/ProductsTopic';
+export { ShareButton } from './components/ShareButton';
 
 // MUI
 export {
