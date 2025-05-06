@@ -19586,7 +19586,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     u
   )) }) }) });
 }, Gv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Tv, { ...e }) }), Yv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Wl, { ...e }) }), Kv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Dl, { ...e }) }), Xv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Vl, { ...e }) }), Cv = (e) => {
-  const t = e.href + location.href;
+  const t = e.href + (location == null ? void 0 : location.href) || "";
   return /* @__PURE__ */ g(ht, { ...e, href: t });
 }, Jv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Cv, { ...e }) }), Ov = {
   method: "GET",
