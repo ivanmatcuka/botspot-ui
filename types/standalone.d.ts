@@ -15,3 +15,4 @@ export { StandaloneProductsTopic } from './components/ProductsTopic/standalone';
 export { StandaloneSecondaryBlock } from './components/SecondaryBlock/standalone';
 export { StandaloneSkeletonVideo } from './components/SkeletonVideo/standalone';
 export { StandaloneTile } from './components/Tile/standalone';
+export { StandaloneShareButton } from './components/ShareButton/standalone';
