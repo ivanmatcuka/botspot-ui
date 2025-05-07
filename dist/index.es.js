@@ -18402,28 +18402,23 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ g(
   },
   h1: {
     fontSize: 60,
-    lineHeight: 1,
-    fontWeight: 400
+    lineHeight: 1
   },
   h2: {
     fontSize: 40,
-    lineHeight: 1.2,
-    fontWeight: 300
+    lineHeight: 1.2
   },
   h3: {
     fontSize: 32,
-    lineHeight: 1.2,
-    fontWeight: 300
+    lineHeight: 1.2
   },
   h4: {
     fontSize: 24,
-    lineHeight: 1.2,
-    fontWeight: 300
+    lineHeight: 1.2
   },
   h5: {
     fontSize: 20,
-    lineHeight: 1.2,
-    fontWeight: 300
+    lineHeight: 1.2
   }
 }, pn = ri({
   palette: gt,

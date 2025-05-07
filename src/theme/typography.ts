@@ -18,26 +18,21 @@ export const typography: TypographyOptions = {
   h1: {
     fontSize: 60,
     lineHeight: 1,
-    fontWeight: 400,
   },
   h2: {
     fontSize: 40,
     lineHeight: 1.2,
-    fontWeight: 300,
   },
   h3: {
     fontSize: 32,
     lineHeight: 1.2,
-    fontWeight: 300,
   },
   h4: {
     fontSize: 24,
     lineHeight: 1.2,
-    fontWeight: 300,
   },
   h5: {
     fontSize: 20,
     lineHeight: 1.2,
-    fontWeight: 300,
   },
 };
