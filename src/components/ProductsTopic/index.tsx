@@ -6,6 +6,8 @@ import { Menu } from '../Menu/Menu';
 import { WP_REST_API_Post } from 'wp-types';
 import { CustomPost } from '../../types/wordpress';
 
+const LEGACY_OPTIONS = ['Scan Service', 'botspot'];
+
 export type ProductsTopicProps = {
   onChange: (topic: string | null) => void;
   defaultProductName?: string;
@@ -43,7 +45,7 @@ export const ProductsTopic: FC<ProductsTopicProps> = ({
     <Box>
       <Menu label={topic} variant="topic">
         <FormGroup sx={{ px: 2, py: 1 }}>
-          {productNames.map((currTopic, index) => (
+          {[...productNames, ...LEGACY_OPTIONS].map((currTopic, index) => (
             <FormControlLabel
               control={<Checkbox checked={topic === currTopic} />}
               key={index}
