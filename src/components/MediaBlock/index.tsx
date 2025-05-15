@@ -1,5 +1,3 @@
-'use client';
-
 import { Box } from '@mui/material';
 import { FC } from 'react';
 
@@ -25,15 +23,15 @@ export const MediaBlock: FC<MediaBlockProps> = ({
 }) => {
   if (!assetUrl) return null;
   const classes = `w-full !h-full !md:min-h-[768px] !lg:min-h-[800px] ${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${banner ? '!xs:min-h-[420px]' : '!xs:min-h-auto'}`;
-
-  const height = fullHeight
-    ? '100vh'
-    : { lg: 800, md: 768, xs: banner ? 420 : 'auto' };
-
+  const height = { lg: 800, md: 768, xs: banner ? 420 : 'auto' };
   const isVideo = ['mp4', 'mov', 'webm'].some((ext) => assetUrl.endsWith(ext));
 
   return isVideo ? (
-    <Box className={containerClassName} height={height}>
+    <Box
+      className={containerClassName}
+      minHeight={fullHeight ? '100vh' : undefined}
+      height={height}
+    >
       <SkeletonVideo
         autoPlay={autoplay}
         className={classes}
@@ -44,7 +42,11 @@ export const MediaBlock: FC<MediaBlockProps> = ({
       />
     </Box>
   ) : (
-    <Box className={containerClassName} height={height}>
+    <Box
+      className={containerClassName}
+      minHeight={fullHeight ? '100vh' : undefined}
+      height={height}
+    >
       <img
         alt=""
         className={classes}

@@ -18136,28 +18136,44 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ g(
   objectFit: a = "cover"
 }) => {
   if (!e) return null;
-  const l = `w-full !h-full !md:min-h-[768px] !lg:min-h-[800px] ${a === "cover" ? "object-cover" : "object-contain"} ${o ? "!xs:min-h-[420px]" : "!xs:min-h-auto"}`, c = i ? "100vh" : { lg: 800, md: 768, xs: o ? 420 : "auto" };
-  return ["mp4", "mov", "webm"].some((d) => e.endsWith(d)) ? /* @__PURE__ */ g(Oe, { className: r, height: c, children: /* @__PURE__ */ g(
-    Dl,
+  const l = `w-full !h-full !md:min-h-[768px] !lg:min-h-[800px] ${a === "cover" ? "object-cover" : "object-contain"} ${o ? "!xs:min-h-[420px]" : "!xs:min-h-auto"}`, c = { lg: 800, md: 768, xs: o ? 420 : "auto" };
+  return ["mp4", "mov", "webm"].some((d) => e.endsWith(d)) ? /* @__PURE__ */ g(
+    Oe,
     {
-      autoPlay: t,
-      className: l,
-      videoSrc: e,
-      thumbSrc: s,
-      loop: !0,
-      muted: !0
+      className: r,
+      minHeight: i ? "100vh" : void 0,
+      height: c,
+      children: /* @__PURE__ */ g(
+        Dl,
+        {
+          autoPlay: t,
+          className: l,
+          videoSrc: e,
+          thumbSrc: s,
+          loop: !0,
+          muted: !0
+        }
+      )
     }
-  ) }) : /* @__PURE__ */ g(Oe, { className: r, height: c, children: /* @__PURE__ */ g(
-    "img",
+  ) : /* @__PURE__ */ g(
+    Oe,
     {
-      alt: "",
-      className: l,
-      height: 1080,
-      loading: "lazy",
-      src: e,
-      width: 1920
+      className: r,
+      minHeight: i ? "100vh" : void 0,
+      height: c,
+      children: /* @__PURE__ */ g(
+        "img",
+        {
+          alt: "",
+          className: l,
+          height: 1080,
+          loading: "lazy",
+          src: e,
+          width: 1920
+        }
+      )
     }
-  ) });
+  );
 }, Oy = ({
   headline: e,
   mediaBlockOptions: t,
