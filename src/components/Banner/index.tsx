@@ -18,7 +18,9 @@ export const Banner: FC<BannerProps> = ({
   sublineElement,
 }) => (
   <Box minHeight={{ lg: 800, md: 768, xs: '100vh' }} position="relative">
-    {mediaBlockOptions && <MediaBlock {...mediaBlockOptions} fullHeight />}
+    {mediaBlockOptions && (
+      <MediaBlock {...mediaBlockOptions} fullHeight banner />
+    )}
 
     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
     <Box

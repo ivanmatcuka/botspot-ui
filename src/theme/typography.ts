@@ -1,6 +1,6 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
-export const typography: TypographyOptions = {
+export const typography = {
   fontFamily: 'Poppins',
   body1: {
     fontSize: 16,
@@ -35,4 +35,4 @@ export const typography: TypographyOptions = {
     fontSize: 20,
     lineHeight: 1.2,
   },
-};
+} satisfies TypographyOptions;
