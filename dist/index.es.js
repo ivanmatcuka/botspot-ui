@@ -18180,7 +18180,7 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ g(
   children: o,
   sublineElement: r
 }) => /* @__PURE__ */ se(Oe, { minHeight: { lg: 800, md: 768, xs: "100vh" }, position: "relative", children: [
-  t && /* @__PURE__ */ g(ko, { ...t, fullHeight: !0 }),
+  t && /* @__PURE__ */ g(ko, { ...t, fullHeight: !0, banner: !0 }),
   /* @__PURE__ */ g("div", { className: "absolute inset-0 bg-gradient-to-t from-black to-transparent" }),
   /* @__PURE__ */ g(
     Oe,
