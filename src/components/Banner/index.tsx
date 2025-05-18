@@ -45,7 +45,7 @@ export const Banner: FC<BannerProps> = ({
           xs={12}
           item
         >
-          <Typography color="white" fontWeight="medium" variant="h1">
+          <Typography color="white" variant="h1">
             {headline}
           </Typography>
 

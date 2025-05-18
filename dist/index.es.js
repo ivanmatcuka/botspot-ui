@@ -18207,7 +18207,7 @@ const Gs = ({ thumbSrc: e }) => e ? /* @__PURE__ */ g(
             xs: 12,
             item: !0,
             children: [
-              /* @__PURE__ */ g(He, { color: "white", fontWeight: "medium", variant: "h1", children: e }),
+              /* @__PURE__ */ g(He, { color: "white", variant: "h1", children: e }),
               an(r) ? r : /* @__PURE__ */ g(
                 He,
                 {
