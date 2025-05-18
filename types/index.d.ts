@@ -30,8 +30,6 @@ export { ScrollableBlock } from './components/ScrollableBlock';
 export { SecondaryBlock } from './components/SecondaryBlock';
 export { SkeletonVideo } from './components/SkeletonVideo';
 export { SnackbarProvider } from './components/Snackbar';
-export { ThemedContainer } from './components/ThemedContainer';
-export { LegacyPostContainer } from './components/LegacyPostContainer';
 export { Tile } from './components/Tile';
 export { ProductsTopic } from './components/ProductsTopic';
 export { ShareButton } from './components/ShareButton';

@@ -18467,7 +18467,7 @@ pn.typography.h1 = {
 function Fe({ children: e }) {
   return /* @__PURE__ */ g(Ga, { theme: pn, children: e });
 }
-const Mv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Oy, { ...e }) }), Py = Ve(/* @__PURE__ */ g("path", {
+const kv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Oy, { ...e }) }), Py = Ve(/* @__PURE__ */ g("path", {
   d: "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"
 }), "ErrorOutline"), wy = Ve(/* @__PURE__ */ g("path", {
   d: "m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
@@ -18934,7 +18934,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     default:
       return /* @__PURE__ */ g(Gt, { ...a });
   }
-}, Av = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ht, { ...e }) }), tv = ({
+}, Mv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ht, { ...e }) }), tv = ({
   color: e,
   error: t,
   fullWidth: o,
@@ -18983,7 +18983,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
       ] })
     ]
   }
-), Ll = ql({ showSnackbar: () => ({}) }), Dv = ({ children: e }) => {
+), Ll = ql({ showSnackbar: () => ({}) }), Av = ({ children: e }) => {
   const [t, o] = Ae(!1), [r, i] = Ae(""), [s, a] = Ae("success"), [l, c] = Ae(3e3), u = (d, m, f = 3e3) => {
     o(!0), i(d), a(m), c(f), setTimeout(() => o(!1), f);
   };
@@ -19206,7 +19206,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
       children: r
     }
   );
-}, Fv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ov, { ...e }) }), jv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Bl, { ...e }) }), rv = ({ children: e, transparent: t = !0 }) => /* @__PURE__ */ g(
+}, Dv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ov, { ...e }) }), Fv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Bl, { ...e }) }), rv = ({ children: e, transparent: t = !0 }) => /* @__PURE__ */ g(
   Oe,
   {
     columnGap: { md: 2, xs: 0 },
@@ -19220,7 +19220,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
     flexDirection: { xs: "column", md: "row" },
     children: e
   }
-), Lv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(rv, { ...e }) }), iv = ({
+), jv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(rv, { ...e }) }), iv = ({
   alt: e,
   bgColor: t = "grey.100",
   children: o,
@@ -19241,7 +19241,7 @@ const Uy = Wy(sr), qy = /* @__PURE__ */ E.forwardRef(function(t, o) {
   /* @__PURE__ */ g(Re, { md: 1, xs: 0 }),
   /* @__PURE__ */ g(Re, { md: 4, mt: { md: 0, xs: 2 }, xs: 12, item: !0, children: o }),
   /* @__PURE__ */ g(Re, { md: 1, xs: 0 })
-] }) }), Bv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(iv, { ...e }) });
+] }) }), Lv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(iv, { ...e }) });
 var Dn = {}, Pr = {};
 const sv = /* @__PURE__ */ Rt(Wp);
 var Zs;
@@ -19307,7 +19307,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
       /* @__PURE__ */ g(ht, { href: `/about/careers/${t}`, variant: "primary", children: /* @__PURE__ */ g(uv, {}) })
     ]
   }
-) }), pv = ({ jobs: e }) => e.map(({ excerpt: t, id: o, title: r }) => /* @__PURE__ */ g(Oe, { display: "flex", children: /* @__PURE__ */ g(dv, { excerpt: t.rendered, id: o, title: r.rendered }) }, o)), zv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(pv, { ...e }) }), vi = (e) => {
+) }), pv = ({ jobs: e }) => e.map(({ excerpt: t, id: o, title: r }) => /* @__PURE__ */ g(Oe, { display: "flex", children: /* @__PURE__ */ g(dv, { excerpt: t.rendered, id: o, title: r.rendered }) }, o)), Bv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(pv, { ...e }) }), vi = (e) => {
   var r, i, s, a;
   const t = (i = (r = e == null ? void 0 : e._embedded) == null ? void 0 : r["wp:featuredmedia"]) == null ? void 0 : i[0], o = (s = t == null ? void 0 : t.media_details) == null ? void 0 : s.sizes;
   return ((a = o == null ? void 0 : o.large) == null ? void 0 : a.source_url) ?? "/img/404.webp";
@@ -19465,14 +19465,14 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     ),
     T
   ] }, `${o.id}_${r + 1}`);
-}), Vv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(gv, { ...e }) }), Wv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(zl, { ...e }) }), Uv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ko, { ...e }) }), qv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(xi, { ...e }) }), yv = ({ people: e }) => /* @__PURE__ */ g(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ g(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ g(
+}), zv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(gv, { ...e }) }), Vv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(zl, { ...e }) }), Wv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(ko, { ...e }) }), Uv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(xi, { ...e }) }), yv = ({ people: e }) => /* @__PURE__ */ g(Re, { spacing: { lg: 5, md: 3, xs: 2 }, xs: 12, container: !0, children: e == null ? void 0 : e.map((t) => /* @__PURE__ */ g(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ g(
   yi,
   {
     excerpt: t.excerpt.rendered,
     featuredImage: vi(t),
     title: t.title.rendered
   }
-) }, t.id)) }), Hv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(yv, { ...e }) }), vv = ({ count: e = 12 }) => Array(e).fill(null).map((t, o) => /* @__PURE__ */ g(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ g(lr, { height: 360, variant: "rounded" }) }, o)), xv = ({
+) }, t.id)) }), qv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(yv, { ...e }) }), vv = ({ count: e = 12 }) => Array(e).fill(null).map((t, o) => /* @__PURE__ */ g(Re, { lg: 4, md: 6, xs: 12, item: !0, children: /* @__PURE__ */ g(lr, { height: 360, variant: "rounded" }) }, o)), xv = ({
   count: e,
   perPage: t,
   setPage: o
@@ -19569,7 +19569,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     )),
     !e && /* @__PURE__ */ g(Re, { mx: "auto", xs: 12, item: !0, children: /* @__PURE__ */ g(xv, { count: c, perPage: o, setPage: l }) })
   ] });
-}, Gv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Ev, { ...e }) }), Tv = ["Scan Service", "botspot"], Cv = ({
+}, Hv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Ev, { ...e }) }), Tv = ["Scan Service", "botspot"], Cv = ({
   defaultProductName: e,
   onChange: t,
   getProducts: o
@@ -19596,16 +19596,16 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     },
     u
   )) }) }) });
-}, Yv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Cv, { ...e }) }), Kv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Wl, { ...e }) }), Xv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Dl, { ...e }) }), Jv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Vl, { ...e }) }), Ov = (e) => {
+}, Gv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Cv, { ...e }) }), Yv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Wl, { ...e }) }), Kv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Dl, { ...e }) }), Xv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Vl, { ...e }) }), Ov = (e) => {
   var o;
   const t = e.href + ((o = window == null ? void 0 : window.location) == null ? void 0 : o.href) || "";
   return /* @__PURE__ */ g(ht, { ...e, href: t });
-}, Zv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Ov, { ...e }) }), Rv = {
+}, Jv = (e) => /* @__PURE__ */ g(Fe, { children: /* @__PURE__ */ g(Ov, { ...e }) }), Rv = {
   method: "GET",
   headers: {
     "Content-Type": "application/json"
   }
-}, Sv = (e) => `${e}/wp-json/wp/v2`, Qv = (e) => async () => {
+}, Sv = (e) => `${e}/wp-json/wp/v2`, Zv = (e) => async () => {
   var o;
   const t = await fetch(
     `${Sv(e)}/product?&per_page=100&acf_format=standard`,
@@ -19617,7 +19617,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
   } catch {
     return { count: 0, data: [] };
   }
-}, e0 = ({ src: e }) => /* @__PURE__ */ g("div", { children: /* @__PURE__ */ g(
+}, Qv = ({ src: e }) => /* @__PURE__ */ g("div", { children: /* @__PURE__ */ g(
   "iframe",
   {
     allow: "autoplay; fullscreen; xr-spatial-tracking",
@@ -19631,7 +19631,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     "xr-spatial-tracking": "true",
     className: "min-w-full md:min-w-[386px] lg:min-w-[493px] min-h-[327px] md:min-h-[384px] lg:min-h-[420px]"
   }
-) }), t0 = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
+) }), e0 = ({ alt: e, href: t }) => /* @__PURE__ */ se(Oe, { position: "relative", children: [
   /* @__PURE__ */ g(
     "img",
     {
@@ -19660,7 +19660,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
       )
     }
   )
-] }), n0 = ({ name: e, src: t }) => /* @__PURE__ */ g(
+] }), t0 = ({ name: e, src: t }) => /* @__PURE__ */ g(
   "img",
   {
     alt: e,
@@ -19670,7 +19670,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     src: t,
     width: 168
   }
-), o0 = ({ children: e }) => /* @__PURE__ */ g(
+), n0 = ({ children: e }) => /* @__PURE__ */ g(
   Oe,
   {
     display: "flex",
@@ -19682,60 +19682,7 @@ const uv = /* @__PURE__ */ Vr(cv), Vl = ({ children: e, headline: t }) => /* @__
     px: { md: 8, xs: 4 },
     children: e
   }
-), Pv = W("main")(({ theme: e }) => ({
-  h1: {
-    ...e.typography.h1
-  },
-  h2: {
-    ...e.typography.h2
-  },
-  h3: {
-    ...e.typography.h3
-  },
-  h4: {
-    ...e.typography.h4
-  },
-  h5: {
-    ...e.typography.h5
-  },
-  "a:not(.MuiButton-root)": {
-    textDecoration: "underline",
-    color: e.palette.primary.main,
-    "&:hover": {
-      textDecoration: "none"
-    }
-  }
-})), r0 = W(Pv)(({ theme: e }) => {
-  const t = {
-    marginBottom: e.spacing(3),
-    marginTop: e.spacing(3),
-    [e.breakpoints.down("md")]: {
-      marginBottom: e.spacing(2),
-      marginTop: e.spacing(2)
-    }
-  };
-  return {
-    "div.MuiTypography-root *": {
-      marginBottom: 0,
-      marginTop: 0
-    },
-    "h1, h2, h3, h4, h5": {
-      "&:not(.MuiTypography-root)": t
-    },
-    hr: {
-      borderColor: e.palette.info.main,
-      borderTopWidth: 1,
-      marginBottom: e.spacing(5)
-    },
-    p: {
-      ...e.typography.body1,
-      ...t
-    },
-    [e.breakpoints.down("md")]: {
-      textAlign: "center"
-    }
-  };
-});
+);
 export {
   gf as Accordion,
   Df as AccordionSummary,
@@ -19752,13 +19699,12 @@ export {
   iv as GalleryTile,
   Re as Grid,
   Vf as IconButton,
-  t0 as IconLink,
-  e0 as Iframe,
+  e0 as IconLink,
+  Qv as Iframe,
   pi as InputLabel,
   _y as Instagram,
   dv as Job,
   pv as Jobs,
-  r0 as LegacyPostContainer,
   Iy as LinkedIn,
   yl as List,
   Db as ListItem,
@@ -19771,8 +19717,8 @@ export {
   xi as PageContainer,
   xv as Pagination,
   Ht as Paper,
-  n0 as PartnerLogo,
-  o0 as PartnerLogoContainer,
+  t0 as PartnerLogo,
+  n0 as PartnerLogoContainer,
   yv as People,
   yi as Post,
   Ev as Posts,
@@ -19783,35 +19729,34 @@ export {
   Ov as ShareButton,
   lr as Skeleton,
   Dl as SkeletonVideo,
-  Dv as SnackbarProvider,
-  Mv as StandaloneBanner,
-  Av as StandaloneButton,
-  Fv as StandaloneDownloadAreaContent,
-  jv as StandaloneDynamicForm,
-  Lv as StandaloneGallery,
-  Bv as StandaloneGalleryTile,
-  zv as StandaloneJobs,
-  Wv as StandaloneMainBlock,
-  Uv as StandaloneMediaBlock,
-  qv as StandalonePageContainer,
-  Hv as StandalonePeople,
-  Gv as StandalonePosts,
-  Vv as StandaloneProductsList,
-  Yv as StandaloneProductsTopic,
-  Kv as StandaloneSecondaryBlock,
-  Zv as StandaloneShareButton,
-  Xv as StandaloneSkeletonVideo,
-  Jv as StandaloneTile,
+  Av as SnackbarProvider,
+  kv as StandaloneBanner,
+  Mv as StandaloneButton,
+  Dv as StandaloneDownloadAreaContent,
+  Fv as StandaloneDynamicForm,
+  jv as StandaloneGallery,
+  Lv as StandaloneGalleryTile,
+  Bv as StandaloneJobs,
+  Vv as StandaloneMainBlock,
+  Wv as StandaloneMediaBlock,
+  Uv as StandalonePageContainer,
+  qv as StandalonePeople,
+  Hv as StandalonePosts,
+  zv as StandaloneProductsList,
+  Gv as StandaloneProductsTopic,
+  Yv as StandaloneSecondaryBlock,
+  Jv as StandaloneShareButton,
+  Kv as StandaloneSkeletonVideo,
+  Xv as StandaloneTile,
   kl as TextField,
   Fe as ThemeRegistry,
-  Pv as ThemedContainer,
   Vl as Tile,
   dy as Toolbar,
   He as Typography,
   My as X,
   Ry as getComponents,
   vi as getFeaturedImageUrl,
-  Qv as getProductsFunction,
+  Zv as getProductsFunction,
   gt as palette,
   Rv as requestInit,
   pn as theme,
