@@ -7,7 +7,7 @@ import {
 import HoverMenu from 'material-ui-popup-state/HoverMenu';
 import { FC, PropsWithChildren } from 'react';
 
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 import { MenuButton } from './MenuButton';
 
 type CustomHoverMenuProps = {

@@ -3,12 +3,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Typography } from '@mui/material';
 
 import { Button } from '../components/Button';
-import { GalleryTile, GalleryTileProps } from '../components/GalleryTile/index';
+import { GalleryTile, GalleryTileProps } from '../components/GalleryTile';
 
 const meta: Meta<GalleryTileProps> = {
   component: GalleryTile,
   tags: ['autodocs'],
-  title: 'botspot/GalleryTile',
+  title: 'Components/GalleryTile',
   args: {
     alt: 'Placeholder image',
     bgColor: 'grey.100',
@@ -29,19 +29,29 @@ const meta: Meta<GalleryTileProps> = {
   argTypes: {
     alt: {
       control: 'text',
-      description: 'Alternative text for the image',
+      description: 'Alternative text for the image.',
     },
     bgColor: {
       control: 'text',
-      description: 'Background color (MUI theme color or CSS value)',
+      description: 'Background color (MUI theme color or CSS value).',
+    },
+    children: {
+      control: false,
+      description: 'Content to display inside the tile.',
     },
     imgUrl: {
       control: 'text',
-      description: 'Image source URL',
+      description: 'Image source URL.',
     },
   },
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component:
+          'GalleryTile is a flexible tile component for galleries, featuring an image, background color, and custom content. Use the controls to explore all features and states.',
+      },
+    },
   },
 };
 
@@ -51,4 +61,51 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'A gallery tile with a placeholder image, grey background, and heading, description, and button content.',
+      },
+    },
+  },
+};
+
+export const CustomBackground: Story = {
+  args: {
+    bgColor: 'primary.main',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Gallery tile with a primary color background.',
+      },
+    },
+  },
+};
+
+export const NoImage: Story = {
+  args: {
+    imgUrl: '',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Gallery tile with no image.',
+      },
+    },
+  },
+};
+
+export const NoChildren: Story = {
+  args: {
+    children: null,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Gallery tile with no content inside.',
+      },
+    },
+  },
 };

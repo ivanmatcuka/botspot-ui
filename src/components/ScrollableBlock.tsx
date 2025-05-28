@@ -10,13 +10,11 @@ type ScrollableBlockProps = {
 export const ScrollableBlock: FC<PropsWithChildren<ScrollableBlockProps>> = ({
   children,
   imagesUrls,
-}) => {
-  return (
-    <>
-      <ScrollableVideo imagesUrls={imagesUrls} />
-      <Box>
-        <PageContainer>{children}</PageContainer>
-      </Box>
-    </>
-  );
-};
+}) => (
+  <>
+    <ScrollableVideo imagesUrls={imagesUrls} />
+    <Box>
+      <PageContainer>{children}</PageContainer>
+    </Box>
+  </>
+);

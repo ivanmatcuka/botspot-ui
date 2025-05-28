@@ -1,13 +1,13 @@
 import { Box, Typography } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
-type PostProps = PropsWithChildren<{
+export type PostProps = {
   excerpt?: string;
   featuredImage?: string;
   objectFit?: 'cover' | 'contain';
   title: string;
-}>;
-export const Post: FC<PostProps> = ({
+};
+export const Post: FC<PropsWithChildren<PostProps>> = ({
   children,
   excerpt,
   featuredImage,
@@ -30,7 +30,7 @@ export const Post: FC<PostProps> = ({
       <Typography
         className="line-clamp-2 !text-white"
         component="h3"
-        dangerouslySetInnerHTML={{ __html: title ?? '' }}
+        dangerouslySetInnerHTML={{ __html: title }}
         mb={excerpt ? 0 : 1}
         variant="h4"
       />

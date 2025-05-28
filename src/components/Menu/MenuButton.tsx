@@ -1,6 +1,6 @@
 import { FC, MouseEvent } from 'react';
 
-import { Button, ButtonProps } from '../../components/Button';
+import { Button, ButtonProps } from '../Button';
 
 type MenuButtonProps = {
   className?: string;

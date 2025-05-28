@@ -35,7 +35,6 @@ export const getComponents = (theme: Theme) => ({
       root: {
         border: 'solid',
         borderWidth: '0.1em',
-        fontWeight: 'normal',
         padding: theme.spacing(1.5, 2.5),
 
         '&:disabled': {
@@ -49,7 +48,6 @@ export const getComponents = (theme: Theme) => ({
       },
       text: {
         border: 'none',
-        fontWeight: 'normal',
 
         '&:disabled': {
           backgroundColor: palette.grey[100],

@@ -3,7 +3,7 @@
 import { Menu as MuiMenu, useTheme } from '@mui/material';
 import { FC, PropsWithChildren, useState } from 'react';
 
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 import { MenuButton } from './MenuButton';
 
 type MobileMenuProps = {

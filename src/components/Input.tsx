@@ -1,5 +1,3 @@
-'use client';
-
 import { ErrorOutline } from '@mui/icons-material';
 import {
   Box,
@@ -15,7 +13,7 @@ import {
   UseFormRegister,
 } from 'react-hook-form';
 
-type InputProps = {
+export type InputProps = {
   color?: 'primary' | 'white';
   error?: FieldValues;
   label?: string;
@@ -37,44 +35,42 @@ export const Input: FC<InputProps> = ({
   rules,
   type,
   value,
-}) => {
-  return (
-    <Box
-      className="!text-white"
-      flex={fullWidth ? '0 0 100%' : 'auto'}
-      flexGrow={1}
-    >
-      {label && (
-        <Box mb={0.5}>
-          <InputLabel
-            className={color === 'white' ? '!text-white' : ''}
-            required={required}
-            sx={{ textAlign: 'left' }}
-          >
-            <Typography variant="caption">{label}</Typography>
-          </InputLabel>
-        </Box>
-      )}
-      <TextField
-        error={Boolean(error)}
-        InputProps={{ className: 'bg-white' }}
-        placeholder={label}
-        rows={rows}
-        type={type}
-        value={value}
-        fullWidth
-        multiline={type === 'textarea'}
-        inputProps={{}}
-        {...register(name, rules)}
-      />
-      {error && (
-        <Box alignItems="center" display="flex" mt={0.5}>
-          <ErrorOutline color="error" fontSize="small" />
-          <Typography color="error" ml={0.5} variant="caption">
-            {error.message}
-          </Typography>
-        </Box>
-      )}
-    </Box>
-  );
-};
+}) => (
+  <Box
+    className="!text-white"
+    flex={fullWidth ? '0 0 100%' : 'auto'}
+    flexGrow={1}
+  >
+    {label && (
+      <Box mb={0.5}>
+        <InputLabel
+          className={color === 'white' ? '!text-white' : ''}
+          required={required}
+          sx={{ textAlign: 'left' }}
+        >
+          <Typography variant="caption">{label}</Typography>
+        </InputLabel>
+      </Box>
+    )}
+    <TextField
+      error={Boolean(error)}
+      InputProps={{ className: 'bg-white' }}
+      inputProps={{}}
+      multiline={type === 'textarea'}
+      placeholder={label}
+      rows={rows}
+      type={type}
+      value={value}
+      fullWidth
+      {...register(name, rules)}
+    />
+    {error && (
+      <Box alignItems="center" display="flex" mt={0.5}>
+        <ErrorOutline color="error" fontSize="small" />
+        <Typography color="error" ml={0.5} variant="caption">
+          {error.message}
+        </Typography>
+      </Box>
+    )}
+  </Box>
+);
