@@ -8,9 +8,6 @@ const meta: Meta<{ count?: number }> = {
   component: LoadingSkeletons,
   tags: ['autodocs'],
   title: 'Components/LoadingSkeletons',
-  args: {
-    count: 12,
-  },
   argTypes: {
     count: {
       control: 'number',
@@ -33,13 +30,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template = (args: { count?: number }) => (
-  <Grid spacing={2} container>
+  <Grid p={4} spacing={2} container>
     <LoadingSkeletons {...args} />
   </Grid>
 );
 
 export const Default: Story = {
-  args: {},
+  args: { count: 12 },
   render: Template,
   parameters: {
     docs: {

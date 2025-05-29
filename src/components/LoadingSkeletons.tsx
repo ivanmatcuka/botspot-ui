@@ -1,3 +1,7 @@
+/**
+ * LoadingSkeletons displays a grid of skeleton placeholders, useful for loading states in galleries or lists.
+ */
+
 import { Grid, Skeleton } from '@mui/material';
 import { FC } from 'react';
 

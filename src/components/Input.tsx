@@ -1,3 +1,7 @@
+/**
+ * Input is a styled form field component supporting text, email, textarea, and password types.
+ * Integrates with react-hook-form for validation and error display.
+ */
 import { ErrorOutline } from '@mui/icons-material';
 import {
   Box,
@@ -36,11 +40,7 @@ export const Input: FC<InputProps> = ({
   type,
   value,
 }) => (
-  <Box
-    className="!text-white"
-    flex={fullWidth ? '0 0 100%' : 'auto'}
-    flexGrow={1}
-  >
+  <Box flex={fullWidth ? '0 0 100%' : 'auto'} flexGrow={1}>
     {label && (
       <Box mb={0.5}>
         <InputLabel

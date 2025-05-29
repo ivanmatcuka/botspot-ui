@@ -1,6 +1,15 @@
+/**
+ * People displays a grid of people, each as a post tile with image, name, and excerpt.
+ */
 import { FC } from 'react';
-import { CustomPost } from '../types';
+export declare const EMPTY_STATE_MSG = "No people to display.";
+export type Person = {
+    excerpt: string;
+    featuredImage: string;
+    id: number;
+    title: string;
+};
 export type PeopleProps = {
-    people: CustomPost[];
+    people: Person[];
 };
 export declare const People: FC<PeopleProps>;

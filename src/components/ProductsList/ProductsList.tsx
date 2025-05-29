@@ -1,12 +1,12 @@
 import { FC, Fragment } from 'react';
 
-import { CustomFields, CustomPost } from '../types/wordpress';
-import { getFeaturedImageUrl } from '../utils/getFeaturedImageUrl';
-import { Button } from './Button';
-import { MediaBlock } from './MediaBlock';
-import { PageContainer } from './PageContainer';
-import { ScrollableBlock } from './__ScrollableBlock';
-import { SecondaryBlock } from './SecondaryBlock';
+import { ScrollableBlock } from '../__ScrollableBlock';
+import { CustomFields, CustomPost } from '../../types/wordpress';
+import { getFeaturedImageUrl } from '../../utils/getFeaturedImageUrl';
+import { Button } from '../Button';
+import { MediaBlock } from '../MediaBlock';
+import { PageContainer } from '../PageContainer';
+import { SecondaryBlock } from '../SecondaryBlock';
 
 // Legacy leftover
 const DOWNLOAD_AREA_FALLBACK = '/download-area';

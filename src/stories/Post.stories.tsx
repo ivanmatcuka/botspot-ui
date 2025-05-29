@@ -1,11 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsWithChildren } from 'react';
-
 import { Button } from '../components/Button';
-import { Post, PostProps } from '../components/Post';
+import { Post } from '../components/Post';
 
-const meta: Meta<PropsWithChildren<PostProps>> = {
+const meta: Meta<typeof Post> = {
   component: Post,
   tags: ['autodocs'],
   title: 'Components/Post',
@@ -15,6 +13,7 @@ const meta: Meta<PropsWithChildren<PostProps>> = {
     featuredImage: 'https://picsum.photos/id/1015/1200/400',
     objectFit: 'cover',
     title: 'Sample Post Title',
+    titleVariant: 'h4',
   },
   argTypes: {
     excerpt: { control: 'text', description: 'Post excerpt (HTML allowed).' },
@@ -32,13 +31,18 @@ const meta: Meta<PropsWithChildren<PostProps>> = {
       description: 'Image object-fit style.',
       options: ['cover', 'contain'],
     },
+    titleVariant: {
+      control: 'select',
+      description: 'Typography variant for the title.',
+      options: ['h1', 'h2', 'h3', 'h4', 'h5'],
+    },
   },
   parameters: {
     layout: 'centered',
     docs: {
       description: {
         component:
-          'Post displays a single post tile with a title, excerpt, featured image, and optional children.',
+          'Post displays a single post tile with a title, excerpt, featured image, and optional children. The titleVariant prop controls the heading level.',
       },
     },
   },
@@ -54,6 +58,19 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'A post with title, excerpt, image, and a button.',
+      },
+    },
+  },
+};
+
+export const TitleAsH2: Story = {
+  args: {
+    titleVariant: 'h2',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'A post with the title rendered as an h2 heading.',
       },
     },
   },

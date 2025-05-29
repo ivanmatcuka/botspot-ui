@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Typography } from '@mui/material';
 
-import { ScrollableBlock } from '../components/ScrollableBlock';
+import { ScrollableBlock } from '../components/__ScrollableBlock';
 
 const mockImages = [
   'https://picsum.photos/id/1011/400/200',

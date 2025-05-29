@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { PropsWithChildren } from 'react';
+
 import { Iframe } from '../components/3dIframe';
 import { Gallery, GalleryProps } from '../components/Gallery';
 
-const meta: Meta<GalleryProps> = {
+const meta: Meta<PropsWithChildren<GalleryProps>> = {
   component: Gallery,
   tags: ['autodocs'],
   title: 'Components/Gallery',

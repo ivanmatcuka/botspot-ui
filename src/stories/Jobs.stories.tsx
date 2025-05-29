@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Box } from '@mui/material';
+
 import { Jobs, JobsProps } from '../components/Jobs';
 
 const meta: Meta<JobsProps> = {
@@ -9,12 +11,9 @@ const meta: Meta<JobsProps> = {
   args: {
     jobs: [
       {
+        excerpt: 'Full-Time // Hybrid // Available ASAP',
         id: 101,
-        title: { rendered: 'Innovation Creator (m/w/d)' },
-        excerpt: {
-          protected: false,
-          rendered: 'Full-Time // Hybrid // Available ASAP',
-        },
+        title: 'Innovation Creator (m/w/d)',
       },
     ],
   },
@@ -40,7 +39,20 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  render: (args) => (
+    <Box p={4}>
+      <Jobs {...args} jobs={args.jobs ?? []} />
+    </Box>
+  ),
+  args: {
+    jobs: [
+      {
+        excerpt: 'Full-Time // Hybrid // Available ASAP',
+        id: 101,
+        title: 'Innovation Creator (m/w/d)',
+      },
+    ],
+  },
   parameters: {
     docs: {
       description: {
@@ -51,31 +63,27 @@ export const Default: Story = {
 };
 
 export const MultipleJobs: Story = {
+  render: (args) => (
+    <Box p={4}>
+      <Jobs {...args} jobs={args.jobs ?? []} />
+    </Box>
+  ),
   args: {
     jobs: [
       {
+        excerpt: 'Full-Time // Hybrid // Available ASAP',
         id: 101,
-        title: { rendered: 'Innovation Creator (m/w/d)' },
-        excerpt: {
-          protected: false,
-          rendered: 'Full-Time // Hybrid // Available ASAP',
-        },
+        title: 'Innovation Creator (m/w/d)',
       },
       {
+        excerpt: 'Full-Time // Remote // React/TypeScript',
         id: 102,
-        title: { rendered: 'Frontend Engineer' },
-        excerpt: {
-          protected: false,
-          rendered: 'Full-Time // Remote // React/TypeScript',
-        },
+        title: 'Frontend Engineer',
       },
       {
+        excerpt: 'Full-Time // Onsite // Node.js/GraphQL',
         id: 103,
-        title: { rendered: 'Backend Developer' },
-        excerpt: {
-          protected: false,
-          rendered: 'Full-Time // Onsite // Node.js/GraphQL',
-        },
+        title: 'Backend Developer',
       },
     ],
   },
@@ -89,6 +97,11 @@ export const MultipleJobs: Story = {
 };
 
 export const NoJobs: Story = {
+  render: (args) => (
+    <Box p={4}>
+      <Jobs {...args} jobs={args.jobs ?? []} />
+    </Box>
+  ),
   args: {
     jobs: [],
   },

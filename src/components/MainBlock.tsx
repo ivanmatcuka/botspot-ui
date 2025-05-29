@@ -1,3 +1,8 @@
+/**
+ * MainBlock is a prominent section component with headline, subline, optional image, and custom content.
+ * Use the controls to explore all features and states.
+ */
+
 import { Box, GridProps, Typography } from '@mui/material';
 import { FC, ReactNode } from 'react';
 
@@ -16,16 +21,20 @@ export const MainBlock: FC<MainBlockProps> = ({
   subline,
 }) => (
   <Box textAlign={{ md: 'left', xs: 'center' }}>
-    <Typography mb={2} variant="body1">
-      {subline}
-    </Typography>
-    <Typography mb={children ? 4 : 0} variant="h2">
-      {headline}
-    </Typography>
+    {subline && (
+      <Typography mb={2} variant="body1">
+        {subline}
+      </Typography>
+    )}
+    {headline && (
+      <Typography mb={children ? 4 : 0} variant="h2">
+        {headline}
+      </Typography>
+    )}
     {children}
     {subAssetUrl && (
       <img
-        alt=""
+        alt={headline}
         className="object-cover w-full h-auto pt-[48px] min-h-[240px]"
         height={800}
         loading="lazy"

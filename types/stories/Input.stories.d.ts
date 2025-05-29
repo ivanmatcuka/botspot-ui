@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { InputProps } from '../components/Input';
 declare const meta: Meta<InputProps>;
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<InputProps>;
 export declare const Default: Story;
 export declare const Email: Story;
 export declare const Textarea: Story;

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { PropsWithChildren } from 'react';
 import { GalleryProps } from '../components/Gallery';
-declare const meta: Meta<GalleryProps>;
+declare const meta: Meta<PropsWithChildren<GalleryProps>>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;

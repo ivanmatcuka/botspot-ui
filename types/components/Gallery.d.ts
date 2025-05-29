@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
-export type GalleryProps = PropsWithChildren<{
+export declare const EMPTY_STATE_MSG = "No gallery items to display.";
+export type GalleryProps = {
     transparent?: boolean;
-}>;
-export declare const Gallery: FC<GalleryProps>;
+};
+export declare const Gallery: FC<PropsWithChildren<GalleryProps>>;

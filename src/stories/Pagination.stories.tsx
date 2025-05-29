@@ -36,12 +36,17 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const Template = (args: any) => {
+const Template = (args: Story['args']) => {
   const [page, setPage] = useState(1);
+
   return (
     <Box>
       <Typography mb={2}>Current page: {page}</Typography>
-      <Pagination {...args} setPage={setPage} />
+      <Pagination
+        count={args?.count}
+        perPage={args?.perPage}
+        setPage={setPage}
+      />
     </Box>
   );
 };

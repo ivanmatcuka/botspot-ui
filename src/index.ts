@@ -23,7 +23,7 @@ export { Pagination } from './components/Pagination';
 export { People } from './components/People';
 export { Post } from './components/Post';
 export { Posts } from './components/Posts';
-export { ScrollableBlock } from './components/ScrollableBlock';
+export { ScrollableBlock } from './components/__ScrollableBlock';
 export { SecondaryBlock } from './components/SecondaryBlock';
 export { SkeletonVideo } from './components/SkeletonVideo';
 export { SnackbarProvider } from './components/Snackbar';

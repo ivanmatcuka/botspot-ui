@@ -1,5 +1,10 @@
 'use client';
 
+/**
+ * Pagination provides navigation for paginated content, supporting custom button rendering and responsive layout.
+ * Figma reference: https://www.figma.com/file/
+ */
+
 import {
   Box,
   Pagination as MuiPagination,
