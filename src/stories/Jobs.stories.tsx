@@ -41,12 +41,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <Box p={4}>
-      <Jobs {...args} jobs={args.jobs ?? []} />
+      <Jobs {...args} jobs={args.jobs} />
     </Box>
   ),
   args: {
     jobs: [
       {
+        content: 'Role description for Innovation Creator',
         excerpt: 'Full-Time // Hybrid // Available ASAP',
         id: 101,
         title: 'Innovation Creator (m/w/d)',
@@ -65,22 +66,25 @@ export const Default: Story = {
 export const MultipleJobs: Story = {
   render: (args) => (
     <Box p={4}>
-      <Jobs {...args} jobs={args.jobs ?? []} />
+      <Jobs {...args} jobs={args.jobs} />
     </Box>
   ),
   args: {
     jobs: [
       {
+        content: 'Role description for Innovation Creator',
         excerpt: 'Full-Time // Hybrid // Available ASAP',
         id: 101,
         title: 'Innovation Creator (m/w/d)',
       },
       {
+        content: 'Role description for Frontend Engineer',
         excerpt: 'Full-Time // Remote // React/TypeScript',
         id: 102,
         title: 'Frontend Engineer',
       },
       {
+        content: 'Role description for Backend Developer',
         excerpt: 'Full-Time // Onsite // Node.js/GraphQL',
         id: 103,
         title: 'Backend Developer',
@@ -99,7 +103,7 @@ export const MultipleJobs: Story = {
 export const NoJobs: Story = {
   render: (args) => (
     <Box p={4}>
-      <Jobs {...args} jobs={args.jobs ?? []} />
+      <Jobs {...args} jobs={args.jobs} />
     </Box>
   ),
   args: {

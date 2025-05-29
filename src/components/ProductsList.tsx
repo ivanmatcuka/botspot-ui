@@ -1,11 +1,10 @@
 import { FC, Fragment } from 'react';
 
 import { CustomFields, CustomPost } from '../types/wordpress';
-import { getFeaturedImageUrl } from '../utils/getFeaturedImageUrl';
+import { ScrollableBlock } from './__ScrollableBlock';
 import { Button } from './Button';
 import { MediaBlock } from './MediaBlock';
 import { PageContainer } from './PageContainer';
-import { ScrollableBlock } from './__ScrollableBlock';
 import { SecondaryBlock } from './SecondaryBlock';
 
 // Legacy leftover
@@ -21,34 +20,32 @@ export const ProductsList: FC<ProductsListProps> = ({
   scrollable = false,
 }) => {
   return products?.map((product, index) => {
-    if (!product?.acf) return null;
+    if (!product?.info) return null;
 
     const {
       'download-cta': downloadCta,
       'download-url': downloadUrl = DOWNLOAD_AREA_FALLBACK, // Legacy leftover
       'explore-cta': exploreCta = EXPLORE_CTA_FALLBACK, // Legacy leftover
+      'full-name': fullName,
       photo_gallery,
       picture,
       'short-name': shortName,
-    }: Partial<CustomFields> = product.acf ?? {};
+    }: Partial<CustomFields> = product.info ?? {};
 
     const imagesUrls =
       photo_gallery?.animation.flat().map((url) => url.full_image_url) ?? [];
 
     const hasEnoughImages = imagesUrls.length > 9;
-    const headline = product.acf['full-name'] || product.title.rendered;
+    const headline = fullName || product.title;
 
     const contentBlock = (
       <PageContainer py={{ md: 10, xs: 5 }}>
-        <SecondaryBlock
-          headline={headline}
-          sublineElement={product.excerpt.rendered}
-        >
+        <SecondaryBlock headline={headline} sublineElement={product.excerpt}>
           <Button href={`/products/${product.slug}`} variant="primary">
-            {exploreCta} {shortName || product.title.rendered}
+            {exploreCta} {shortName || product.title}
           </Button>
           <Button
-            href={`${downloadUrl}?default=${product.title.rendered}`}
+            href={`${downloadUrl}?default=${product.title}`}
             variant="secondary"
           >
             {downloadCta}
@@ -58,7 +55,7 @@ export const ProductsList: FC<ProductsListProps> = ({
     );
 
     const assetUrl = scrollable
-      ? (imagesUrls[0] ?? getFeaturedImageUrl(product))
+      ? (imagesUrls[0] ?? product.featuredImage)
       : picture;
 
     return hasEnoughImages && scrollable ? (

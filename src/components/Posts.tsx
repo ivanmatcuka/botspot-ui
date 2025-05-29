@@ -2,9 +2,8 @@
 
 import { Grid } from '@mui/material';
 import { FC, useEffect, useState } from 'react';
-import { WP_REST_API_Post } from 'wp-types';
 
-import { getFeaturedImageUrl } from '../utils/getFeaturedImageUrl';
+import { CustomPost } from '../types';
 import { Button } from './Button';
 import { LoadingSkeletons } from './LoadingSkeletons';
 import { Pagination } from './Pagination';
@@ -19,7 +18,7 @@ export type PostsProps = {
     perPage?: number,
   ) => Promise<{
     count: number;
-    data: WP_REST_API_Post[];
+    data: CustomPost[];
   }>;
 };
 export const Posts: FC<PostsProps> = ({
@@ -31,7 +30,7 @@ export const Posts: FC<PostsProps> = ({
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(0);
-  const [posts, setPosts] = useState<WP_REST_API_Post[]>([]);
+  const [posts, setPosts] = useState<CustomPost[]>([]);
 
   useEffect(() => {
     setLoading(true);
@@ -56,10 +55,7 @@ export const Posts: FC<PostsProps> = ({
             xs={12}
             item
           >
-            <Post
-              featuredImage={getFeaturedImageUrl(post)}
-              title={post.title.rendered}
-            >
+            <Post featuredImage={post.featuredImage} title={post.title || ''}>
               <Button
                 href={`/3d-academy/${post.slug}`}
                 target="_blank"

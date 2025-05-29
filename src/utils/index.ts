@@ -4,4 +4,3 @@ export const requestInit: RequestInit = {
     'Content-Type': 'application/json',
   },
 };
-export { getFeaturedImageUrl } from './getFeaturedImageUrl';

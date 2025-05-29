@@ -1,13 +1,13 @@
-import { WP_REST_API_Post } from 'wp-types';
-
-import { DeepPartial, Seo } from './yoast';
-
 export type CustomPost<T = unknown> = {
-  acf?: Partial<CustomFields>;
-  block_data?: T[];
-  has_blocks?: boolean;
-  yoast_head_json?: DeepPartial<Seo>;
-} & WP_REST_API_Post;
+  blocks?: T[];
+  content?: string;
+  excerpt?: string;
+  featuredImage?: string;
+  id: number;
+  info?: Partial<CustomFields>;
+  slug?: string;
+  title?: string;
+};
 
 export type CustomFields = {
   banner: string;

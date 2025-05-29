@@ -26,7 +26,7 @@ export const ProductsTopic: FC<ProductsTopicProps> = ({
   const [topic, setTopic] = useState<string>('');
 
   const productNames = useMemo(
-    () => data?.map((product) => product.title.rendered) ?? [],
+    () => data?.map((product) => product.title) ?? [],
     [data],
   );
 
@@ -54,6 +54,7 @@ export const ProductsTopic: FC<ProductsTopicProps> = ({
           {options.map((currTopic, index) => (
             <FormControlLabel
               onChange={() => {
+                if (!currTopic) return;
                 setTopic(currTopic);
                 onChange(currTopic);
               }}

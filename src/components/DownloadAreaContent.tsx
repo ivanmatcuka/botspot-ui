@@ -39,15 +39,15 @@ export const DownloadAreaContent: FC<DownloadAreaContentProps> = ({
       />
       <Grid mt={6} spacing={{ lg: 5, md: 3, xs: 2 }} container>
         {products.map((product, index) => {
-          const { datasheet, picture } = product.acf ?? {};
+          const { datasheet, picture } = product.info ?? {};
 
           return (
             <Grid key={index} lg={4} md={6} xs={12} item>
               <Post
-                excerpt={product.excerpt.rendered}
+                excerpt={product.excerpt}
                 featuredImage={picture}
                 objectFit="contain"
-                title={product.title.rendered}
+                title={product.title || ''}
               >
                 <Button href={datasheet} variant="secondary">
                   Download Data Sheet

@@ -1,23 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Box } from '@mui/material';
-
-import { People, PeopleProps } from '../components/People';
+import { People } from '../components/People';
 
 const mockPeople = [
   {
+    content: 'Bio for Alice Johnson',
     excerpt: 'Lead Engineer with a passion for robotics and AI.',
     featuredImage: 'https://randomuser.me/api/portraits/women/1.jpg',
     id: 1,
     title: 'Alice Johnson',
   },
   {
+    content: 'Bio for Bob Smith',
     excerpt: 'Creative Director and design systems expert.',
     featuredImage: 'https://randomuser.me/api/portraits/men/2.jpg',
     id: 2,
     title: 'Bob Smith',
   },
   {
+    content: 'Bio for Carol Lee',
     excerpt: 'Product Manager focused on user experience.',
     featuredImage: 'https://randomuser.me/api/portraits/women/3.jpg',
     id: 3,
@@ -25,7 +26,7 @@ const mockPeople = [
   },
 ];
 
-const meta: Meta<PeopleProps> = {
+const meta: Meta = {
   component: People,
   tags: ['autodocs'],
   title: 'Components/People',
@@ -35,8 +36,7 @@ const meta: Meta<PeopleProps> = {
   argTypes: {
     people: {
       control: false,
-      description:
-        'Array of people (each with excerpt, featuredImage, id, title).',
+      description: 'Array of people (CustomPost type).',
     },
   },
   parameters: {
@@ -55,11 +55,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Box p={4}>
-      <People {...args} people={args.people ?? []} />
-    </Box>
-  ),
   args: {
     people: mockPeople,
   },
@@ -73,11 +68,6 @@ export const Default: Story = {
 };
 
 export const Empty: Story = {
-  render: (args) => (
-    <Box p={4}>
-      <People {...args} people={args.people ?? []} />
-    </Box>
-  ),
   args: {
     people: [],
   },
