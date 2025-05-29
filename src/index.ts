@@ -8,7 +8,7 @@ export { Iframe } from './components/3dIframe';
 export { Banner } from './components/Banner';
 export { Button } from './components/Button';
 export { DownloadAreaContent } from './components/DownloadAreaContent';
-export { DynamicForm } from './components/DynamicForm';
+export { DynamicForm } from './components/DynamicForm/DynamicForm';
 export { Gallery } from './components/Gallery';
 export { GalleryTile } from './components/GalleryTile';
 export { Job } from './components/Job';
