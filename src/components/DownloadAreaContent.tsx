@@ -10,7 +10,7 @@ import { FC, PropsWithChildren, useState } from 'react';
 import { CustomPost } from '../types';
 import { ApiResponse } from '../utils/getForm';
 import { Button } from './Button';
-import { DynamicForm } from './DynamicForm/DynamicForm';
+import { DynamicForm } from './DynamicForm';
 import { MainBlock } from './MainBlock';
 import { Post } from './Post';
 

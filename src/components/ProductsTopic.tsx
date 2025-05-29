@@ -4,7 +4,7 @@ import { Box, Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 import { FC, useEffect, useMemo, useState } from 'react';
 
 import { CustomPost } from '../types';
-import { Menu } from './Menu/Menu';
+import { Menu } from './Menu';
 
 const LEGACY_OPTIONS = ['Scan Service', 'botspot'];
 

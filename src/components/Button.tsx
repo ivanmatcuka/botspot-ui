@@ -25,7 +25,7 @@ const MuiIcons = {
   X,
 };
 
-import { MenuItem } from './Menu/Menu';
+import { MenuItem } from './Menu';
 
 const PrimaryButton = styled(({ ...props }: ButtonProps) => (
   <MuiButton color="primary" {...props} variant="contained" />

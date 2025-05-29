@@ -2,10 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Typography } from '@mui/material';
 
-import {
-  DynamicForm,
-  DynamicFormProps,
-} from '../components/DynamicForm/DynamicForm';
+import { DynamicForm, DynamicFormProps } from '../components/DynamicForm';
 import { mockGetForm, mockSubmitForm } from '../utils/mock';
 
 const meta: Meta<DynamicFormProps> = {
