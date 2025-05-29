@@ -27,11 +27,6 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./standalone": {
-      "types": "./types/standalone.d.ts",
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    },
     "./theme": {
       "types": "./types/theme.d.ts",
       "import": "./dist/index.es.js",
