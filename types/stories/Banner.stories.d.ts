@@ -4,3 +4,7 @@ declare const meta: Meta<BannerProps>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const ImageMedia: Story;
+export declare const NoChildren: Story;
+export declare const NoMedia: Story;
+export declare const OnlyHeadline: Story;

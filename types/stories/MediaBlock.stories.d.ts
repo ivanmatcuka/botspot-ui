@@ -4,3 +4,7 @@ declare const meta: Meta<MediaBlockProps>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const VideoExample: Story;
+export declare const ImageExample: Story;
+export declare const FullHeight: Story;
+export declare const ContainFit: Story;
+export declare const NoAsset: Story;

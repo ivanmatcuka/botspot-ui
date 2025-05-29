@@ -1,6 +1,6 @@
 import { MenuItemProps as MuiMenuItemProps } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 export declare const MenuItem: FC<PropsWithChildren<MuiMenuItemProps>>;
 type MenuProps = {
     className?: string;

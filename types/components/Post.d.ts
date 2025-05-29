@@ -1,9 +1,8 @@
 import { FC, PropsWithChildren } from 'react';
-type PostProps = PropsWithChildren<{
+export type PostProps = {
     excerpt?: string;
     featuredImage?: string;
     objectFit?: 'cover' | 'contain';
     title: string;
-}>;
-export declare const Post: FC<PostProps>;
-export {};
+};
+export declare const Post: FC<PropsWithChildren<PostProps>>;

@@ -1,6 +1,6 @@
 import { usePopupState } from 'material-ui-popup-state/hooks';
 import { FC, PropsWithChildren } from 'react';
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 type CustomHoverMenuProps = {
     className?: string;
     href?: string;

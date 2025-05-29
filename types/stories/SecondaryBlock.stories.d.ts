@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { PropsWithChildren } from 'react';
 import { SecondaryBlockProps } from '../components/SecondaryBlock';
-declare const meta: Meta<SecondaryBlockProps>;
+declare const meta: Meta<PropsWithChildren<SecondaryBlockProps>>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const NoChildren: Story;
+export declare const LongSubline: Story;
+export declare const Empty: Story;

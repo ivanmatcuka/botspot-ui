@@ -4,3 +4,7 @@ declare const meta: Meta<MainBlockProps>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const NoImage: Story;
+export declare const NoChildren: Story;
+export declare const LongSubline: Story;
+export declare const NoHeadline: Story;

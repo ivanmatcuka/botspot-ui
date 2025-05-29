@@ -15,22 +15,27 @@ export declare const typography: {
     };
     h1: {
         fontSize: number;
+        fontWeight: number;
         lineHeight: number;
     };
     h2: {
         fontSize: number;
+        fontWeight: number;
         lineHeight: number;
     };
     h3: {
         fontSize: number;
+        fontWeight: number;
         lineHeight: number;
     };
     h4: {
         fontSize: number;
+        fontWeight: number;
         lineHeight: number;
     };
     h5: {
         fontSize: number;
+        fontWeight: number;
         lineHeight: number;
     };
 };

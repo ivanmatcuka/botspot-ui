@@ -70,15 +70,27 @@ const meta: Meta<InputProps> = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<InputProps>;
 
-const Template = (args: any) => {
+const Template = (args: InputProps) => {
   const { formState, register } = useForm();
   return (
     <Box width={400}>
       <Input
         {...args}
         error={formState.errors[args.name]}
+        register={register}
+      />
+    </Box>
+  );
+};
+const TemplateWithError = (args: InputProps) => {
+  const { register } = useForm();
+  return (
+    <Box width={400}>
+      <Input
+        {...args}
+        error={{ message: 'This field is required.' }}
         register={register}
       />
     </Box>
@@ -146,18 +158,7 @@ export const WhiteColor: Story = {
 };
 
 export const WithError: Story = {
-  render: (args) => {
-    // Simulate error
-    return (
-      <Box width={400}>
-        <Input
-          {...args}
-          error={{ message: 'This field is required.' }}
-          register={() => ({})}
-        />
-      </Box>
-    );
-  },
+  render: TemplateWithError,
   args: {
     label: 'With Error',
     required: true,

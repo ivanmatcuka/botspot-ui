@@ -4,3 +4,6 @@ declare const meta: Meta<GalleryProps>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const OpaqueBackground: Story;
+export declare const SingleChild: Story;
+export declare const NoChildren: Story;

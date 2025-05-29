@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { PropsWithChildren } from 'react';
 import { TileProps } from '../components/Tile';
-declare const meta: Meta<TileProps>;
+declare const meta: Meta<PropsWithChildren<TileProps>>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const NoChildren: Story;
+export declare const LongHeadline: Story;
+export declare const Empty: Story;

@@ -1,9 +1,13 @@
-'use client';
+// A prominent banner component with headline, subline, media, and call-to-action support. Use the controls to explore all features.
+// Figma reference: https://www.figma.com/file/your-figma-link-here
 
 import { Box, Grid, Typography } from '@mui/material';
 import { FC, isValidElement, ReactNode } from 'react';
 
 import { MediaBlock, MediaBlockProps } from './MediaBlock';
+
+const GRADIENT_CLASS =
+  'absolute inset-0 bg-gradient-to-t from-black to-transparent';
 
 export type BannerProps = {
   children?: ReactNode;
@@ -22,7 +26,9 @@ export const Banner: FC<BannerProps> = ({
       <MediaBlock {...mediaBlockOptions} banner fullHeight />
     )}
 
-    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+    {/* Gradient */}
+    <div className={GRADIENT_CLASS} />
+
     <Box
       bottom={0}
       left={0}

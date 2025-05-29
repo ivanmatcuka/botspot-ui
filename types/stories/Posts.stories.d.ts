@@ -7,3 +7,4 @@ export declare const Default: Story;
 export declare const Loading: Story;
 export declare const ListLayout: Story;
 export declare const WithoutPagination: Story;
+export declare const Empty: Story;

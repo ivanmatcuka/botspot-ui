@@ -8,6 +8,7 @@ export type CF7FormField = {
 export type CF7Form = {
     id: number;
     locale: string;
+    title: string;
     properties: {
         form: {
             content: string;
@@ -24,7 +25,6 @@ export type CF7Form = {
             use_html: boolean;
         };
     };
-    title: string;
 };
 export type Field = {
     attr: string;

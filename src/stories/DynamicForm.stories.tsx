@@ -3,39 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Typography } from '@mui/material';
 
 import { DynamicForm, DynamicFormProps } from '../components/DynamicForm';
-
-const mockFields = [
-  {
-    basetype: 'text',
-    labels: ['Name'],
-    name: 'name',
-    raw_name: 'name',
-    type: 'text*',
-  },
-  {
-    basetype: 'email',
-    labels: ['Email'],
-    name: 'email',
-    raw_name: 'email',
-    type: 'email*',
-  },
-  {
-    basetype: 'textarea',
-    labels: ['Message'],
-    name: 'message',
-    raw_name: 'message',
-    type: 'textarea',
-  },
-];
-
-const mockGetForm = async (formId: number) => ({
-  fields: mockFields,
-});
-
-const mockSubmitForm = async (formData: FormData, formId: number) => {
-  // Simulate network delay
-  await new Promise((resolve) => setTimeout(resolve, 500));
-};
+import { mockGetForm, mockSubmitForm } from '../utils/mock';
 
 const meta: Meta<DynamicFormProps> = {
   component: DynamicForm,

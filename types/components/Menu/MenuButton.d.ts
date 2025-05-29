@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from 'react';
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 type MenuButtonProps = {
     className?: string;
     href?: string;

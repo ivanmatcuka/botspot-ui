@@ -2,6 +2,7 @@
 /**
  * This is a higly specific component that is used to display a download area.
  * Needs to be reconsidered in the future.
+ * Figma reference: https://www.figma.com
  */
 import { Grid } from '@mui/material';
 import { FC, PropsWithChildren, useState } from 'react';

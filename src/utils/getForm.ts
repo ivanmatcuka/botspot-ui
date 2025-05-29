@@ -1,15 +1,15 @@
 export type Field = {
-  attr: string;
+  attr?: string;
   basetype: string;
-  content: string;
+  content?: string;
   labels: string[];
   name: string;
-  options: string[];
-  pipes: Record<string, unknown>;
+  options?: string[];
+  pipes?: Record<string, unknown>;
   raw_name: string;
-  raw_values: string[];
+  raw_values?: string[];
   type: string;
-  values: string[];
+  values?: string[];
 };
 
 export type ApiResponse = {

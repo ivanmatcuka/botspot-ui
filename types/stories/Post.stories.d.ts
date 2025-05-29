@@ -1,0 +1,11 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { PropsWithChildren } from 'react';
+import { PostProps } from '../components/Post';
+declare const meta: Meta<PropsWithChildren<PostProps>>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export declare const Default: Story;
+export declare const NoExcerpt: Story;
+export declare const NoImage: Story;
+export declare const ContainImage: Story;
+export declare const NoChildren: Story;

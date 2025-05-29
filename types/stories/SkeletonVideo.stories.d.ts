@@ -4,3 +4,7 @@ declare const meta: Meta<SkeletonVideoProps>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
+export declare const NotMuted: Story;
+export declare const NoLoop: Story;
+export declare const NoAutoplay: Story;
+export declare const NoVideo: Story;

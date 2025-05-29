@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { ScrollableBlock } from '../components/ScrollableBlock';
+declare const meta: Meta<typeof ScrollableBlock>;
+export default meta;
+type Story = StoryObj<typeof ScrollableBlock>;
+export declare const Default: Story;
+export declare const NoImages: Story;
+export declare const NoChildren: Story;
+export declare const ManyImages: Story;
+export declare const EmptyProps: Story;

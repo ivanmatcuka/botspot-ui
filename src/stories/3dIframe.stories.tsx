@@ -60,13 +60,13 @@ export const AlternateModel: Story = {
 
 export const InvalidSrc: Story = {
   args: {
-    src: 'https://example.com/invalid-url',
+    src: '1',
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Demonstrates how the component handles an invalid or non-embeddable URL.',
+          'Demonstrates how the component handles an invalid or non-embeddable URL (shows error state).',
       },
     },
   },
@@ -79,7 +79,8 @@ export const EmptySrc: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'No src provided. The iframe will not render any content.',
+        story:
+          'No src provided. The iframe will not render any content and shows the empty state.',
       },
     },
   },

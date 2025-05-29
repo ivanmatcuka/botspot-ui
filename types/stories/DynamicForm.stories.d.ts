@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { DynamicFormProps } from '../components/DynamicForm';
+declare const meta: Meta<DynamicFormProps>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export declare const Default: Story;
+export declare const Frameless: Story;
+export declare const Secondary: Story;
+export declare const NoChildren: Story;
+export declare const NoFields: Story;

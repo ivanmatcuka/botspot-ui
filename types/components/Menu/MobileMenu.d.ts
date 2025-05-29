@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { ButtonProps } from '../../components/Button';
+import { ButtonProps } from '../Button';
 type MobileMenuProps = {
     label: string;
     variant: ButtonProps['variant'];
