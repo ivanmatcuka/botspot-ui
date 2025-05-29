@@ -7,16 +7,13 @@ import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
 import { Box, Typography } from '@mui/material';
 import { FC } from 'react';
 
+import { CustomPost } from '../types';
 import { Button } from './Button';
 import { Tile } from './Tile';
 
 const NO_DESCRIPTION_MSG = 'No description available.';
 
-export type JobProps = {
-  excerpt?: string;
-  id: number;
-  title: string;
-};
+export type JobProps = Pick<CustomPost, 'excerpt' | 'id' | 'title'>;
 export const Job: FC<JobProps> = ({ excerpt, id, title }) => (
   <Tile headline={title}>
     <Box

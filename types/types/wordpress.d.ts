@@ -6,7 +6,7 @@ export type CustomPost<T = unknown> = {
     id: number;
     info?: Partial<CustomFields>;
     slug?: string;
-    title?: string;
+    title: string;
 };
 export type CustomFields = {
     banner: string;

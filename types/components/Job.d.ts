@@ -3,9 +3,6 @@
  * Figma reference: https://www.figma.com/file
  */
 import { FC } from 'react';
-export type JobProps = {
-    excerpt?: string;
-    id: number;
-    title: string;
-};
+import { CustomPost } from '../types';
+export type JobProps = Pick<CustomPost, 'excerpt' | 'id' | 'title'>;
 export declare const Job: FC<JobProps>;

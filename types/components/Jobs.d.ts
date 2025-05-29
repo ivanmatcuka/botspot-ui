@@ -3,11 +3,8 @@
  * Figma reference: https://www.figma.com/file
  */
 import { FC } from 'react';
-export type Job = {
-    excerpt?: string;
-    id: number;
-    title: string;
-};
+import { JobProps } from './Job';
+export type Job = JobProps;
 export type JobsProps = {
     jobs: Job[];
 };

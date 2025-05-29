@@ -6,15 +6,11 @@
 import { Box } from '@mui/material';
 import { FC } from 'react';
 
-import { Job } from './Job';
+import { Job, JobProps } from './Job';
 
 const NO_JOBS_MSG = 'No jobs available at the moment.';
 
-export type Job = {
-  excerpt?: string;
-  id: number;
-  title: string;
-};
+export type Job = JobProps;
 export type JobsProps = {
   jobs: Job[];
 };
