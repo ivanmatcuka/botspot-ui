@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Box } from '@mui/material';
+
 import { People } from '../components/People';
 
 const mockPeople = [
@@ -13,7 +15,6 @@ const mockPeople = [
   {
     content: 'Bio for Bob Smith',
     excerpt: 'Creative Director and design systems expert.',
-    featuredImage: 'https://randomuser.me/api/portraits/men/2.jpg',
     id: 2,
     title: 'Bob Smith',
   },
@@ -55,6 +56,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  render: (args) => (
+    <Box sx={{ pb: 4, pl: 4, pt: 4 }}>
+      <People people={args.people} />
+    </Box>
+  ),
   args: {
     people: mockPeople,
   },
@@ -68,6 +74,11 @@ export const Default: Story = {
 };
 
 export const Empty: Story = {
+  render: (args) => (
+    <Box sx={{ pb: 4, pl: 4, pt: 4 }}>
+      <People people={args.people} />
+    </Box>
+  ),
   args: {
     people: [],
   },

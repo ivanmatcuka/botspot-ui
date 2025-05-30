@@ -10,7 +10,6 @@ const meta: Meta<typeof Post> = {
   args: {
     children: <Button variant="primary">Read More</Button>,
     excerpt: 'This is a short excerpt for the post.',
-    featuredImage: 'https://picsum.photos/id/1015/1200/400',
     objectFit: 'cover',
     title: 'Sample Post Title',
     titleVariant: 'h4',
@@ -53,7 +52,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    featuredImage: 'https://picsum.photos/id/1015/1200/400',
+  },
   parameters: {
     docs: {
       description: {
@@ -65,6 +66,7 @@ export const Default: Story = {
 
 export const TitleAsH2: Story = {
   args: {
+    featuredImage: 'https://picsum.photos/id/1015/1200/400',
     titleVariant: 'h2',
   },
   parameters: {
@@ -79,6 +81,7 @@ export const TitleAsH2: Story = {
 export const NoExcerpt: Story = {
   args: {
     excerpt: '',
+    featuredImage: 'https://picsum.photos/id/1015/1200/400',
   },
   parameters: {
     docs: {
@@ -90,9 +93,7 @@ export const NoExcerpt: Story = {
 };
 
 export const NoImage: Story = {
-  args: {
-    featuredImage: '',
-  },
+  args: {},
   parameters: {
     docs: {
       description: {
@@ -104,6 +105,7 @@ export const NoImage: Story = {
 
 export const ContainImage: Story = {
   args: {
+    featuredImage: 'https://picsum.photos/id/1015/1200/400',
     objectFit: 'contain',
   },
   parameters: {
@@ -118,6 +120,7 @@ export const ContainImage: Story = {
 export const NoChildren: Story = {
   args: {
     children: null,
+    featuredImage: 'https://picsum.photos/id/1015/1200/400',
   },
   parameters: {
     docs: {

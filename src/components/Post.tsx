@@ -13,6 +13,8 @@ const INNER_BOX_CLASSES =
 const TITLE_CLASSES = 'line-clamp-2 !text-white';
 const EXCERPT_CLASSES = 'line-clamp-3';
 const IMAGE_BASE_CLASSES = 'w-full h-full absolute inset-0 object-top';
+const FEATURED_IMAGE_DEFAULT =
+  'https://lightwidget.com/wp-content/uploads/localhost-file-not-found-480x480.avif';
 
 export type PostProps = {
   excerpt?: string;
@@ -24,7 +26,7 @@ export type PostProps = {
 export const Post: FC<PropsWithChildren<PostProps>> = ({
   children,
   excerpt,
-  featuredImage,
+  featuredImage = FEATURED_IMAGE_DEFAULT,
   objectFit = 'cover',
   title,
   titleVariant = 'h4',
