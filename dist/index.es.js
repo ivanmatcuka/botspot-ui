@@ -19214,7 +19214,7 @@ const Hy = Gy(rr), Yy = /* @__PURE__ */ E.forwardRef(function(t, o) {
         ]
       }
     ),
-    o && /* @__PURE__ */ x(
+    /* @__PURE__ */ x(
       "img",
       {
         alt: "",

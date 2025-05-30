@@ -69,15 +69,13 @@ export const Post: FC<PropsWithChildren<PostProps>> = ({
         )}
         {children}
       </Box>
-      {featuredImage && (
-        <img
-          alt=""
-          className={featuredImageClasses}
-          loading="lazy"
-          onError={() => setImgError(true)}
-          src={imageSrc}
-        />
-      )}
+      <img
+        alt=""
+        className={featuredImageClasses}
+        loading="lazy"
+        onError={() => setImgError(true)}
+        src={imageSrc}
+      />
     </Box>
   );
 };
