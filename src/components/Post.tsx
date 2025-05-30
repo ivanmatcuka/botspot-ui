@@ -4,7 +4,7 @@
  */
 
 import { Box, Typography } from '@mui/material';
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useState } from 'react';
 
 const OUTER_BOX_CLASSES =
   'relative rounded-lg text-white overflow-hidden h-full min-h-[360px]';
@@ -12,7 +12,7 @@ const INNER_BOX_CLASSES =
   'bg-common-black !bg-opacity-80 w-full text-center z-10';
 const TITLE_CLASSES = 'line-clamp-2 !text-white';
 const EXCERPT_CLASSES = 'line-clamp-3';
-const IMAGE_BASE_CLASSES = 'w-full h-full absolute inset-0 object-top';
+const IMAGE_BASE_CLASSES = 'w-full h-full absolute inset-0';
 const FEATURED_IMAGE_DEFAULT =
   'https://lightwidget.com/wp-content/uploads/localhost-file-not-found-480x480.avif';
 
@@ -31,9 +31,16 @@ export const Post: FC<PropsWithChildren<PostProps>> = ({
   title,
   titleVariant = 'h4',
 }) => {
+  const [imgError, setImgError] = useState(false);
+
   const featuredImageClasses = `${IMAGE_BASE_CLASSES} ${
-    objectFit === 'cover' ? 'object-cover' : 'object-contain'
+    objectFit === 'cover'
+      ? 'object-cover object-center'
+      : 'object-contain object-top'
   }`;
+
+  const imageSrc = imgError ? FEATURED_IMAGE_DEFAULT : featuredImage;
+
   return (
     <Box alignItems="flex-end" className={OUTER_BOX_CLASSES} display="flex">
       <Box
@@ -67,7 +74,8 @@ export const Post: FC<PropsWithChildren<PostProps>> = ({
           alt=""
           className={featuredImageClasses}
           loading="lazy"
-          src={featuredImage}
+          onError={() => setImgError(true)}
+          src={imageSrc}
         />
       )}
     </Box>

@@ -130,3 +130,20 @@ export const NoChildren: Story = {
     },
   },
 };
+
+export const InvalidImage: Story = {
+  args: {
+    featuredImage: 'https://example.com/this-image-does-not-exist.jpg',
+    title: 'Post with Broken Image',
+    excerpt:
+      'This post has an invalid image URL and should show the default fallback.',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Shows the Post component falling back to the default image when the provided image URL is invalid.',
+      },
+    },
+  },
+};

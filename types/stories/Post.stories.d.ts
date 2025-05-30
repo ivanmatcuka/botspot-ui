@@ -9,3 +9,4 @@ export declare const NoExcerpt: Story;
 export declare const NoImage: Story;
 export declare const ContainImage: Story;
 export declare const NoChildren: Story;
+export declare const InvalidImage: Story;
