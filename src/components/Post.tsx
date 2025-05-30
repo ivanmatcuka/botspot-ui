@@ -39,7 +39,11 @@ export const Post: FC<PropsWithChildren<PostProps>> = ({
       : 'object-contain object-top'
   }`;
 
-  const imageSrc = imgError ? FEATURED_IMAGE_DEFAULT : featuredImage;
+  const imageSrc = imgError
+    ? FEATURED_IMAGE_DEFAULT
+    : featuredImage === ''
+      ? FEATURED_IMAGE_DEFAULT
+      : featuredImage;
 
   return (
     <Box alignItems="flex-end" className={OUTER_BOX_CLASSES} display="flex">
