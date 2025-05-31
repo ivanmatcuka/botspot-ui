@@ -1,5 +1,3 @@
-'use client';
-
 /**
  * People displays a grid of people, each as a post tile with image, name, and excerpt.
  */

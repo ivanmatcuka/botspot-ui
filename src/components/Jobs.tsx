@@ -16,9 +16,9 @@ export type JobsProps = {
 };
 export const Jobs: FC<JobsProps> = ({ jobs }) => {
   return jobs.length ? (
-    jobs.map(({ excerpt, id, title }) => (
-      <Box display="flex" key={id}>
-        <Job excerpt={excerpt} id={id} title={title} />
+    jobs.map(({ excerpt, slug, title }) => (
+      <Box display="flex" key={slug}>
+        <Job excerpt={excerpt} slug={slug} title={title} />
       </Box>
     ))
   ) : (

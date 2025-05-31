@@ -12,7 +12,7 @@ const meta: Meta<JobsProps> = {
     jobs: [
       {
         excerpt: 'Full-Time // Hybrid // Available ASAP',
-        id: 101,
+        slug: '101',
         title: 'Innovation Creator (m/w/d)',
       },
     ],
@@ -74,19 +74,19 @@ export const MultipleJobs: Story = {
       {
         content: 'Role description for Innovation Creator',
         excerpt: 'Full-Time // Hybrid // Available ASAP',
-        id: 101,
+        slug: '101',
         title: 'Innovation Creator (m/w/d)',
       },
       {
         content: 'Role description for Frontend Engineer',
         excerpt: 'Full-Time // Remote // React/TypeScript',
-        id: 102,
+        slug: '102',
         title: 'Frontend Engineer',
       },
       {
         content: 'Role description for Backend Developer',
         excerpt: 'Full-Time // Onsite // Node.js/GraphQL',
-        id: 103,
+        slug: '103',
         title: 'Backend Developer',
       },
     ],

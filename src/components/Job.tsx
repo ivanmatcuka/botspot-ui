@@ -13,8 +13,8 @@ import { Tile } from './Tile';
 
 const NO_DESCRIPTION_MSG = 'No description available.';
 
-export type JobProps = Pick<CustomPost, 'excerpt' | 'id' | 'title'>;
-export const Job: FC<JobProps> = ({ excerpt, id, title }) => (
+export type JobProps = Pick<CustomPost, 'excerpt' | 'title' | 'slug'>;
+export const Job: FC<JobProps> = ({ excerpt, slug, title }) => (
   <Tile headline={title}>
     <Box
       alignItems="center"
@@ -34,7 +34,7 @@ export const Job: FC<JobProps> = ({ excerpt, id, title }) => (
           {NO_DESCRIPTION_MSG}
         </Typography>
       )}
-      <Button href={`/about/careers/${id}`} variant="primary">
+      <Button href={`/about/careers/${slug}`} variant="primary">
         <ArrowForwardIos />
       </Button>
     </Box>

@@ -19358,7 +19358,7 @@ const $v = /* @__PURE__ */ Ur(Sv), Pv = ({
       /* @__PURE__ */ x(Re, { md: 6, xs: 12, item: !0, children: e })
     ]
   }
-), wv = "No description available.", Nv = ({ excerpt: e, id: t, title: o }) => /* @__PURE__ */ x(Pv, { headline: o, children: /* @__PURE__ */ se(
+), wv = "No description available.", Nv = ({ excerpt: e, slug: t, title: o }) => /* @__PURE__ */ x(Pv, { headline: o, children: /* @__PURE__ */ se(
   he,
   {
     alignItems: "center",
@@ -19378,7 +19378,7 @@ const $v = /* @__PURE__ */ Ur(Sv), Pv = ({
       /* @__PURE__ */ x(Et, { href: `/about/careers/${t}`, variant: "primary", children: /* @__PURE__ */ x($v, {}) })
     ]
   }
-) }), _v = "No jobs available at the moment.", t0 = ({ jobs: e }) => e.length ? e.map(({ excerpt: t, id: o, title: r }) => /* @__PURE__ */ x(he, { display: "flex", children: /* @__PURE__ */ x(Nv, { excerpt: t, id: o, title: r }) }, o)) : /* @__PURE__ */ x(he, { color: "grey.500", p: 4, textAlign: "center", width: "100%", children: _v }), zl = ({
+) }), _v = "No jobs available at the moment.", t0 = ({ jobs: e }) => e.length ? e.map(({ excerpt: t, slug: o, title: r }) => /* @__PURE__ */ x(he, { display: "flex", children: /* @__PURE__ */ x(Nv, { excerpt: t, slug: o, title: r }) }, o)) : /* @__PURE__ */ x(he, { color: "grey.500", p: 4, textAlign: "center", width: "100%", children: _v }), zl = ({
   banner: e = !1,
   bgcolor: t = "white",
   children: o,

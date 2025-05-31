@@ -4,5 +4,5 @@
  */
 import { FC } from 'react';
 import { CustomPost } from '../types';
-export type JobProps = Pick<CustomPost, 'excerpt' | 'id' | 'title'>;
+export type JobProps = Pick<CustomPost, 'excerpt' | 'title' | 'slug'>;
 export declare const Job: FC<JobProps>;

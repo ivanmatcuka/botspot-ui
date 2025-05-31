@@ -8,11 +8,11 @@ const meta: Meta<JobProps> = {
   title: 'Components/Job',
   args: {
     excerpt: 'Full-Time // Hybrid // Available ASAP',
-    id: 101,
+    slug: '101',
     title: 'Innovation Creator (m/w/d)',
   },
   argTypes: {
-    id: { control: 'number', description: 'Job post ID.' },
+    slug: { control: 'text', description: 'Job post ID.' },
     title: { control: 'text', description: 'Job title.' },
     excerpt: {
       control: 'text',
