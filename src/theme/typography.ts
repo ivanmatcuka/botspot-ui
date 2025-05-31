@@ -17,27 +17,27 @@ export const typography = {
   },
   h1: {
     fontSize: 60,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1,
   },
   h2: {
     fontSize: 40,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2,
   },
   h3: {
     fontSize: 32,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2,
   },
   h4: {
     fontSize: 24,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2,
   },
   h5: {
     fontSize: 20,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2,
   },
 } satisfies TypographyOptions;

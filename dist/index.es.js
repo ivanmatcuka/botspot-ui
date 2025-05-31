@@ -64,6 +64,7 @@ const ht = {
       root: {
         border: "solid",
         borderWidth: "0.1em",
+        fontWeight: 300,
         padding: e.spacing(1.5, 2.5),
         "&:disabled": {
           backgroundColor: ht.grey[200],
@@ -76,6 +77,7 @@ const ht = {
       },
       text: {
         border: "none",
+        fontWeight: 300,
         "&:disabled": {
           backgroundColor: ht.grey[100],
           border: "none",
@@ -4734,27 +4736,27 @@ const ss = (e) => {
   },
   h1: {
     fontSize: 60,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1
   },
   h2: {
     fontSize: 40,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2
   },
   h3: {
     fontSize: 32,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2
   },
   h4: {
     fontSize: 24,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2
   },
   h5: {
     fontSize: 20,
-    fontWeight: 400,
+    fontWeight: 300,
     lineHeight: 1.2
   }
 }, un = si({

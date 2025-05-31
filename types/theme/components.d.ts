@@ -31,6 +31,7 @@ export declare const getComponents: (theme: Theme) => {
             root: {
                 border: string;
                 borderWidth: string;
+                fontWeight: number;
                 padding: string;
                 '&:disabled': {
                     backgroundColor: string;
@@ -43,6 +44,7 @@ export declare const getComponents: (theme: Theme) => {
             };
             text: {
                 border: string;
+                fontWeight: number;
                 '&:disabled': {
                     backgroundColor: string;
                     border: string;
