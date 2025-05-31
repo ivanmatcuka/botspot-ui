@@ -64,7 +64,7 @@ const ht = {
       root: {
         border: "solid",
         borderWidth: "0.1em",
-        fontWeight: 300,
+        fontWeight: 400,
         padding: e.spacing(1.5, 2.5),
         "&:disabled": {
           backgroundColor: ht.grey[200],
@@ -77,7 +77,7 @@ const ht = {
       },
       text: {
         border: "none",
-        fontWeight: 300,
+        fontWeight: 400,
         "&:disabled": {
           backgroundColor: ht.grey[100],
           border: "none",
