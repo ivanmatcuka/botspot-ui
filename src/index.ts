@@ -30,6 +30,8 @@ export { SnackbarProvider } from './components/Snackbar';
 export { Tile } from './components/Tile';
 export { ProductsTopic } from './components/ProductsTopic';
 export { ShareButton } from './components/ShareButton';
+export { PartnerLogo } from './components/PartnerLogo';
+export { PartnerLogoContainer } from './components/PartnerLogoContainer';
 
 // MUI
 export {
